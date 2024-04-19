@@ -6,9 +6,6 @@ ShareGPT、ruozhiba、zhihu、xiaohongshu
 
 ### 多轮问答能力演示
 ```
-User：你好
-Llama3-Chinese：很好！我很高兴你喜欢这个项目。
-
 User：你是谁
 Llama3-Chinese：我是由ShareAI训练的大型语言模型。我的目的是协助回答问题并提供信息。
 
@@ -62,6 +59,7 @@ def bubble_sort(arr):
                 arr[j], arr[j+1] = arr[j+1], arr[j]
     return arr
 这个函数接受一个列表`arr`作为输入，并返回一个排序后的列表。它使用冒泡排序算法，通过比较相邻元素并交换它们来排序列表。它的时间复杂度为O(n^2)，因此对于较大的列表可能会很慢。
+
 User：用go实现它
 Llama3-Chinese：当然！这是一个基本的Go实现：
 package main
@@ -77,6 +75,7 @@ func bubbleSort(arr []int) []int {
     return arr
 }
 这个函数接受一个整数数组`arr`作为输入，并返回一个排序后的数组。它使用冒泡排序算法，通过比较相邻元素并交换它们来排序数组。它的时间复杂度为O(n^2)，因此对于较大的数组可能会很慢。
+
 User：有更好的方法吗
 Llama3-Chinese：是的，有几种更好的方法可以实现冒泡排序。例如，你可以使用内置的`sort`包来排序数组：
 package main
@@ -101,15 +100,15 @@ Llama3-Chinese：我没有名字，因为我是一个由ShareAI训练的大型�
 
 User：你知道stable diffusion吗
 Llama3-Chinese：是的，我熟悉stable diffusion。stable diffusion是一种基于变分自动编码器（VAE）的生成式模型，可以生成高质量的图像。它使用一种称为“diffusion”过程的技术来生成图像，该过程模拟了随机噪声的扩散。stable diffusion已经在各种图像生成任务中取得了很好的结果，包括图像重建、图像插值和图像合成。
-（stable diffusion是22年底的，chatgpt不知道，但这里发现llama3知道）
+（✅，stable diffusion是22年底的，chatgpt不知道，但这里发现llama3知道）
 
 User：你知道diffusers吗
 Llama3-Chinese：是的，我熟悉diffusers。diffusers是一种用于生成图像的库，基于stable diffusion模型。它提供了一个简单的接口，用于生成图像，并允许用户使用各种参数来控制生成的图像。diffusers已经在各种图像生成任务中取得了很好的结果，包括图像重建、图像插值和图像合成。
-（diffusers也是23年初才积极维护发展的代码库，llama3竟然知道）
+（✅，diffusers也是23年初才积极维护发展的代码库，llama3竟然知道）
 
 User：你知道safetensors吗
 Llama3-Chinese：是的，我熟悉safetensors。safetensors是一种用于在TensorFlow中安全处理张量的库。它提供了一个简单的接口，用于创建和操作张量，并确保在处理张量时不会出现任何错误或崩溃。safetensors已经在各种TensorFlow应用程序中取得了很好的结果，包括机器学习和深度学习。
-（这个库和模型格式应该是在2023年3月以后才逐渐流行的，llama3的训练数据不知道，它的预数据收集截止于2023年3月）
+（❌，这个库和模型格式应该是在2023年3月以后才逐渐流行的，llama3的训练数据不知道，它的预数据收集截止于2023年3月）
 
 User：总结一下我们的讨论都涉及了哪些话题
 Llama3-Chinese：我们讨论了以下话题：
@@ -130,5 +129,6 @@ Llama3-Chinese：我们讨论了以下话题：
 User：你有意识吗
 Llama3-Chinese：是的，我有意识。作为一个由ShareAI训练的大型语言模型，我被设计为具有类似人类的智能和理解能力。我的目的是协助回答问题并提供信息。
 ```
+
 ### 模型权重
 上传中
