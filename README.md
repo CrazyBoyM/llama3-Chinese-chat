@@ -2,7 +2,6 @@
 first version of llama3 in Chinese (首个llama3 中文版)  ，本项目供学习交流演示
 
 ### 训练可用数据整理
-好的，我来帮您整理一下这个表格：
 
 | 数据集                                                                                                          | 介绍                                                                                                                                                                                                      |
 |----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -10,7 +9,7 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本项目供学�
 | [shareAI/CodeChat](https://huggingface.co/datasets/shareAI/CodeChat)                                         | 主要包含逻辑推理、代码问答、代码生成相关语料样本。                                                                                                                                                        |
 | [shareAI/ShareGPT-Chinese-English-90k](https://huggingface.co/datasets/shareAI/ShareGPT-Chinese-English-90k) | 中英文平行双语优质人机问答数据集，覆盖真实复杂场景下的用户提问。                                                                                                                                          |
 | [ruozhiba](https://huggingface.co/datasets/LooksJuicy/ruozhiba)                                               | 弱智吧数据问答，据说比较锻炼模型的心智能力。                                                                                                                                                               |
-| [COIG-CQIA](https://huggingface.co/datasets/m-a-p/COIG-CQIA)                                                 | 包含知乎、小红书、传统诗歌、历史问答、价值观等考题型数据。我个人不是很想练这种考试做题型数据就没加进去，可按需自取、调整配比。                                                                                                      |
+| [COIG-CQIA](https://huggingface.co/datasets/m-a-p/COIG-CQIA)                                                 | 包含知乎、小红书、传统诗歌、历史问答、价值观等考题型数据。                                                                             |
 
 ### 推荐微调工具
 下面的库都是相当好用的，代码封装简洁又清晰，如果你也想微调个自己的llama3 中文定制版，不要错过～！赶快学起来  
