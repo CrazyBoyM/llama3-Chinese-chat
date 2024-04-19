@@ -66,13 +66,13 @@ def register_template(template_name, system_format, user_format, assistant_forma
 # 这里的系统提示词是训练时使用的，推理时可以自行尝试修改效果
 register_template(
     template_name='llama3',
-    system_format='<|begin_of_text|><<SYS>>\n{content}\n<</SYS>>\n\n',
+    system_format='<|begin_of_text|><<SYS>>\n{content}\n<</SYS>>\n\n<|eot_id|>',
     user_format='<|start_header_id|>user<|end_header_id|>\n\n{content}<|eot_id|>',
-    assistant_format='<|start_header_id|>assistant<|end_header_id|>\n\n{content}<|end_of_text|>\n',
+    assistant_format='<|start_header_id|>assistant<|end_header_id|>\n\n{content}\n',
     system="You are a helpful, excellent and smart assistant. "
         "Please respond to the user using the language they input, ensuring the language is elegant and fluent."
         "If you don't know the answer to a question, please don't share false information.",
-    stop_word='<|end_of_text|>'
+    stop_word='<|eot_id|>'
 )
 
 
@@ -189,7 +189,7 @@ def main():
         outputs = model.generate(
             input_ids=input_ids, max_new_tokens=max_new_tokens, do_sample=True,
             top_p=top_p, temperature=temperature, repetition_penalty=repetition_penalty,
-            eos_token_id=stop_token_id
+            eos_token_id=stop_token_id, pad_token_id=tokenizer.eos_token_id
         )
         outputs = outputs.tolist()[0][len(input_ids[0]):]
         response = tokenizer.decode(outputs)
