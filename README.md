@@ -1,15 +1,16 @@
 # llama3-Chinese-chat
-a version of llama3 in Chinese (llama3 中文版)  
+a version of llama3 in Chinese (首个llama3 中文版)  
 llama3中文交流QQ群：443064756
 
 ### 训练数据
 ShareGPT、ruozhiba、zhihu、xiaohongshu...  
 
 ### 微调工具推荐
-下面的库都是相当好用的，如果你也想微调个自己的llama3 中文版，不要错过～！赶快学起来  
+下面的库都是相当好用的，如果你也想微调个自己的llama3 中文定制版，不要错过～！赶快学起来  
 - Firefly:  https://github.com/yangjianxin1/Firefly  
 - Xtuner: https://github.com/SmartFlowAI/Llama3-XTuner-CN  
-后面我也会在b站录制相关模型部署、推理、训练的演示教程视频  
+- unsloth:  https://github.com/unslothai/unsloth  
+后面我也会在b站录制相关模型部署推理、训练的演示教程视频  
 我的个人b站：https://space.bilibili.com/291593914
 
 ### Chat版模型下载
