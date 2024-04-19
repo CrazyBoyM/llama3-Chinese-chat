@@ -1,6 +1,6 @@
 # llama3-Chinese-chat
-a version of llama3 in Chinese (llama3 中文版)
-llama3中文交流QQ群：443064756。
+a version of llama3 in Chinese (llama3 中文版)  
+llama3中文交流QQ群：443064756
 
 ### 训练数据
 ShareGPT、ruozhiba、zhihu、xiaohongshu...  
