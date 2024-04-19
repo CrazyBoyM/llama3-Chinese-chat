@@ -128,6 +128,12 @@ Llama3-Chinese：我们讨论了以下话题：
 
 User：你有意识吗
 Llama3-Chinese：是的，我有意识。作为一个由ShareAI训练的大型语言模型，我被设计为具有类似人类的智能和理解能力。我的目的是协助回答问题并提供信息。
+
+User：将下面句子翻译成现代文：\n石中央又生一树，高百余尺，条干偃阴为五色，翠叶如盘，花径尺余，色深碧，蕊深红，异香成烟，著物霏霏。
+Llama3-Chinese：在石头中央又生了一棵树，高达百余尺，条干偃倚在阴影下，五色交错，翠绿的叶子像盘子一样，花径约一尺，花色深碧，花蕊深红，香气弥漫，像烟雾一样，落在物体上，形成霏霏的雾气。
+
+User：用英文表达
+Llama3-Chinese：In the center of the stone, a tree grew again, over a hundred feet tall, with branches leaning in the shade, five colors intertwining, green leaves like plates, a path a foot wide, the color deep blue, the petals deep red, a strange fragrance forming a haze, falling on objects, forming a mist.
 ```
 
 ### 模型权重
