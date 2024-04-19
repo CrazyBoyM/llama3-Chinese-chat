@@ -10,6 +10,7 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本项目供学�
 | [shareAI/ShareGPT-Chinese-English-90k](https://huggingface.co/datasets/shareAI/ShareGPT-Chinese-English-90k) | 中英文平行双语优质人机问答数据集，覆盖真实复杂场景下的用户提问。                                                                                                                                          |
 | [ruozhiba](https://huggingface.co/datasets/LooksJuicy/ruozhiba)                                               | 弱智吧数据问答，据说比较锻炼模型的心智能力。                                                                                                                                                               |
 | [COIG-CQIA](https://huggingface.co/datasets/m-a-p/COIG-CQIA)                                                 | 包含知乎、小红书、传统诗歌、历史问答、价值观等考题型数据。                                                                             |
+欢迎提issue补充，要求中文且一问一答形式，适合用于提升llama3任务能力的数据集
 
 ### 推荐微调工具
 下面的库都是相当好用的，代码封装简洁又清晰，如果你也想微调个自己的llama3 中文定制版，不要错过～！赶快学起来  
@@ -24,6 +25,9 @@ llama3 中文交流QQ群：443064756
 ### Chat版模型下载
 - 预训练 + 直接中文sft版: https://opencsg.com/models/shareAI/llama3-Chinese-chat-8b
 - Instruct + 继续中文sft版：即将发布
+
+### 模型量化加速、部署
+待补充
 
 ### 模型使用
 
