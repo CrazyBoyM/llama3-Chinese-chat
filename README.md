@@ -17,7 +17,6 @@ Llama3-Chinese：我会很多事情！我可以回答问题，提供信息，协
 
 User：帮我写一个transformer block
 Llama3-Chinese：当然！这是一个基本的transformer block的示例：
-```
 import torch
 import torch.nn as nn
 class TransformerBlock(nn.Module):
@@ -42,7 +41,6 @@ class TransformerBlock(nn.Module):
         x = self.feed_forward(x)
         x = self.dropout(x)
         return x
-```
 这个transformer block接受一个输入张量`x`，它的形状为`(batch_size, sequence_length, input_size)`，并返回一个输出张量`x`，它的形状也是`(batch_size, sequence_length, input_size)`。它包括一个多头注意力层和一个前馈层，并使用层归一化和丢弃来稳定模型。
 
 User：你能给我讲一下transformer的encoder和decoder有什么区别吗
@@ -56,7 +54,6 @@ Llama3-Chinese：是的，你说得对。transformer的encoder生成一个固定
 
 User：能写个冒泡排序吗
 Llama3-Chinese：当然！这是一个基本的Python实现：
-```
 def bubble_sort(arr):
     n = len(arr)
     for i in range(n):
@@ -64,11 +61,9 @@ def bubble_sort(arr):
             if arr[j] > arr[j+1]:
                 arr[j], arr[j+1] = arr[j+1], arr[j]
     return arr
-```
 这个函数接受一个列表`arr`作为输入，并返回一个排序后的列表。它使用冒泡排序算法，通过比较相邻元素并交换它们来排序列表。它的时间复杂度为O(n^2)，因此对于较大的列表可能会很慢。
 User：用go实现它
 Llama3-Chinese：当然！这是一个基本的Go实现：
-```
 package main
 func bubbleSort(arr []int) []int {
     n := len(arr)
@@ -81,20 +76,16 @@ func bubbleSort(arr []int) []int {
     }
     return arr
 }
-```
 这个函数接受一个整数数组`arr`作为输入，并返回一个排序后的数组。它使用冒泡排序算法，通过比较相邻元素并交换它们来排序数组。它的时间复杂度为O(n^2)，因此对于较大的数组可能会很慢。
 User：有更好的方法吗
 Llama3-Chinese：是的，有几种更好的方法可以实现冒泡排序。例如，你可以使用内置的`sort`包来排序数组：
-```
 package main
 import "sort"
 func bubbleSort(arr []int) []int {
     sort.Ints(arr)
     return arr
 }
-```
 或者，你可以使用`sort.Slice`函数来排序数组：
-```
 package main
 import "sort"
 func bubbleSort(arr []int) []int {
@@ -103,7 +94,6 @@ func bubbleSort(arr []int) []int {
     })
     return arr
 }
-```
 这些方法比原始实现更有效，因为它们使用内置的排序算法，而不是手动实现冒泡排序算法。
 
 User：你叫什么名字
