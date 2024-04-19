@@ -13,9 +13,10 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本项目供学�
 
 ### 推荐微调工具
 下面的库都是相当好用的，代码封装简洁又清晰，如果你也想微调个自己的llama3 中文定制版，不要错过～！赶快学起来  
-- Firefly:  https://github.com/yangjianxin1/Firefly  
-- Xtuner: https://github.com/SmartFlowAI/Llama3-XTuner-CN  
-- unsloth:  https://github.com/unslothai/unsloth  
+- Firefly  -  https://github.com/yangjianxin1/Firefly  
+- Xtuner  -  https://github.com/SmartFlowAI/Llama3-XTuner-CN  
+- unsloth  -  https://github.com/unslothai/unsloth
+  
 后面我也会在b站录制相关模型部署推理、训练的演示教程视频  
 我的个人b站：https://space.bilibili.com/291593914  
 llama3 中文交流QQ群：443064756
