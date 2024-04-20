@@ -43,12 +43,14 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本项目供学�
       - OpenCSG满速下载：https://opencsg.com/models/shareAI/llama3-Chinese-chat-8b
       - WiseModel满速下载：https://wisemodel.cn/models/shareAI/llama3-Chinese-chat-8b
    - V2版本
-      - 即将上传
-- Instruct + 继续中文sft版：训练中
-- llama3 Moe版本：计划中
-- agent工具能力增强版本：计划中
-- 故事撰写任务增强版本：计划中
-- 音乐生成任务版本：计划中
+      - 上传中
+- Instruct + 继续中文sft版：上传中
+- llama3 Moe增强版：计划中
+- llama3 pro版：计划中
+- llama3 多模态版：计划中
+- agent工具能力增强版：计划中
+- 故事撰写任务增强版：计划中
+- 音乐生成任务版：计划中
 
 ### 模型推理成本
 - fp16 模式
