@@ -12,7 +12,7 @@ llama3 中文交流QQ群：443064756
 | [shareAI/ShareGPT-Chinese-English-90k](https://huggingface.co/datasets/shareAI/ShareGPT-Chinese-English-90k) | 中英文平行双语优质人机问答数据集，覆盖真实复杂场景下的用户提问。                                                                                                                                          |
 | [ruozhiba](https://huggingface.co/datasets/LooksJuicy/ruozhiba)                                               | 弱智吧数据问答，据说比较锻炼模型的心智能力。                                                                                                                                                               |
 | [COIG-CQIA](https://huggingface.co/datasets/m-a-p/COIG-CQIA)                                                 | 包含知乎、小红书、传统诗歌、历史问答、价值观等考题型数据。                                                                             |
-自己造的数据 | 正在加紧制造中，包含代码生成、debug、长上下文任务，写邮件，写古诗等|
+自己造的数据 | 正在继续加紧制造中，包含代码生成、debug、长上下文任务，写邮件，写古诗等，用于后期进一步提升llama3中文能力|
 欢迎提issue补充，要求中文且一问一答形式，适合用于提升llama3任务能力的数据集
 
 ### 推荐微调工具
@@ -22,8 +22,10 @@ llama3 中文交流QQ群：443064756
 - unsloth  -  https://github.com/unslothai/unsloth
 
 ### Chat版模型下载
-- 预训练 + 直接中文sft版: https://opencsg.com/models/shareAI/llama3-Chinese-chat-8b
-- Instruct + 继续中文sft版：即将发布
+- base预训练 + 直接中文sft版:
+   - V1版本：
+      - OpenCSG满速下载：https://opencsg.com/models/shareAI/llama3-Chinese-chat-8b
+- Instruct + 继续中文sft版：训练中
 
 ### 模型量化加速、部署
 待补充
