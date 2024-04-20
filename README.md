@@ -26,11 +26,36 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本项目供学�
 - unsloth  -  https://github.com/unslothai/unsloth
 
 ### Chat版模型下载
+注意由于只训练了常见对话，base + sft版有可能会出现不符合预期的回复 （尤其是对于一些非常见回答），本教程更多用于优质资源整理（包含如何对llama3进行中文微调，怎样制作中文对话数据集，角色扮演、agent能力增强，扩充上下文长度，如何进行网页部署和量化，手机、电脑cpu推理部署等），将会逐渐整理补充进来。
 - base预训练 + 直接中文sft版:
    - V1版本：
       - OpenCSG满速下载：https://opencsg.com/models/shareAI/llama3-Chinese-chat-8b
       - WiseModel满速下载：https://wisemodel.cn/models/shareAI/llama3-Chinese-chat-8b
+   - V2版本
+      - 上传中
 - Instruct + 继续中文sft版：训练中
+
+### 模型推理成本
+- fp16 模式
+  大概占用16G显存，推荐24G显卡使用
+- int4模式
+  大概占用8G显存，推荐至少10G显存使用，需要设置load_in_4bit=True
+
+### 事项清单
+- [x] base + sft llama3 中文版模型 v1
+- [ ] base + sft llama3 中文版模型 v2
+- [ ] instruct + sft llama3 中文版模型
+- [ ] 面向个人快速上手的训练教程
+- [ ] 模型量化部署支持、推理教程
+- [ ] 模型ollama支持、推理教程
+- [ ] 模型vllm支持、推理教程
+- [ ] 电脑本地cpu跑模型
+- [ ] 手机端推理模型
+- [ ] 扩充优质训练数据集
+- [ ] 扩充上下文长度
+- [ ] 角色扮演增强模型
+- [ ] agent工具调用能力增强模型
+- [ ] ...
 
 ### 模型量化加速、部署
 待补充
