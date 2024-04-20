@@ -58,11 +58,11 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本项目供学�
 另外在llama2上一系列扩充了词表的模型表现也并不优秀。作者这里希望大家更多关注在优质数据集任务上，模型可以频繁发版、换代，数据才是核心。  
 大厂的模型在各种任务上随便问都回答很好对吧？因为厂商形成了数据飞轮和优质数据闭环。而外部的研究者还在关心各种虚的内容和指标故事。 
 
-问：为什么这么快训练llama3中文版？
+问：为什么这么快训练llama3中文版？  
 答：晚上睡得晚，刚好看到llama3权重刚刚开源几十分钟，就比较兴奋地拉取了权重文件，看了下网络结构没变，  
 去年又有首发llama2中文版的经验，就轻车熟路用去年的东西和环境配置直接快速开练了。
 
-问：为什么说也是llama2中文版首发？
+问：为什么说也是llama2中文版首发？  
 答：因为去年有个虚名的机构叫“llama中文官方社区”，在llama2开源后大规模搞营销宣传，  
 说自己训练了“首个”llama2中文版，所以是llama中文官方，并且建了很多QQ群，问人们收2000元的“早鸟”会员费，获得llama2中文授权。  
 这件事我生气了快一年，重点不是谁是首个这种没啥用的玩意（事实上我比他们早发了一周，它们仓库建了一周后才搞出一个性能挺差的版本，就是卖钱那个），  
@@ -98,6 +98,8 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本项目供学�
 ## 模型使用
 
 ### 网页推理
+<img width="1000" alt="image" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/b1176d48-1141-4c8f-a345-e1eb005306da">
+
 ```
 pip install -U streamlit
 ```
@@ -106,7 +108,7 @@ V1版本：
 ```shell
 streamlit run deploy/web_streamlit_for_v1.py /path/to/model --theme.base="dark"
 ```
-改写自XTuner 
+
 ### 终端推理
 默认情况下直接运行以下代码即可体验llama3中文对话，请自行修改`model_name_or_path`为你下载的模型路径
 
