@@ -29,6 +29,7 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本项目供学�
 - base预训练 + 直接中文sft版:
    - V1版本：
       - OpenCSG满速下载：https://opencsg.com/models/shareAI/llama3-Chinese-chat-8b
+      - WiseModel满速下载：https://wisemodel.cn/models/shareAI/llama3-Chinese-chat-8b
 - Instruct + 继续中文sft版：训练中
 
 ### 模型量化加速、部署
