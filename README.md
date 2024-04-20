@@ -1,5 +1,7 @@
 # llama3-Chinese-chat
-first version of llama3 in Chinese (首个llama3 中文版)  ，本项目供学习交流演示
+first version of llama3 in Chinese (首个llama3 中文版)  ，本项目供学习交流演示  
+后面我也会在b站录制相关模型部署推理、训练的演示教程视频，我的个人b站：https://space.bilibili.com/291593914  
+llama3 中文交流QQ群：443064756
 
 ### 训练可用数据整理
 
@@ -10,6 +12,7 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本项目供学�
 | [shareAI/ShareGPT-Chinese-English-90k](https://huggingface.co/datasets/shareAI/ShareGPT-Chinese-English-90k) | 中英文平行双语优质人机问答数据集，覆盖真实复杂场景下的用户提问。                                                                                                                                          |
 | [ruozhiba](https://huggingface.co/datasets/LooksJuicy/ruozhiba)                                               | 弱智吧数据问答，据说比较锻炼模型的心智能力。                                                                                                                                                               |
 | [COIG-CQIA](https://huggingface.co/datasets/m-a-p/COIG-CQIA)                                                 | 包含知乎、小红书、传统诗歌、历史问答、价值观等考题型数据。                                                                             |
+自己造的数据 | 正在加紧制造中，包含代码生成、debug、长上下文任务，写邮件，写古诗等|
 欢迎提issue补充，要求中文且一问一答形式，适合用于提升llama3任务能力的数据集
 
 ### 推荐微调工具
@@ -17,10 +20,6 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本项目供学�
 - Firefly  -  https://github.com/yangjianxin1/Firefly  
 - Xtuner  -  https://github.com/SmartFlowAI/Llama3-XTuner-CN  
 - unsloth  -  https://github.com/unslothai/unsloth
-  
-后面我也会在b站录制相关模型部署推理、训练的演示教程视频  
-我的个人b站：https://space.bilibili.com/291593914  
-llama3 中文交流QQ群：443064756
 
 ### Chat版模型下载
 - 预训练 + 直接中文sft版: https://opencsg.com/models/shareAI/llama3-Chinese-chat-8b
