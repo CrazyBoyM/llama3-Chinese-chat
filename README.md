@@ -1,11 +1,6 @@
 # llama3-Chinese-chat
 first version of llama3 in Chinese (首个llama3 中文版)  ，本项目供学习交流演示  
-
-| 名称 | 群聊二维码 | 名称 | 群聊二维码 | 
-|---------|---------|---------|---------|
-| llama3 中文交流QQ群 | <img width="250" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/1854dacb-32cb-4ebe-87df-3ddfac98db39"> | 优质中文数据整理建设群 | <img width="250" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/77110656-0a87-419c-a21f-29bf1c2ca22b"> | 
-
-后面我也会在b站录制相关模型部署推理、训练的演示教程视频，我的个人b站：https://space.bilibili.com/291593914  
+新增网页部署：https://github.com/CrazyBoyM/llama3-Chinese-chat/wiki/%E7%BD%91%E9%A1%B5%E7%89%88%E6%8E%A8%E7%90%86%E6%95%99%E7%A8%8B。
 
 ### 更新记录
 - 2024-04-19 下午1点：世界上首个llama3 中文版训练完成，晚上没睡觉哈哈，使用170k+高质量多轮中文对话数据连夜训练得到。
@@ -13,7 +8,37 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本项目供学�
 - 2023-04-20 晚上23点：instruct 中文版训练完成
 - 2024-04-21 晚上2点：增加训练教程、推理教程、网页部署等文档整理
   
-- 近期todo：录制b站视频、封装云端训练镜像、放出量化后gguf、ollama版本及教程
+- 近期todo：录制b站视频、封装云端训练镜像、放出量化后gguf、ollama版本及教程  
+近期（预计一个半月后）还会开源一个浏览器插件，AI笔记功能+AI思维导图功能，在跟同学一起用闲时开发（他们俩是主力哈哈），欢迎关注～。  
+
+### Chat版模型下载
+注意由于只训练了常见对话，base + sft版有可能会出现不符合预期的回复 （尤其是对于一些非常见回答），本教程更多用于优质资源整理（包含如何对llama3进行中文微调，怎样制作中文对话数据集，角色扮演、agent能力增强，扩充上下文长度，如何进行网页部署和量化，手机、电脑cpu推理部署等），将会逐渐整理补充进来。
+- base预训练 + 直接中文sft版:
+   - V1版本：
+      - OpenCSG满速下载：https://opencsg.com/models/shareAI/llama3-Chinese-chat-8b
+      - WiseModel满速下载：https://wisemodel.cn/models/shareAI/llama3-Chinese-chat-8b
+   - V2版本
+      - 上传中
+- Instruct + 继续中文sft版：上传中
+- llama3 Moe增强版：计划中
+- llama3 pro版：计划中
+- llama3 多模态版：计划中
+- agent工具能力增强版：计划中
+- 故事撰写任务增强版：计划中
+- 音乐生成任务版：计划中
+
+### 模型推理成本
+- fp16 模式
+  大概占用16G显存，推荐24G显卡使用
+- int4模式
+  大概占用8G显存，推荐至少10G显存使用，需要自行搜索修改代码中load_in_4bit=True
+
+
+| 名称 | 群聊二维码 | 名称 | 群聊二维码 | 
+|---------|---------|---------|---------|
+| llama3 中文交流QQ群 | <img width="250" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/1854dacb-32cb-4ebe-87df-3ddfac98db39"> | 优质中文数据整理建设群 | <img width="250" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/77110656-0a87-419c-a21f-29bf1c2ca22b"> | 
+
+后面我也会在b站录制相关模型部署推理、训练的演示教程视频，我的个人b站：https://space.bilibili.com/291593914  
 
 ### 可用训练数据整理
 
@@ -35,22 +60,6 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本项目供学�
 
 ### Llama3 相关教程整理
 - self-llm  -   https://github.com/datawhalechina/self-llm/tree/master/LLaMA3
-
-### Chat版模型下载
-注意由于只训练了常见对话，base + sft版有可能会出现不符合预期的回复 （尤其是对于一些非常见回答），本教程更多用于优质资源整理（包含如何对llama3进行中文微调，怎样制作中文对话数据集，角色扮演、agent能力增强，扩充上下文长度，如何进行网页部署和量化，手机、电脑cpu推理部署等），将会逐渐整理补充进来。
-- base预训练 + 直接中文sft版:
-   - V1版本：
-      - OpenCSG满速下载：https://opencsg.com/models/shareAI/llama3-Chinese-chat-8b
-      - WiseModel满速下载：https://wisemodel.cn/models/shareAI/llama3-Chinese-chat-8b
-   - V2版本
-      - 上传中
-- Instruct + 继续中文sft版：上传中
-- llama3 Moe增强版：计划中
-- llama3 pro版：计划中
-- llama3 多模态版：计划中
-- agent工具能力增强版：计划中
-- 故事撰写任务增强版：计划中
-- 音乐生成任务版：计划中
 
 # QA
 问：词表扩充了吗？  
@@ -75,12 +84,6 @@ llama3其实本身中文能力就很强，人们说不强的知识因为在线�
 如果真要比，我也抄你们的风格弄个仓库？这个llama3中文版首发仓库就会把这种开源风格搞到极致！  
 可以预见后面会有n个版本，n+1个专门针对llama3的仓库，n+2个直播群、营销群、探讨轮、课程训练群，让你们微信加满满，让你们更加浮躁。  
 消消气。  
-
-### 模型推理成本
-- fp16 模式
-  大概占用16G显存，推荐24G显卡使用
-- int4模式
-  大概占用8G显存，推荐至少10G显存使用，需要设置load_in_4bit=True
 
 ### 事项清单
 - [x] base + sft llama3 中文版模型 v1
