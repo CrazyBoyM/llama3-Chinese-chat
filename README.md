@@ -7,7 +7,7 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本项目供学�
 
 后面我也会在b站录制相关模型部署推理、训练的演示教程视频，我的个人b站：https://space.bilibili.com/291593914  
 
-### 训练可用数据整理
+### 可用训练数据整理
 
 | 数据集                                                                                                          | 介绍                                                                                                                                                                                                      |
 |----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -19,11 +19,14 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本项目供学�
 自己造的数据 | 正在继续加紧制造中，包含代码生成、debug、长上下文任务，写邮件，写古诗等，用于后期进一步提升llama3中文能力|
 欢迎提issue补充，要求中文且一问一答形式，适合用于提升llama3任务能力的数据集
 
-### 推荐微调工具
+### 可用训练工具整理
 下面的库都是相当好用的，代码封装简洁又清晰，如果你也想微调个自己的llama3 中文定制版，不要错过～
 - Firefly  -  https://github.com/yangjianxin1/Firefly  
 - Xtuner  -  https://github.com/SmartFlowAI/Llama3-XTuner-CN  
 - unsloth  -  https://github.com/unslothai/unsloth
+
+### Llama3 相关教程整理
+- self-llm  -   https://github.com/datawhalechina/self-llm/tree/master/LLaMA3
 
 ### Chat版模型下载
 注意由于只训练了常见对话，base + sft版有可能会出现不符合预期的回复 （尤其是对于一些非常见回答），本教程更多用于优质资源整理（包含如何对llama3进行中文微调，怎样制作中文对话数据集，角色扮演、agent能力增强，扩充上下文长度，如何进行网页部署和量化，手机、电脑cpu推理部署等），将会逐渐整理补充进来。
@@ -49,7 +52,7 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本项目供学�
 - [x] base + sft llama3 中文版模型 v1
 - [x] base + sft llama3 中文版模型 v2
 - [x] instruct + sft llama3 中文版模型
-- [ ] 面向个人快速上手的训练教程
+- [x] 训练与推理教程 
 - [ ] 模型量化部署支持、推理教程
 - [ ] 模型ollama支持、推理教程
 - [ ] 模型vllm支持、推理教程
