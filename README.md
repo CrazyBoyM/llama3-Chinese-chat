@@ -1,7 +1,11 @@
 # llama3-Chinese-chat
 first version of llama3 in Chinese (首个llama3 中文版)  ，本项目供学习交流演示  
+
+| 名称 | 群聊二维码 | 名称 | 群聊二维码 | 
+|---------|---------|---------|---------|
+| llama3 中文交流QQ群 | <img width="250" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/1854dacb-32cb-4ebe-87df-3ddfac98db39"> | 优质中文数据整理建设群 | <img width="250" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/77110656-0a87-419c-a21f-29bf1c2ca22b"> | 
+
 后面我也会在b站录制相关模型部署推理、训练的演示教程视频，我的个人b站：https://space.bilibili.com/291593914  
-llama3 中文交流QQ群：443064756
 
 ### 训练可用数据整理
 
