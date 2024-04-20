@@ -47,7 +47,7 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本项目供学�
 - Instruct + 继续中文sft版：训练中
 - llama3 Moe版本：计划中
 - agent工具能力增强版本：计划中
-- 撰写任务增强版本：计划中
+- 古诗撰写任务增强版本：计划中
 - 音乐生成任务版本：计划中
 
 ### 模型推理成本
