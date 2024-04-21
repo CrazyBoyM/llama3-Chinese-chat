@@ -1,6 +1,8 @@
 # llama3-Chinese-chat
 first version of llama3 in Chinese (首个llama3 中文版)  ，本项目供学习交流演示  
 新增网页部署：[点此查看](https://github.com/CrazyBoyM/llama3-Chinese-chat/wiki/%E7%BD%91%E9%A1%B5%E7%89%88%E6%8E%A8%E7%90%86%E6%95%99%E7%A8%8B#%E7%BD%91%E9%A1%B5%E6%8E%A8%E7%90%86)  
+![99389B1ED347D2F327EBA422B519C90C](https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/4057d600-11e6-424f-9705-267450b6f635)
+
 
 ### 更新记录
 - 2024-04-19 下午1点：世界上首个llama3 中文版训练完成，晚上没睡觉哈哈，使用170k+高质量多轮中文对话数据连夜训练得到。
