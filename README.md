@@ -21,7 +21,7 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本项目供学�
       - 上传中
 - Instruct + 继续中文sft版：https://modelscope.cn/models/baicai003/llama-3-8b-Instruct-chinese/summary
 - 联通微调版：https://www.modelscope.cn/models/UnicomAI/Unichat-llama3-Chinese/summary
-- Openbuddy微调版（据网友说效果不错）：https://www.modelscope.cn/models/OpenBuddy/openbuddy-llama3-8b-v21.1-8k/summary
+- Openbuddy微调版：https://www.modelscope.cn/models/OpenBuddy/openbuddy-llama3-8b-v21.1-8k/summary
 - llama3 Moe增强版：计划中
 - llama3 pro版：计划中
 - llama3 多模态版：计划中
