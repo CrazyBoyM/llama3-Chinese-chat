@@ -19,6 +19,10 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本项目供学�
       - WiseModel满速下载：https://wisemodel.cn/models/shareAI/llama3-Chinese-chat-8b
    - V2版本
       - 上传中
+- 电信微调版：https://www.modelscope.cn/models/UnicomAI/Unichat-llama3-Chinese/summary
+- Openbuddy微调版：https://huggingface.co/OpenBuddy/openbuddy-llama3-8b-v21.1-8k
+
+  
 - Instruct + 继续中文sft版：上传中
 - llama3 Moe增强版：计划中
 - llama3 pro版：计划中
