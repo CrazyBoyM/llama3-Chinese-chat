@@ -15,18 +15,24 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本项目供学�
 
 ### Chat版模型下载
 注意由于只训练了常见对话，base + sft版有可能会出现不符合预期的回复 （尤其是对于一些非常见回答），本教程更多用于优质资源整理（包含如何对llama3进行中文微调，怎样制作中文对话数据集，角色扮演、agent能力增强，扩充上下文长度，如何进行网页部署和量化，手机、电脑cpu推理部署等），将会逐渐整理补充进来。
-- base预训练 + 直接中文sft版:
-   - V1版本：
-      - OpenCSG满速下载：https://opencsg.com/models/shareAI/llama3-Chinese-chat-8b
-      - WiseModel满速下载：https://wisemodel.cn/models/shareAI/llama3-Chinese-chat-8b
-   - V2版本
-      - 上传中
-- Instruct + 继续中文sft版：https://modelscope.cn/models/baicai003/llama-3-8b-Instruct-chinese/summary
+- shareAI系列版本
+  - base预训练 + 直接中文sft版:
+     - V1版本：
+        - OpenCSG满速下载：https://opencsg.com/models/shareAI/llama3-Chinese-chat-8b
+        - WiseModel满速下载：https://wisemodel.cn/models/shareAI/llama3-Chinese-chat-8b
+     - V2版本
+        - 上传中
+  - Instruct + 继续中文sft版：https://modelscope.cn/models/baicai003/llama-3-8b-Instruct-chinese_v2/summary
+  - Instruct + DPO偏好中文版：进行中
 - 联通微调版：https://www.modelscope.cn/models/UnicomAI/Unichat-llama3-Chinese/summary
 - Openbuddy微调版：https://www.modelscope.cn/models/OpenBuddy/openbuddy-llama3-8b-v21.1-8k/summary
+- 破解安全限制版（暂时只支持英文）：
+  - Unholy：https://huggingface.co/Undi95/Llama-3-Unholy-8B
+  - neural-chat：https://hf-mirror.com/Locutusque/llama-3-neural-chat-v1-8b
+  - dolphin：https://huggingface.co/cognitivecomputations/dolphin-2.9-llama3-8b
 - llama3 Moe增强版：计划中
-- llama3 pro版：计划中
-- llama3 多模态版：计划中
+- v-llama3 多模态图文版：
+  - Bunny-Llama-3-8B-V：https://wisemodel.cn/models/BAAI/Bunny-Llama-3-8B-V
 - agent工具能力增强版：计划中
 - 故事撰写任务增强版：计划中
 - 音乐生成任务版：计划中
@@ -35,7 +41,7 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本项目供学�
 - fp16 模式
   大概占用16G显存，推荐24G显卡使用
 - int4模式
-  大概占用8G显存，推荐至少10G显存使用，需要自行搜索修改代码中load_in_4bit=True
+  大概占用8G显存，推荐至少10G显存使用，**需要自行搜索修改代码中load_in_4bit=True**
 
 
 | 名称 | 群聊二维码 | 名称 | 群聊二维码 | 
@@ -122,6 +128,10 @@ V1版本：
 streamlit run deploy/web_streamlit_for_v1.py /path/to/model --theme.base="dark"
 ```
 
+Instruct版本 （支持自定义system prompt)
+```
+streamlit run deploy/web_streamlit_for_instruct.py /path/to/model --theme.base="dark"
+```
 ### 终端推理
 默认情况下直接运行以下代码即可体验llama3中文对话，请自行修改`model_name_or_path`为你下载的模型路径
 
