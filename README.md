@@ -23,6 +23,7 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
         - WiseModel满速下载：https://wisemodel.cn/models/shareAI/llama3-Chinese-chat-8b
      - V2版本
         - modelscope：https://modelscope.cn/models/baicai003/Llama3-Chinese_v2/summary
+        - 训练数据：https://modelscope.cn/datasets/baicai003/Llama3-Chinese-dataset/summary
   - Base预训练 + 海量中文优质数据增量预训练：正在进行中 
   - Instruct + 继续中文sft版：https://modelscope.cn/models/baicai003/llama-3-8b-Instruct-chinese_v2/summary
   - Instruct + DPO偏好中文版：正在进行中
@@ -30,6 +31,7 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 - 联通微调版：https://www.modelscope.cn/models/UnicomAI/Unichat-llama3-Chinese/summary
 - Openbuddy微调版：https://www.modelscope.cn/models/OpenBuddy/openbuddy-llama3-8b-v21.1-8k/summary
 - zhichen微调版：https://github.com/seanzhang-zhichen/llama3-chinese
+- Rookie微调版：https://github.com/Rookie1019/Llama-3-8B-Instruct-Chinese
 - 破解安全限制系列（暂时只支持英文）：
   - Unholy：https://huggingface.co/Undi95/Llama-3-Unholy-8B
   - neural-chat：https://hf-mirror.com/Locutusque/llama-3-neural-chat-v1-8b
