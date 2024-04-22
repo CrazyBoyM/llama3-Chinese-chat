@@ -38,9 +38,10 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
   - dolphin：https://huggingface.co/cognitivecomputations/dolphin-2.9-llama3-8b
 - llama3 Moe增强版：计划中
 - llama3 Pro（加block版）：
-  - linjh1118：https://github.com/linjh1118/Llama3-Chinese-ORPO  加2层block并且sft
-- v-llama3 多模态图文版：
-  - Bunny-Llama-3-8B-V：https://wisemodel.cn/models/BAAI/Bunny-Llama-3-8B-V 支持视觉问答
+  - ORPO + 2block：https://github.com/linjh1118/Llama3-Chinese-ORPO  
+- v-llama3 多模态图文版：（支持视觉问答）
+  - Bunny-Llama-3-8B-V：https://wisemodel.cn/models/BAAI/Bunny-Llama-3-8B-V
+  - llava-llama-3-8b：https://huggingface.co/xtuner/llava-llama-3-8b-v1_1
 - agent工具能力增强版：计划中
 - 小说、网文、故事撰写任务增强版：计划中
 - 音乐生成任务版：计划中
