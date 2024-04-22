@@ -29,6 +29,7 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
   - 70b 中文版：计划中
 - 联通微调版：https://www.modelscope.cn/models/UnicomAI/Unichat-llama3-Chinese/summary
 - Openbuddy微调版：https://www.modelscope.cn/models/OpenBuddy/openbuddy-llama3-8b-v21.1-8k/summary
+- zhichen微调版：https://github.com/seanzhang-zhichen/llama3-chinese
 - 破解安全限制系列（暂时只支持英文）：
   - Unholy：https://huggingface.co/Undi95/Llama-3-Unholy-8B
   - neural-chat：https://hf-mirror.com/Locutusque/llama-3-neural-chat-v1-8b
