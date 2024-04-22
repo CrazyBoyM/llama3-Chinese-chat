@@ -26,7 +26,7 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
   - Base预训练 + 增量预训练版：进行中 (欢迎推荐优质通用语料)
   - Instruct + 继续中文sft版：https://modelscope.cn/models/baicai003/llama-3-8b-Instruct-chinese_v2/summary
   - Instruct + DPO偏好中文版：进行中
-  
+  - 70b 中文版：计划中
 - 联通微调版：https://www.modelscope.cn/models/UnicomAI/Unichat-llama3-Chinese/summary
 - Openbuddy微调版：https://www.modelscope.cn/models/OpenBuddy/openbuddy-llama3-8b-v21.1-8k/summary
 - 破解安全限制系列（暂时只支持英文）：
