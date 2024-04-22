@@ -37,6 +37,7 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
   - neural-chat：https://hf-mirror.com/Locutusque/llama-3-neural-chat-v1-8b
   - dolphin：https://huggingface.co/cognitivecomputations/dolphin-2.9-llama3-8b
 - llama3 Moe增强版：计划中
+- llama3 Pro（加层版）：https://github.com/linjh1118/Llama3-Chinese-ORPO
 - v-llama3 多模态图文版：
   - Bunny-Llama-3-8B-V：https://wisemodel.cn/models/BAAI/Bunny-Llama-3-8B-V
 - agent工具能力增强版：计划中
