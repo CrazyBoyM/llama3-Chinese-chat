@@ -13,9 +13,10 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本仓库供交�
 - 近期todo：录制b站视频、封装云端训练镜像、放出量化后gguf、ollama版本及教程  
 近期（预计一个半月后）还会开源一个浏览器插件，AI笔记功能+AI思维导图功能，在跟同学一起用闲时开发（他们俩是主力哈哈），欢迎关注～。  
 
-### Chat版模型下载
-注意由于只训练了常见对话，base + sft版有可能会出现不符合预期的回复 （尤其是对于一些非常见回答），本教程更多用于优质资源整理（包含如何对llama3进行中文微调，怎样制作中文对话数据集，角色扮演、agent能力增强，扩充上下文长度，如何进行网页部署和量化，手机、电脑cpu推理部署等），将会逐渐整理补充进来。
-- shareAI系列版本
+### 可用Chat版模型整理
+注意由于只训练了常见对话，base + sft版有可能会出现不符合预期的回复 （尤其是对于一些非常见回答），本教程更多用于优质资源整理（包含如何对llama3进行中文微调，怎样制作中文对话数据集，角色扮演、agent能力增强，扩充上下文长度，如何进行网页部署和量化，手机、电脑cpu推理部署等），将会逐渐整理补充进来。  
+llama3相关对话版本优质权重整理：（欢迎issue补充）
+- shareAI系列：
   - base预训练 + 直接中文sft版:
      - V1版本：
         - OpenCSG满速下载：https://opencsg.com/models/shareAI/llama3-Chinese-chat-8b
@@ -28,7 +29,7 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本仓库供交�
   
 - 联通微调版：https://www.modelscope.cn/models/UnicomAI/Unichat-llama3-Chinese/summary
 - Openbuddy微调版：https://www.modelscope.cn/models/OpenBuddy/openbuddy-llama3-8b-v21.1-8k/summary
-- 破解安全限制版（暂时只支持英文）：
+- 破解安全限制系列（暂时只支持英文）：
   - Unholy：https://huggingface.co/Undi95/Llama-3-Unholy-8B
   - neural-chat：https://hf-mirror.com/Locutusque/llama-3-neural-chat-v1-8b
   - dolphin：https://huggingface.co/cognitivecomputations/dolphin-2.9-llama3-8b
