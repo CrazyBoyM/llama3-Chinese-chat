@@ -1,5 +1,5 @@
 # llama3-Chinese-chat
-first version of llama3 in Chinese (首个llama3 中文版)  ，本项目供学习交流演示  
+first version of llama3 in Chinese (首个llama3 中文版)  ，本仓库供交流llama3中文相关学习内容，欢迎任何人加入共建PR  
 新增网页部署：[点此查看](https://github.com/CrazyBoyM/llama3-Chinese-chat/wiki/%E7%BD%91%E9%A1%B5%E7%89%88%E6%8E%A8%E7%90%86%E6%95%99%E7%A8%8B#%E7%BD%91%E9%A1%B5%E6%8E%A8%E7%90%86)  
 ![99389B1ED347D2F327EBA422B519C90C](https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/4057d600-11e6-424f-9705-267450b6f635)
 
@@ -114,7 +114,7 @@ llama3其实本身中文能力就很强，人们说不强的知识因为在线�
 - [ ] ...
 
 ### 模型量化加速、部署
-待补充
+待补充，欢迎PR  
 
 ## 模型使用
 
