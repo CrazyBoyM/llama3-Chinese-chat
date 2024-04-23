@@ -1,6 +1,8 @@
 # llama3-Chinese-chat
 first version of llama3 in Chinese (首个llama3 中文版)  ，本仓库供交流llama3中文相关学习内容，欢迎任何人加入共建PR  
 新增网页部署：[点此查看](https://github.com/CrazyBoyM/llama3-Chinese-chat/wiki/%E7%BD%91%E9%A1%B5%E7%89%88%E6%8E%A8%E7%90%86%E6%95%99%E7%A8%8B#%E7%BD%91%E9%A1%B5%E6%8E%A8%E7%90%86)  
+
+如果你有自己微调的版本或者在网上发现有趣的特化版本，欢迎提issue收录。
 ![99389B1ED347D2F327EBA422B519C90C](https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/4057d600-11e6-424f-9705-267450b6f635)
 
 
@@ -18,15 +20,16 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本仓库供交�
 llama3相关对话版本优质权重整理：（欢迎issue补充）
 - shareAI系列：
   - base预训练 + 直接中文sft版:
-     - V1版本
+     - 训练数据：https://modelscope.cn/datasets/baicai003/Llama3-Chinese-dataset/summary 
+     - V1版
         - OpenCSG满速下载：https://opencsg.com/models/shareAI/llama3-Chinese-chat-8b
         - WiseModel满速下载：https://wisemodel.cn/models/shareAI/llama3-Chinese-chat-8b
-     - V2版本
+     - V2版
         - modelscope：https://modelscope.cn/models/baicai003/Llama3-Chinese_v2/summary
-        - 训练数据：https://modelscope.cn/datasets/baicai003/Llama3-Chinese-dataset/summary
-  - Base预训练 + 海量中文优质数据增量预训练：正在进行中 
+     - V3版（来自中国科学院大学 庄夏列）：https://modelscope.cn/models/zhuangxialie/Llama3_Chinese_Sft/files 
   - Instruct + 继续中文sft版：https://modelscope.cn/models/baicai003/llama-3-8b-Instruct-chinese_v2/summary
   - Instruct + DPO偏好中文版：正在进行中
+  - Base预训练 + 海量中文优质数据增量预训练：正在进行中 
   - 70b 中文版：计划中
 - 联通微调版：https://www.modelscope.cn/models/UnicomAI/Unichat-llama3-Chinese/summary
 - Openbuddy微调版：https://www.modelscope.cn/models/OpenBuddy/openbuddy-llama3-8b-v21.1-8k/summary
