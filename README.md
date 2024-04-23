@@ -26,7 +26,8 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
         - WiseModel满速下载：https://wisemodel.cn/models/shareAI/llama3-Chinese-chat-8b
      - V2版
         - modelscope：https://modelscope.cn/models/baicai003/Llama3-Chinese_v2/summary
-     - V3版（来自中国科学院大学 庄夏列）：https://modelscope.cn/models/zhuangxialie/Llama3_Chinese_Sft/files 
+     - V3版
+        - https://modelscope.cn/models/zhuangxialie/Llama3_Chinese_Sft/files 
   - Instruct + 继续中文sft版：https://modelscope.cn/models/baicai003/llama-3-8b-Instruct-chinese_v2/summary
   - Instruct + DPO偏好中文版：正在进行中
   - Base预训练 + 海量中文优质数据增量预训练：正在进行中 
