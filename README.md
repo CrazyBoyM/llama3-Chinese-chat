@@ -34,6 +34,7 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 - 联通微调版：https://www.modelscope.cn/models/UnicomAI/Unichat-llama3-Chinese/summary
 - Openbuddy微调版：https://www.modelscope.cn/models/OpenBuddy/openbuddy-llama3-8b-v21.1-8k/summary
 - zhichen微调版：https://github.com/seanzhang-zhichen/llama3-chinese
+- shenzhi-wang微调版：https://huggingface.co/shenzhi-wang/Llama3-8B-Chinese-Chat
 - Rookie微调版：https://github.com/Rookie1019/Llama-3-8B-Instruct-Chinese
 - 破解安全限制系列（暂时只支持英文）：
   - Unholy：https://huggingface.co/Undi95/Llama-3-Unholy-8B
@@ -72,7 +73,7 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 | [shareAI/CodeChat](https://huggingface.co/datasets/shareAI/CodeChat)                                         | 主要包含逻辑推理、代码问答、代码生成相关语料样本。                                                                                                                                                        |
 | [shareAI/ShareGPT-Chinese-English-90k](https://huggingface.co/datasets/shareAI/ShareGPT-Chinese-English-90k) | 中英文平行双语优质人机问答数据集，覆盖真实复杂场景下的用户提问。（包含大量多轮对话）                                                                                                                                          |
 | [ruozhiba](https://huggingface.co/datasets/LooksJuicy/ruozhiba)                                               | 弱智吧数据问答，据说比较锻炼模型的心智能力。                                                                                                                                                               |
-| [DPO-EN-ZH-20k]([https://huggingface.co/datasets/m-a-p/COIG-CQIA](https://huggingface.co/datasets/hiyouga/DPO-En-Zh-20k))    | 包含大量偏好对齐的问答对数据<好，差>，有助于进一步提升chat模型的对话质量，使其生成内容更加详细、适合人类偏好。                                                                             |
+| [DPO-EN-ZH-20k](https://huggingface.co/datasets/hiyouga/DPO-En-Zh-20k)    | 包含大量偏好对齐的问答对数据<好，差>，有助于进一步提升chat模型的对话质量，使其生成内容更加详细、适合人类偏好。                                                                             |
 | [glaive-function-calling-v2-sharegpt](https://huggingface.co/datasets/hiyouga/glaive-function-calling-v2-sharegpt)   | 包含大量工具函数选择、调用和具体参数数据，有助于提升模型的自主工具选择与使用能力。                                                  |
 | [Agent-FLAN](https://huggingface.co/datasets/internlm/Agent-FLAN)                                                 | (纯英文)类型同上， 包含大量工具使用数据，有助于提升模型的工具使用能力。                                            |
 | [Agent-Instruct](https://huggingface.co/datasets/THUDM/AgentInstruct)                                                 | (纯英文)类型同上， 包含大量agent演示数据，有助于提升模型的工具使用、模拟能力。                                            |
