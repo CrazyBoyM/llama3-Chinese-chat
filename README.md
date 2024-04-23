@@ -216,7 +216,7 @@ def load_model(model_name_or_path, load_in_4bit=False, adapter_name_or_path=None
 
     return model
 
-## 加载tokenzier
+## 加载tokenizer
 def load_tokenizer(model_name_or_path):
     tokenizer = AutoTokenizer.from_pretrained(
         model_name_or_path,
