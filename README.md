@@ -95,6 +95,7 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 - LLaMA-Factory - https://github.com/hiyouga/LLaMA-Factory
 - unsloth  -  https://github.com/unslothai/unsloth
 - Xtuner  -  https://github.com/SmartFlowAI/Llama3-XTuner-CN  
+- SWIFT  -  https://github.com/modelscope/swift
 
 ### Llama3 相关教程整理
 - self-llm  -   https://github.com/datawhalechina/self-llm/tree/master/LLaMA3
