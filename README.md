@@ -38,6 +38,7 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 - zhichen微调版：https://github.com/seanzhang-zhichen/llama3-chinese
 - shenzhi-wang微调版：https://huggingface.co/shenzhi-wang/Llama3-8B-Chinese-Chat
 - Rookie微调版：https://github.com/Rookie1019/Llama-3-8B-Instruct-Chinese
+- ModelScope Chinese Agent版V1：https://modelscope.cn/models/swift/Llama3-Chinese-8B-Instruct-Agent-v1/summary
 - 破解安全限制系列（暂时只支持英文）：
   - Unholy：https://huggingface.co/Undi95/Llama-3-Unholy-8B
   - neural-chat：https://hf-mirror.com/Locutusque/llama-3-neural-chat-v1-8b
