@@ -31,7 +31,7 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
      - V3版
         - https://modelscope.cn/models/zhuangxialie/Llama3_Chinese_Sft/files 
   - Instruct + 继续中文sft版：https://modelscope.cn/models/baicai003/llama-3-8b-Instruct-chinese_v2/summary
-  - Instruct + DPO偏好中文版：正在进行中
+  - Instruct + DPO偏好中文版：https://www.modelscope.cn/models/zhuangxialie/Llama3-Chinese-DPO/summary ```偏爱长对话```
   - Base预训练 + 海量中文优质数据增量预训练：正在进行中 
   - 70b 中文版：计划中
 - llama3 Pro（加block版）：
