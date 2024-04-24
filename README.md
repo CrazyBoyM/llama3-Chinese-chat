@@ -33,6 +33,9 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
   - Instruct + DPO偏好中文版：正在进行中
   - Base预训练 + 海量中文优质数据增量预训练：正在进行中 
   - 70b 中文版：计划中
+- llama3 Pro（加block版）：
+  - ORPO + 2block：https://github.com/linjh1118/Llama3-Chinese-ORPO
+- llama3 Moe增强版：计划中
 - 联通微调版：https://www.modelscope.cn/models/UnicomAI/Unichat-llama3-Chinese/summary
 - Openbuddy微调版：https://www.modelscope.cn/models/OpenBuddy/openbuddy-llama3-8b-v21.1-8k/summary
 - zhichen微调版：https://github.com/seanzhang-zhichen/llama3-chinese
@@ -42,9 +45,6 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
   - Unholy：https://huggingface.co/Undi95/Llama-3-Unholy-8B
   - neural-chat：https://hf-mirror.com/Locutusque/llama-3-neural-chat-v1-8b
   - dolphin：https://huggingface.co/cognitivecomputations/dolphin-2.9-llama3-8b
-- llama3 Moe增强版：计划中
-- llama3 Pro（加block版）：
-  - ORPO + 2block：https://github.com/linjh1118/Llama3-Chinese-ORPO  
 - v-llama3 多模态图文版：（支持视觉问答）
   - Bunny-Llama-3-8B-V：https://wisemodel.cn/models/BAAI/Bunny-Llama-3-8B-V
   - llava-llama-3-8b：https://huggingface.co/xtuner/llava-llama-3-8b-v1_1
