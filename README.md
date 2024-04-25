@@ -19,7 +19,6 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本仓库供交�
 ### 可用Chat版模型整理
 注意由于只训练了常见对话，base + sft版有可能会出现不符合预期的回复 （尤其是对于一些非常见回答），本教程更多用于优质资源整理（包含如何对llama3进行中文微调，怎样制作中文对话数据集，角色扮演、agent能力增强，扩充上下文长度，如何进行网页部署和量化，手机、电脑cpu推理部署等），将会逐渐整理补充进来。  
 llama3相关对话版本优质权重整理：（欢迎issue补充）
-- 中文微调数据集部分汇总 - https://modelscope.cn/datasets/zhuangxialie/Llama3-Chinese-Dataset/summary
 - shareAI系列：
   - base预训练 + 直接中文sft版:
      - 训练数据：https://modelscope.cn/datasets/baicai003/Llama3-Chinese-dataset/summary 
@@ -31,10 +30,11 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
   - Instruct + 继续中文sft版：https://modelscope.cn/models/baicai003/llama-3-8b-Instruct-chinese_v2/summary
   - Base预训练 + 海量中文优质数据增量预训练：正在进行中 
   - 70b 中文版：计划中
--  下面几个版本，因对话格式不同暂时不支持网页部署，需要用[fastchat](https://github.com/lm-sys/FastChat)体验：
-    - https://modelscope.cn/models/zhuangxialie/Llama3_Chinese_Sft/files 
-    - Instruct + DPO偏好中文版：https://www.modelscope.cn/models/zhuangxialie/Llama3-Chinese-DPO/summary ```偏爱长对话```
-    - Base + ORPO偏好中文版：https://modelscope.cn/models/zhuangxialie/Llama3-Chinese-ORPO/summary ```偏爱长对话```
+-  下面几个版本因对话模版格式不同暂时不支持网页部署推理，需要用[fastchat](https://github.com/lm-sys/FastChat)体验：
+    - 训练用数据集：https://modelscope.cn/datasets/zhuangxialie/Llama3-Chinese-Dataset/summary (已经转换到sharegpt格式)
+    - Base + 中文SFT：https://modelscope.cn/models/zhuangxialie/Llama3_Chinese_Sft/files
+    - Base + ORPO：https://modelscope.cn/models/zhuangxialie/Llama3-Chinese-ORPO/summary ```偏爱长对话```
+    - Instruct + DPO：https://www.modelscope.cn/models/zhuangxialie/Llama3-Chinese-DPO/summary ```偏爱长对话```
 - llama3 Pro（加block版，推荐尝试该方案上做更多探索）：
   - 首个扩展2Block + ORPO偏好对齐：https://github.com/linjh1118/Llama3-Chinese-ORPO
 - llama3 Moe增强版：计划中
@@ -96,6 +96,9 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 
 | 
 自己造的数据 | 正在继续加紧制造中，包含代码生成、debug、长上下文任务，写邮件，写古诗等，用于后期进一步提升llama3中文能力|
+[中文对话微调数据集部分汇总，高速下载](https://modelscope.cn/datasets/zhuangxialie/Llama3-Chinese-Dataset/dataPeview)(已经转换到sharegpt格式)
+![image](https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/608e6953-5b1d-45ba-a0cd-4f1c80256538)
+
 欢迎提issue补充，要求中文且一问一答形式，适合用于提升llama3任务能力的数据集
 
 ### 可用训练工具整理
