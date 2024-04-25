@@ -31,11 +31,10 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
   - Base预训练 + 海量中文优质数据增量预训练：正在进行中 
   - 70b 中文版：计划中
 -  下面几个版本因对话模版格式不同暂时不支持网页部署推理，需要用[fastchat](https://github.com/lm-sys/FastChat)体验：
-    - 训练用数据集：https://modelscope.cn/datasets/zhuangxialie/Llama3-Chinese-Dataset/summary (已经转换到sharegpt格式)
     - Base + 中文SFT：https://modelscope.cn/models/zhuangxialie/Llama3_Chinese_Sft/files
     - Base + ORPO：https://modelscope.cn/models/zhuangxialie/Llama3-Chinese-ORPO/summary ```偏爱长对话```
     - Instruct + DPO：https://www.modelscope.cn/models/zhuangxialie/Llama3-Chinese-DPO/summary ```偏爱长对话```
-- llama3 Pro（加block版，推荐尝试该方案上做更多探索）：
+- llama3 Pro（加block版，推荐网友积极在该方案上做更多尝试、探索）：
   - 首个扩展2Block + ORPO偏好对齐：https://github.com/linjh1118/Llama3-Chinese-ORPO
 - llama3 Moe增强版：计划中
 - 联通微调版：https://www.modelscope.cn/models/UnicomAI/Unichat-llama3-Chinese/summary
@@ -86,18 +85,16 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 | [ruozhiba](https://huggingface.co/datasets/LooksJuicy/ruozhiba)                                               | 弱智吧数据问答，据说比较锻炼模型的心智能力。                                                                                                                                                               |
 | [DPO-EN-ZH-20k](https://huggingface.co/datasets/hiyouga/DPO-En-Zh-20k)    | 包含大量偏好对齐的问答对数据<好，差>，有助于进一步提升chat模型的对话质量，使其生成内容更加详细、适合人类偏好。                                                                             |
 | [glaive-function-calling-v2-sharegpt](https://huggingface.co/datasets/hiyouga/glaive-function-calling-v2-sharegpt)   | 包含大量工具函数选择、调用和具体参数数据，有助于提升模型的自主工具选择与使用能力。                                                  |
-| [Agent-FLAN](https://huggingface.co/datasets/internlm/Agent-FLAN)                                                 | (纯英文)类型同上， 包含大量工具使用数据，有助于提升模型的工具使用能力。                                            |
-| [Agent-Instruct](https://huggingface.co/datasets/THUDM/AgentInstruct)                                                 | (纯英文)类型同上， 包含大量agent演示数据，有助于提升模型的工具使用、模拟能力。                                            |
-| [CogVLM-sft-311K](https://huggingface.co/datasets/THUDM/CogVLM-SFT-311K)                                                | (中文) 包含带图片问答数据，可以训练模型看图问答、看图生成代码能力。                                            |
+| [Agent-FLAN](https://huggingface.co/datasets/internlm/Agent-FLAN)                                         | (纯英文)类型同上， 包含大量工具使用数据，有助于提升模型的工具使用能力。                                            |
+| [Agent-Instruct](https://huggingface.co/datasets/THUDM/AgentInstruct)                                       | (纯英文)类型同上， 包含大量agent演示数据，有助于提升模型的工具使用、模拟能力。                                            |
+| [CogVLM-sft-311K](https://huggingface.co/datasets/THUDM/CogVLM-SFT-311K)                                    | (中文) 包含带图片问答数据，可以训练模型看图问答、看图生成代码能力。                                            |
+| [ShareGPT4-V ](https://huggingface.co/datasets/Lin-Chen/ShareGPT4V)                                         | (英文) 类型同上，包含带图片问答数据，可以训练模型看图问答、看图生成代码能力。                                            |
 | [web-QA](https://huggingface.co/datasets/THUDM/webglm-qa)                                    | (纯英文) 包含大量（网页文章 -> 问题 -> 答案)数据，可以提升模型在RAG、文档问答、网页问答等垂直场景表现能力。欢迎翻译成中文进行开源                   |
 | [Humaneval-x](https://huggingface.co/datasets/THUDM/humaneval-x)                                      | (纯英文) 包含cpp、java、go、js等代码的测试数据，可以评测模型生成代码能力。                                            |
 | [longBench](https://huggingface.co/datasets/THUDM/LongBench)                                     | (中、英文) 包含长样本问答数据，可以评测模型在输入内容比较长时候的任务能力。（长上下文）                                            |
 
-
-| 
-自己造的数据 | 正在继续加紧制造中，包含代码生成、debug、长上下文任务，写邮件，写古诗等，用于后期进一步提升llama3中文能力|
-[中文对话微调数据集部分汇总，高速下载](https://modelscope.cn/datasets/zhuangxialie/Llama3-Chinese-Dataset/dataPeview)(已经转换到sharegpt格式)
-![image](https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/608e6953-5b1d-45ba-a0cd-4f1c80256538)
+中文对话微调数据集[高速下载](https://modelscope.cn/datasets/zhuangxialie/Llama3-Chinese-Dataset/dataPeview)(部分汇总，已经统一转换到sharegpt格式)  
+<img src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/608e6953-5b1d-45ba-a0cd-4f1c80256538" width="500">
 
 欢迎提issue补充，要求中文且一问一答形式，适合用于提升llama3任务能力的数据集
 
@@ -109,8 +106,12 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 - Xtuner  -  https://github.com/SmartFlowAI/Llama3-XTuner-CN  
 - SWIFT  -  https://github.com/modelscope/swift
 
-### Llama3 相关教程整理
-- self-llm  -   https://github.com/datawhalechina/self-llm/tree/master/LLaMA3
+### Llama3 相关教程推荐
+- Self-LLM
+  - [后端API部署](https://github.com/datawhalechina/self-llm/blob/master/LLaMA3/01-LLaMA3-8B-Instruct%20FastApi%20%E9%83%A8%E7%BD%B2%E8%B0%83%E7%94%A8.md)
+  - [langchain教程文档](https://github.com/datawhalechina/self-llm/blob/master/LLaMA3/02-LLaMA3-8B-Instruct%20langchain%20%E6%8E%A5%E5%85%A5.md)
+  - [streamlit部署](https://github.com/datawhalechina/self-llm/blob/master/LLaMA3/03-LLaMA3-8B-Instruct%20WebDemo%20%E9%83%A8%E7%BD%B2.md)
+  - [极简LoRA训练](https://github.com/datawhalechina/self-llm/blob/master/LLaMA3/04-LLaMA3-8B-Instruct%20Lora%20%E5%BE%AE%E8%B0%83.md)
 
 ## Star History
 
@@ -126,10 +127,10 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 - [ ] 模型vllm支持、推理教程
 - [ ] 电脑本地cpu跑模型
 - [ ] 手机端推理模型
-- [ ] 扩充优质训练数据集
-- [ ] 扩充上下文长度
+- [x] 扩充优质训练数据集
+- [x] 扩充上下文长度
 - [ ] 角色扮演增强模型
-- [ ] agent工具调用能力增强模型
+- [x] agent工具调用能力增强模型
 - [ ] ...
 
 ### 模型量化加速、部署
