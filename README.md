@@ -31,7 +31,7 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
   - Instruct + 继续中文sft版：https://modelscope.cn/models/baicai003/llama-3-8b-Instruct-chinese_v2/summary
   - Base预训练 + 海量中文优质数据增量预训练：正在进行中 
   - 70b 中文版：计划中
--  因对话格式不同暂时不支持网页部署，需要用fastchat体验：
+-  下面几个版本，因对话格式不同暂时不支持网页部署，需要用[fastchat](https://github.com/lm-sys/FastChat)体验：
     - https://modelscope.cn/models/zhuangxialie/Llama3_Chinese_Sft/files 
     - Instruct + DPO偏好中文版：https://www.modelscope.cn/models/zhuangxialie/Llama3-Chinese-DPO/summary ```偏爱长对话```
     - Base + ORPO偏好中文版：https://modelscope.cn/models/zhuangxialie/Llama3-Chinese-ORPO/summary ```偏爱长对话```
