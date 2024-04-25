@@ -29,12 +29,12 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
      - V2版
         - modelscope：https://modelscope.cn/models/baicai003/Llama3-Chinese_v2/summary
   - Instruct + 继续中文sft版：https://modelscope.cn/models/baicai003/llama-3-8b-Instruct-chinese_v2/summary
-  -  因对话格式不同暂时不支持网页部署，需要用fastchat体验：
+  - Base预训练 + 海量中文优质数据增量预训练：正在进行中 
+  - 70b 中文版：计划中
+-  因对话格式不同暂时不支持网页部署，需要用fastchat体验：
     - https://modelscope.cn/models/zhuangxialie/Llama3_Chinese_Sft/files 
     - Instruct + DPO偏好中文版：https://www.modelscope.cn/models/zhuangxialie/Llama3-Chinese-DPO/summary ```偏爱长对话```
     - Base + ORPO偏好中文版：https://modelscope.cn/models/zhuangxialie/Llama3-Chinese-ORPO/summary ```偏爱长对话```
-  - Base预训练 + 海量中文优质数据增量预训练：正在进行中 
-  - 70b 中文版：计划中
 - llama3 Pro（加block版，推荐尝试该方案上做更多探索）：
   - 首个扩展2Block + ORPO偏好对齐：https://github.com/linjh1118/Llama3-Chinese-ORPO
 - llama3 Moe增强版：计划中
@@ -60,7 +60,7 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 ### llama3上下文长度扩展32K方法
 直接把模型文件夹config.json中max_position_embeddings改为32768，rope_theta改为1000000或者4000000  
 即可在几乎无性能损失情况下将llama3的上下文从8k拉长到32k，从而适配大部分长上下文任务。  
-（该方法由@岁月提示。）
+（该方法由@岁月提示,适用于instruct版本，base未测试）
 
 ### 模型推理成本
 - fp16 模式
