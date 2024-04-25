@@ -24,7 +24,7 @@ def replace_keywords_and_remove_lines(input_file, output_file):
 
 
 # 指定输入文件和输出文件的路径
-input_file_path = "。/dataset/v2/merged.jsonl"
+input_file_path = "./dataset/v2/merged.jsonl"
 output_file_path = "./train_v2.jsonl"
 
 # 调用函数进行关键词替换和删除行
