@@ -69,7 +69,7 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 
 | 名称 | 群聊二维码 | 名称 | 群聊二维码 | 
 |---------|---------|---------|---------|
-| llama3 中文交流QQ群 | <img width="250" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/0bfa3300-45b1-4c24-8d15-0f1c6b69c9ee"> | 优质中文数据整理建设群 | <img width="250" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/77110656-0a87-419c-a21f-29bf1c2ca22b"> | 
+| llama3 中文交流QQ群 | <img width="260" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/83a3d1e9-d1ae-4eed-91b5-20589407581e"> | 优质中文数据整理建设群 | <img width="260" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/77110656-0a87-419c-a21f-29bf1c2ca22b"> | 
 
 后面我也会在b站录制相关模型部署推理、训练的演示教程视频，我的个人b站：https://space.bilibili.com/291593914  
 
