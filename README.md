@@ -95,7 +95,7 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 
 
 ### 中文对话微调数据集打包  
-已经转换好，开箱即用：
+已经转换好，开箱即用：  
 1、[firefly可用格式](https://modelscope.cn/datasets/baicai003/Llama3-Chinese-dataset/summary)  
 2、[llama-factory可用格式（sharegpt格式）](https://modelscope.cn/datasets/zhuangxialie/Llama3-Chinese-Dataset/dataPeview)  
 
