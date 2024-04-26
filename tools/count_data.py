@@ -6,10 +6,10 @@ def count_jsonl(input_file):
     with open(input_file, 'r', encoding='utf-8') as f_input:
         for line in f_input:
             if len(line) > max_len:
-                max_len = len(line)
+                max_len = len(line.strip().split())
             if len(line) < min_len:
-                min_len = len(line)
-            total_len += len(line)
+                min_len = len(line.strip().split())
+            total_len += len(line.strip().split())
             count += 1
         
         print("max_len: ", max_len)
