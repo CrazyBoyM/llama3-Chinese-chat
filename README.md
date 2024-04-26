@@ -91,11 +91,14 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 | [web-QA](https://huggingface.co/datasets/THUDM/webglm-qa)                                    | (纯英文) 包含大量（网页文章 -> 问题 -> 答案)数据，可以提升模型在RAG、文档问答、网页问答等垂直场景表现能力。欢迎翻译成中文进行开源                   |
 | [Humaneval-x](https://huggingface.co/datasets/THUDM/humaneval-x)                                      | (纯英文) 包含cpp、java、go、js等代码的测试数据，可以评测模型生成代码能力。                                            |
 | [longBench](https://huggingface.co/datasets/THUDM/LongBench)                                     | (中、英文) 包含长样本问答数据，可以评测模型在输入内容比较长时候的任务能力。（长上下文）                                            |
-
-中文对话微调数据集[高速下载](https://modelscope.cn/datasets/zhuangxialie/Llama3-Chinese-Dataset/dataPeview)(部分汇总，已经统一转换到sharegpt格式)  
-<img src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/608e6953-5b1d-45ba-a0cd-4f1c80256538" width="500">
-
 欢迎提issue补充，要求中文且一问一答形式，适合用于提升llama3任务能力的数据集
+
+
+### 中文对话微调数据集打包  
+已经转换好，开箱即用：
+[firefly可用格式](https://modelscope.cn/datasets/baicai003/Llama3-Chinese-dataset/summary)
+[llama-factory可用格式 - sharegpt格式](https://modelscope.cn/datasets/zhuangxialie/Llama3-Chinese-Dataset/dataPeview)
+<img src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/608e6953-5b1d-45ba-a0cd-4f1c80256538" width="500">
 
 ### 可用训练工具整理
 下面的库都是相当好用的，代码封装简洁又清晰，如果你也想微调个自己的llama3 中文定制版，不要错过～
