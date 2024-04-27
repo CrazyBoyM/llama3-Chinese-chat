@@ -1,4 +1,4 @@
-# llama3-Chinese-chat
+![image](https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/240caf5a-af30-4d16-ae41-d0191cfad94d)# llama3-Chinese-chat
 first version of llama3 in Chinese (首个llama3 中文版)  ，本仓库供交流llama3中文相关学习内容，欢迎任何人加入共建PR  
 新增Phi3模型中文资料仓库（性能超越llama3 8b，以小搏大)，正在适配中，欢迎关注：https://github.com/CrazyBoyM/phi3-Chinese  
 新增网页部署：[点此查看](https://github.com/CrazyBoyM/llama3-Chinese-chat/wiki/%E7%BD%91%E9%A1%B5%E7%89%88%E6%8E%A8%E7%90%86%E6%95%99%E7%A8%8B#%E7%BD%91%E9%A1%B5%E6%8E%A8%E7%90%86)  
@@ -27,6 +27,7 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
         - WiseModel满速下载：https://wisemodel.cn/models/shareAI/llama3-Chinese-chat-8b
      - V2版
         - modelscope：https://modelscope.cn/models/baicai003/Llama3-Chinese_v2/summary
+        - 云服务器镜像在线体验（点击即用，短时体验）：https://www.suanyun.cn/console/share?uuid=b1ba51908f8a4bd1af37148765c293ee  
   - Instruct + 继续中文sft版：https://modelscope.cn/models/baicai003/llama-3-8b-Instruct-chinese_v2/summary
   - Base预训练 + 海量中文优质数据增量预训练：正在进行中 
   - 70b 中文版：计划中
@@ -70,18 +71,21 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 | LLaMA3-8B Instruct             |   67.1   | 
 | LLaMA3-8B Instruct（shareAI-V2）|   67.2   | 
 
+### llama3上下文长度简单无损三步扩张法 - 32K、200K
+1、直接打开任意下载后llama3微调版本模型文件夹，  
+2、把config.json中max_position_embeddings改为32768，（32k)  
+3、rope_theta改为1000000或者4000000  
+即可在几乎无性能损失情况下将llama3的上下文从8k拉长到32k，从而适配大部分长上下文任务。  
+（该方法由群友“@岁月”分享,适用于Instruct版本，猜测可能是官方已经训练过超长上下文数据了）
+评测实验：  
+<img src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/27b4796d-ea42-4cd4-86ed-076f35df56cb" width=520>  
+可以看到，当长度扩展到96K时，依然没什么性能上损失。
+
 ### 模型推理成本
 - fp16 模式
   大概占用16G显存，推荐24G显卡使用
 - int4模式
   大概占用8G显存，推荐至少10G显存使用，**需要自行搜索修改代码中load_in_4bit=True**
-
-### llama3上下文长度简单无损三步扩张法 - 32K、200K
-1、直接打开任意下载后llama3微调版本模型文件夹，  
-2、把config.json中max_position_embeddings改为32768，  
-3、rope_theta改为1000000或者4000000  
-即可在几乎无性能损失情况下将llama3的上下文从8k拉长到32k，从而适配大部分长上下文任务。  
-（该方法由群友“@岁月”分享,适用于Instruct版本，猜测可能是官方已经训练过超长上下文数据了）
 
 | 名称 | 群聊二维码 | 名称 | 群聊二维码 | 
 |---------|---------|---------|---------|
