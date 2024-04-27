@@ -35,13 +35,14 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
     - Base + ORPO：https://modelscope.cn/models/zhuangxialie/Llama3-Chinese-ORPO/summary ```偏爱长对话```
     - Instruct + DPO：https://www.modelscope.cn/models/zhuangxialie/Llama3-Chinese-DPO/summary ```偏爱长对话```
 - llama3 Pro（加block版，推荐网友积极在该方案上做更多尝试、探索）：
-  - 首个扩展2Block + ORPO偏好对齐：https://github.com/linjh1118/Llama3-Chinese-ORPO
+  - linjh1118网友（第一个ORPO偏好对齐 + 扩展2Block）：https://github.com/linjh1118/Llama3-Chinese-ORPO
 - llama3 Moe增强版：计划中
-- 联通微调版：https://www.modelscope.cn/models/UnicomAI/Unichat-llama3-Chinese/summary
-- Openbuddy微调版：https://www.modelscope.cn/models/OpenBuddy/openbuddy-llama3-8b-v21.1-8k/summary
-- zhichen微调版：https://github.com/seanzhang-zhichen/llama3-chinese
-- shenzhi-wang微调版：https://huggingface.co/shenzhi-wang/Llama3-8B-Chinese-Chat
-- Rookie微调版：https://github.com/Rookie1019/Llama-3-8B-Instruct-Chinese
+- 联通微调版（SFT，网友尝试反馈幻觉多）：https://www.modelscope.cn/models/UnicomAI/Unichat-llama3-Chinese/summary
+- 联通微调版v2 (28k上下文，推荐尝试一下）：https://huggingface.co/UnicomLLM/Unichat-llama3-Chinese-8B-28K
+- Openbuddy微调版（SFT，据说不错）：https://www.modelscope.cn/models/OpenBuddy/openbuddy-llama3-8b-v21.1-8k/summary
+- zhichen微调版（ORPO方法，应该是第一个orpo）：https://github.com/seanzhang-zhichen/llama3-chinese
+- shenzhi-wang微调版（ORPO方法，说是第一个orpo）：https://huggingface.co/shenzhi-wang/Llama3-8B-Chinese-Chat
+- Rookie微调版（SFT）：https://github.com/Rookie1019/Llama-3-8B-Instruct-Chinese
 - 破解安全限制系列（暂时只支持英文）：
   - Unholy：https://huggingface.co/Undi95/Llama-3-Unholy-8B
   - neural-chat：https://hf-mirror.com/Locutusque/llama-3-neural-chat-v1-8b
@@ -50,7 +51,7 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
   - Bunny-Llama-3-8B-V：https://wisemodel.cn/models/BAAI/Bunny-Llama-3-8B-V
   - llava-llama-3-8b：https://huggingface.co/xtuner/llava-llama-3-8b-v1_1
 - agent工具能力增强版：
-  - ModelScope Chinese Agent版V1：https://modelscope.cn/models/swift/Llama3-Chinese-8B-Instruct-Agent-v1/summary
+  - ModelScope Chinese Agent版V1（可根据要求帮你选择工具）：https://modelscope.cn/models/swift/Llama3-Chinese-8B-Instruct-Agent-v1/summary
 - 小说、网文、故事撰写任务增强版：计划中
 - 音乐生成任务版：计划中
 - 猫娘扮演版：计划中
