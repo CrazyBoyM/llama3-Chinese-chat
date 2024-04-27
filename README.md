@@ -71,15 +71,16 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 | LLaMA3-8B Instruct             |   67.1   | 
 | LLaMA3-8B Instruct（shareAI-V2）|   67.2   | 
 
-### llama3上下文长度简单无损三步扩张法 - 32K、200K
-1、直接打开任意下载后llama3微调版本模型文件夹，  
-2、把config.json中max_position_embeddings改为32768，（32k)  
+### llama3上下文长度简单无损三步扩张法（32K、96K）
+1、直接打开任意下载后llama3微调版本模型文件夹  
+2、把config.json中max_position_embeddings改为32768（32k)   
 3、rope_theta改为1000000或者4000000  
 即可在几乎无性能损失情况下将llama3的上下文从8k拉长到32k，从而适配大部分长上下文任务。  
 （该方法由群友“@岁月”分享,适用于Instruct版本，猜测可能是官方已经训练过超长上下文数据了）
 评测实验：  
 <img src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/27b4796d-ea42-4cd4-86ed-076f35df56cb" width=520>  
-可以看到，当长度扩展到96K时，依然没什么性能上损失。
+可以看到，当长度扩展到96K时，依然没什么性能上损失。  
+链接源：https://github.com/OpenAccess-AI-Collective/axolotl/pull/1567
 
 ### 模型推理成本
 - fp16 模式
