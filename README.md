@@ -17,18 +17,18 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本仓库供交�
 近期（预计一个半月后）还会开源一个浏览器插件，AI笔记功能+AI思维导图功能，在跟同学一起用闲时开发（他们俩是主力哈哈），欢迎关注～。  
 
 ### 可用Chat版模型整理
-注意由于只训练了常见对话，base + sft版有可能会出现不符合预期的回复 （尤其是对于一些非常见回答），本教程更多用于优质资源整理（包含如何对llama3进行中文微调，怎样制作中文对话数据集，角色扮演、agent能力增强，扩充上下文长度，如何进行网页部署和量化，手机、电脑cpu推理部署等），将会逐渐整理补充进来。  
 llama3相关对话版本优质权重整理：（欢迎issue补充）
 - shareAI系列：
-  - base预训练 + 直接中文sft版:
+  - base预训练 + 直接中文SFT版:
      - 训练数据：https://modelscope.cn/datasets/baicai003/Llama3-Chinese-dataset/summary 
      - V1版
         - OpenCSG满速下载：https://opencsg.com/models/shareAI/llama3-Chinese-chat-8b
         - WiseModel满速下载：https://wisemodel.cn/models/shareAI/llama3-Chinese-chat-8b
      - V2版
-        - modelscope：https://modelscope.cn/models/baicai003/Llama3-Chinese_v2/summary
-        - 云服务器镜像在线体验（点击即用，短时体验）：https://www.suanyun.cn/console/share?uuid=b1ba51908f8a4bd1af37148765c293ee  
-  - Instruct + 继续中文sft版：https://modelscope.cn/models/baicai003/llama-3-8b-Instruct-chinese_v2/summary
+        - modelscope：https://modelscope.cn/models/baicai003/Llama3-Chinese_v2/summary 
+  - Instruct + 继续中文SFT版：
+    - modelscope模型下载：https://modelscope.cn/models/baicai003/llama-3-8b-Instruct-chinese_v2/summary
+    - 云服务器镜像在线体验（点击即用，短时体验）：https://www.suanyun.cn/console/share?uuid=b1ba51908f8a4bd1af37148765c293ee 
   - Base预训练 + 海量中文优质数据增量预训练：正在进行中 
   - 70b 中文版：计划中
 -  下面几个版本因对话模版格式不同暂时不支持网页部署推理，需要用[fastchat](https://github.com/lm-sys/FastChat)体验：
@@ -58,6 +58,8 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 - 猫娘扮演版：计划中
 - 涩涩版：计划中
 
+
+注意由于只训练了常见对话，Base + SFT版有可能会出现不符合预期的回复 （尤其是对于一些非常见回答），本教程更多用于优质资源整理（包含如何对llama3进行中文微调，怎样制作中文对话数据集，角色扮演、agent能力增强，扩充上下文长度，如何进行网页部署和量化，手机、电脑cpu推理部署等），将会逐渐整理补充进来。  
 ### 模型评测
 | Model                 |   MMLU   |  C-Eval  |  TriviaQA-Wiki   | 
 |:----------------------|:--------:|:--------:|:--------:|
