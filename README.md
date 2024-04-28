@@ -28,7 +28,7 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
         - modelscope：https://modelscope.cn/models/baicai003/Llama3-Chinese_v2/summary 
   - Instruct + 继续中文SFT版：
     - modelscope模型下载：https://modelscope.cn/models/baicai003/llama-3-8b-Instruct-chinese_v2/summary
-    - 云服务器镜像在线体验（点击即用，短时体验）：https://www.suanyun.cn/console/share?uuid=b1ba51908f8a4bd1af37148765c293ee 
+    - 云服务器镜像在线体验（点击即用，免费 4 小时）：https://www.suanyun.cn/console/share?uuid=b1ba51908f8a4bd1af37148765c293ee 
   - Base预训练 + 海量中文优质数据增量预训练：正在进行中 
   - 70b 中文版：计划中
 -  下面几个版本因对话模版格式不同暂时不支持网页部署推理，需要用[fastchat](https://github.com/lm-sys/FastChat)体验：
@@ -41,13 +41,14 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 - 长上下文版本：
   - 联通微调版v2 (中文，28k上下文）：https://huggingface.co/UnicomLLM/Unichat-llama3-Chinese-8B-28K
   - 262k上下文（英文）：https://huggingface.co/gradientai/Llama-3-8B-Instruct-262k
-  - 262k上下文（英文）：计划中
+  - 262k上下文（中文）：计划中
   - 无限上下文版本：计划中，参考：https://medium.com/neoxia/llm-infini-attention-with-linear-complexity-3209b87a77c3
-- 联通微调版（SFT，网友尝试反馈幻觉多）：https://www.modelscope.cn/models/UnicomAI/Unichat-llama3-Chinese/summary
-- Openbuddy微调版（SFT，据说不错）：https://www.modelscope.cn/models/OpenBuddy/openbuddy-llama3-8b-v21.1-8k/summary
-- zhichen微调版（ORPO方法，应该是第一个orpo）：https://github.com/seanzhang-zhichen/llama3-chinese
-- shenzhi-wang微调版（ORPO方法，说是第一个orpo）：https://huggingface.co/shenzhi-wang/Llama3-8B-Chinese-Chat
-- Rookie微调版（SFT）：https://github.com/Rookie1019/Llama-3-8B-Instruct-Chinese
+- 其他普通中文微调版本：
+  - 联通微调版（SFT，网友尝试反馈幻觉多）：https://www.modelscope.cn/models/UnicomAI/Unichat-llama3-Chinese/summary
+  - Openbuddy微调版（SFT，据说不错）：https://www.modelscope.cn/models/OpenBuddy/openbuddy-llama3-8b-v21.1-8k/summary
+  - zhichen微调版（ORPO方法，应该是第一个orpo）：https://github.com/seanzhang-zhichen/llama3-chinese
+  - shenzhi-wang微调版（ORPO方法，说是第一个orpo）：https://huggingface.co/shenzhi-wang/Llama3-8B-Chinese-Chat
+  - Rookie微调版（SFT）：https://github.com/Rookie1019/Llama-3-8B-Instruct-Chinese
 - 破解安全限制系列（暂时只支持英文）：
   - Unholy：https://huggingface.co/Undi95/Llama-3-Unholy-8B
   - neural-chat：https://hf-mirror.com/Locutusque/llama-3-neural-chat-v1-8b
