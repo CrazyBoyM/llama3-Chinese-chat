@@ -49,6 +49,7 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
   - zhichen微调版（ORPO方法，应该是第一个orpo）：https://github.com/seanzhang-zhichen/llama3-chinese
   - shenzhi-wang微调版（ORPO方法，说是第一个orpo）：https://huggingface.co/shenzhi-wang/Llama3-8B-Chinese-Chat
   - Rookie微调版（SFT）：https://github.com/Rookie1019/Llama-3-8B-Instruct-Chinese
+  - hit-sz klc lab 微调版本：[https://github.com/zyg18181818/Llama-3-Chinese](https://github.com/zyg18181818/Llama-3-Chinese)
 - 破解安全限制系列（暂时只支持英文）：
   - Unholy：https://huggingface.co/Undi95/Llama-3-Unholy-8B
   - neural-chat：https://hf-mirror.com/Locutusque/llama-3-neural-chat-v1-8b
@@ -99,11 +100,24 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 可以看到，当长度扩展到96K时，依然没什么性能上损失。  
 链接源：https://github.com/OpenAccess-AI-Collective/axolotl/pull/1567
 
-### 模型推理成本
-- fp16 模式
-  大概占用16G显存，推荐24G显卡使用
-- int4模式
-  大概占用8G显存，推荐至少10G显存使用，**需要自行搜索修改代码中load_in_4bit=True**
+### 模型及训练推理成本
+- 推理
+  - fp16 模式
+    大概占用16G显存，推荐24G显卡使用
+  - int4模式
+    大概占用8G显存，推荐至少10G显存使用，**需要自行搜索修改代码中load_in_4bit=True**
+
+- 训练
+
+| Method            | Bits | 7B    | 13B   | 30B   | 70B    | 8x7B  |
+| ----------------- | ---- | ----- | ----- | ----- | ------ | ----- |
+| Full              | AMP  | 120GB | 240GB | 600GB | 1200GB | 900GB |
+| Full              | 16   | 60GB  | 120GB | 300GB | 600GB  | 400GB |
+| LoRA/GaLore/BAdam | 16   | 16GB  | 32GB  | 64GB  | 160GB  | 120GB |
+| QLoRA             | 8    | 10GB  | 20GB  | 40GB  | 80GB   | 60GB  |
+| QLoRA             | 4    | 6GB   | 12GB  | 24GB  | 48GB   | 30GB  |
+
+### 
 
 | 名称 | 群聊二维码 | 名称 | 群聊二维码 | 
 |---------|---------|---------|---------|
