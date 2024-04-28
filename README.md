@@ -72,11 +72,21 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 | LLaMA3-8B             |   66.6   |   49.8   |   81.4   |
 | LLaMA3-8B（shareAI-V2）|   66.2   |   50.9   |   81.8   |
 
-| Instruct Model                 |   MMLU   | 
+
+| Instruct Model                 |   MMLU   |
 |:-------------------------------|:--------:|
 |                                |  5-shot  |
-| LLaMA3-8B Instruct             |   67.1   | 
-| LLaMA3-8B Instruct（shareAI-V2）|   67.2   | 
+| LLaMA3-8B Instruct             |   67.1   |
+| LLaMA3-8B Instruct（shareAI-V2）|   67.2   |
+
+
+| Instruct Model                 |   MMLU   |  C-Eval  |TriviaQA-Wiki| 
+|:-------------------------------|:--------:|:--------:|:--------:|
+|                                |OpenCompass|OpenCompass|OpenCompass|
+| LLaMA3-8B Instruct             |   64.8   |   68.11  |   52.24  | 
+|llama-3-8b-Instruct-chinese_v2  |   64.22  |   67.47  |   51.8   | 
+
+备注: OpenCompass测评过程详见[[Llama3][InternLM2]**OpenCompass 大模型评测Llama3-instruct-8B 中文版_v2** [OpenCompass] - 知乎](https://zhuanlan.zhihu.com/p/694922988)
 
 ### llama3上下文长度简单无损三步扩张法（32K、96K）
 1、直接打开任意下载后llama3微调版本模型文件夹  
