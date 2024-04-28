@@ -38,8 +38,12 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 - llama3 Pro（加block版，推荐网友积极在该方案上做更多尝试、探索）：
   - linjh1118网友（第一个ORPO偏好对齐 + 扩展2*blocks）：https://github.com/linjh1118/Llama3-Chinese-ORPO
 - llama3 Moe增强版：计划中
+- 长上下文版本：
+  - 联通微调版v2 (中文，28k上下文）：https://huggingface.co/UnicomLLM/Unichat-llama3-Chinese-8B-28K
+  - 262k上下文（英文）：https://huggingface.co/gradientai/Llama-3-8B-Instruct-262k
+  - 262k上下文（英文）：计划中
+  - 无限上下文版本：计划中，参考：https://medium.com/neoxia/llm-infini-attention-with-linear-complexity-3209b87a77c3
 - 联通微调版（SFT，网友尝试反馈幻觉多）：https://www.modelscope.cn/models/UnicomAI/Unichat-llama3-Chinese/summary
-- 联通微调版v2 (28k上下文，推荐尝试一下）：https://huggingface.co/UnicomLLM/Unichat-llama3-Chinese-8B-28K
 - Openbuddy微调版（SFT，据说不错）：https://www.modelscope.cn/models/OpenBuddy/openbuddy-llama3-8b-v21.1-8k/summary
 - zhichen微调版（ORPO方法，应该是第一个orpo）：https://github.com/seanzhang-zhichen/llama3-chinese
 - shenzhi-wang微调版（ORPO方法，说是第一个orpo）：https://huggingface.co/shenzhi-wang/Llama3-8B-Chinese-Chat
@@ -48,11 +52,11 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
   - Unholy：https://huggingface.co/Undi95/Llama-3-Unholy-8B
   - neural-chat：https://hf-mirror.com/Locutusque/llama-3-neural-chat-v1-8b
   - dolphin：https://huggingface.co/cognitivecomputations/dolphin-2.9-llama3-8b
-- v-llama3 多模态图文版：（支持视觉问答）
+- v-llama3 多模态图文版：（英文，支持视觉问答）
   - Bunny-Llama-3-8B-V：https://wisemodel.cn/models/BAAI/Bunny-Llama-3-8B-V
   - llava-llama-3-8b：https://huggingface.co/xtuner/llava-llama-3-8b-v1_1
 - agent工具能力增强版：
-  - ModelScope Chinese Agent版V1（可根据要求帮你选择工具）：https://modelscope.cn/models/swift/Llama3-Chinese-8B-Instruct-Agent-v1/summary
+  - ModelScope Chinese Agent版V1（中文，可根据要求帮你选择工具）：https://modelscope.cn/models/swift/Llama3-Chinese-8B-Instruct-Agent-v1/summary
 - 小说、网文、故事撰写任务增强版：计划中
 - 音乐生成任务版：计划中
 - 猫娘扮演版：计划中
