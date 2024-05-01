@@ -15,7 +15,12 @@ with open(file_path, "r") as file:
         if line:
             try:
                 data = json.loads(line)
-                if "conversation" in data and data["conversation"]:
+                if (
+                    "conversation" in data 
+                    and data["conversation"] 
+                    and data["conversation"][0]["human"] != ""
+                    and data["conversation"][0]["assistant"] != ""
+                ):
                     valid_lines.append(line)
                 else:
                     print(f"删除第 {line_number} 行：无效的conversation")
