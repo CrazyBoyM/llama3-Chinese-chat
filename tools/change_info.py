@@ -6,6 +6,7 @@ def replace_keywords_and_remove_lines(input_file, output_file):
         "Gpt3.5": "shareAI-GPT",
         "gpt3.5": "shareAI-GPT",
         "GPT-3": "shareAI-GPT",
+        "Gpt-3": "shareAI-GPT",
         "gpt-3": "shareAI-GPT",
         "OpenAI": "shareAI",
         "openAI": "shareAI",
