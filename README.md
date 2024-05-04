@@ -6,9 +6,9 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本仓库供交�
 
 如果你有自己微调的版本或者在网上发现有趣的特化版本，欢迎提issue收录。  
 Base中文SFT版：
- ![99389B1ED347D2F327EBA422B519C90C](https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/4057d600-11e6-424f-9705-267450b6f635)
+<img width="1000" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/4057d600-11e6-424f-9705-267450b6f635">
 Instruct偏好强化学习版：
- ![image](https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/0330a118-7a38-44a7-8a48-a94bfb9eead2)
+<img width="1000" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/0330a118-7a38-44a7-8a48-a94bfb9eead2">
 
 ### 更新记录
 - 2024-04-19 下午1点：世界上首个llama3 中文版训练完成，晚上没睡觉哈哈，使用170k+高质量多轮中文对话数据连夜训练得到。
