@@ -2,7 +2,7 @@
 first version of llama3 in Chinese (首个llama3 中文版)  ，本仓库供交流llama3中文相关学习内容，欢迎任何人加入共建PR  
 新增Phi3模型中文资料仓库（性能超越llama3 8b，以小搏大)，正在适配中，欢迎关注：https://github.com/CrazyBoyM/phi3-Chinese  
 新增网页部署：[点此查看](https://github.com/CrazyBoyM/llama3-Chinese-chat/wiki/%E7%BD%91%E9%A1%B5%E7%89%88%E6%8E%A8%E7%90%86%E6%95%99%E7%A8%8B#%E7%BD%91%E9%A1%B5%E6%8E%A8%E7%90%86)  
-新增趣味版：https://modelscope.cn/models/baicai003/Llama3-Chinese-instruct-DPO-beta0.5/summary
+新增趣味版，数据集已开源：https://modelscope.cn/models/baicai003/Llama3-Chinese-instruct-DPO-beta0.5/summary
 
 如果你有自己微调的版本或者在网上发现有趣的特化版本，欢迎提issue收录。  
 Base中文SFT版：  
@@ -34,7 +34,9 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
     - modelscope模型下载：https://modelscope.cn/models/baicai003/llama-3-8b-Instruct-chinese_v2/summary
     - 云服务器镜像在线体验（点击即用，免费 4 小时）：https://www.suanyun.cn/console/share?uuid=b1ba51908f8a4bd1af37148765c293ee
   - Instruct + 强化学习中文版：
-    - DPO 表情趣味版：https://modelscope.cn/models/baicai003/Llama3-Chinese-instruct-DPO-beta0.5/summary
+    - DPO 表情趣味版 （10分钟左右可训练好，对原多语言instruct版最小化性能损伤，实测超过大多中文大量训练版）
+      - modelscope下载：https://modelscope.cn/models/baicai003/Llama3-Chinese-instruct-DPO-beta0.5/summary
+      - 偏好学习数据集：[DPO-zh-en-emoji](https://huggingface.co/datasets/shareAI/DPO-zh-en-emoji)
 
   - Base预训练 + 海量中文优质数据增量预训练：正在进行中 
   - 70b 中文版：计划中
