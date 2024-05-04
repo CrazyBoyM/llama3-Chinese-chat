@@ -5,9 +5,9 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本仓库供交�
 新增趣味版：https://modelscope.cn/models/baicai003/Llama3-Chinese-instruct-DPO-beta0.5/summary
 
 如果你有自己微调的版本或者在网上发现有趣的特化版本，欢迎提issue收录。  
-Base中文SFT版：
-<img width="500" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/4057d600-11e6-424f-9705-267450b6f635">
-Instruct偏好强化学习版：
+Base中文SFT版：  
+<img width="1000" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/4057d600-11e6-424f-9705-267450b6f635">
+Instruct偏好强化学习版：  
 <img width="1000" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/0330a118-7a38-44a7-8a48-a94bfb9eead2">
 
 ### 更新记录
