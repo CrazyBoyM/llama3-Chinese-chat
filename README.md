@@ -2,6 +2,7 @@
 first version of llama3 in Chinese (首个llama3 中文版)  ，本仓库供交流llama3中文相关学习内容，欢迎任何人加入共建PR  
 新增Phi3模型中文资料仓库（性能超越llama3 8b，以小搏大)，正在适配中，欢迎关注：https://github.com/CrazyBoyM/phi3-Chinese  
 新增网页部署：[点此查看](https://github.com/CrazyBoyM/llama3-Chinese-chat/wiki/%E7%BD%91%E9%A1%B5%E7%89%88%E6%8E%A8%E7%90%86%E6%95%99%E7%A8%8B#%E7%BD%91%E9%A1%B5%E6%8E%A8%E7%90%86)  
+新增趣味版：https://modelscope.cn/models/baicai003/Llama3-Chinese-instruct-DPO-beta0.5/summary
 
 如果你有自己微调的版本或者在网上发现有趣的特化版本，欢迎提issue收录。
 ![99389B1ED347D2F327EBA422B519C90C](https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/4057d600-11e6-424f-9705-267450b6f635)
@@ -12,7 +13,8 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本仓库供交�
 - 2024-04-20 早上7点：v2版训练完成 
 - 2023-04-20 晚上23点：instruct 中文版训练完成
 - 2024-04-21 晚上2点：增加训练教程、推理教程、网页部署等文档整理
-  
+- 2024-05-04 五一期间，新增偏好对齐版本（直接DPO）。喜欢使用趣味风格、emoji表情回复
+
 - 近期todo：录制b站视频、封装云端训练镜像、放出量化后gguf、ollama版本及教程  
 近期（预计一个半月后）还会开源一个浏览器插件，AI笔记功能+AI思维导图功能，在跟同学一起用闲时开发（他们俩是主力哈哈），欢迎关注～。  
 
@@ -28,7 +30,11 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
         - modelscope：https://modelscope.cn/models/baicai003/Llama3-Chinese_v2/summary 
   - Instruct + 继续中文SFT版：
     - modelscope模型下载：https://modelscope.cn/models/baicai003/llama-3-8b-Instruct-chinese_v2/summary
-    - 云服务器镜像在线体验（点击即用，免费 4 小时）：https://www.suanyun.cn/console/share?uuid=b1ba51908f8a4bd1af37148765c293ee 
+    - 云服务器镜像在线体验（点击即用，免费 4 小时）：https://www.suanyun.cn/console/share?uuid=b1ba51908f8a4bd1af37148765c293ee
+  - Instruct + 强化学习中文版：
+    - DPO 表情趣味版：https://modelscope.cn/models/baicai003/Llama3-Chinese-instruct-DPO-beta0.5/summary
+      ![image](https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/0330a118-7a38-44a7-8a48-a94bfb9eead2)
+
   - Base预训练 + 海量中文优质数据增量预训练：正在进行中 
   - 70b 中文版：计划中
 -  下面几个版本因对话模版格式不同暂时不支持网页部署推理，需要用[fastchat](https://github.com/lm-sys/FastChat)体验：
