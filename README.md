@@ -46,7 +46,8 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
     - Instruct + DPO：https://www.modelscope.cn/models/zhuangxialie/Llama3-Chinese-DPO/summary ```偏爱长对话```
 - llama3 Pro（加block版，推荐网友积极在该方案上做更多尝试、探索）：
   - linjh1118网友（第一个ORPO偏好对齐 + 扩展2*blocks）：https://github.com/linjh1118/Llama3-Chinese-ORPO
-- llama3 Moe增强版：计划中
+- llama3 Moe增强版：
+  - cooper12121-llama3-8x8b-MoE：https://github.com/cooper12121/llama3-8x8b-MoE
 - 长上下文版本：
   - 联通微调版v2 (中文，28k上下文）：https://huggingface.co/UnicomLLM/Unichat-llama3-Chinese-8B-28K
   - 262k上下文（英文）：https://huggingface.co/gradientai/Llama-3-8B-Instruct-262k
