@@ -222,6 +222,10 @@ Instruct版本 （支持自定义system prompt)
 ```
 streamlit run deploy/web_streamlit_for_instruct.py /path/to/model --theme.base="dark"
 ```
+Instruct DPO版  （支持自定义system prompt，喜欢使用有趣语言风格和表情回复)
+```
+streamlit run deploy/web_streamlit_for_instruct_v2.py /path/to/model --theme.base="dark"
+```
 ### 终端推理
 默认情况下直接运行以下代码即可体验llama3中文对话，请自行修改`model_name_or_path`为你下载的模型路径
 
