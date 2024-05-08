@@ -70,7 +70,7 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 - agent工具能力增强版：
   - ModelScope Chinese Agent版V1（中文，可根据要求帮你选择工具）：https://modelscope.cn/models/swift/Llama3-Chinese-8B-Instruct-Agent-v1/summary
 - **基于EmoLLM心理数据微调的Llama3-8B-Instruct 模型**
-  -  **EmoLLM 3.0 在线体验链接** [![Open in OpenXLab](https://cdn-static.openxlab.org.cn/app-center/openxlab_app.svg)](https://openxlab.org.cn/apps/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0)
+  -  **EmoLLM 3.0 在线体验链接**
     - [**EmoLLM Llama3心理咨询室V3.0**](https://st-app-center-006861-9746-jlroxvg.openxlab.space/) https://st-app-center-006861-9746-jlroxvg.openxlab.space/
     - 或者前往[OpenXLab EmoLLM3.0-Llama3](https://openxlab.org.cn/apps/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0)启动 https://openxlab.org.cn/apps/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0
   - **模型链接**
