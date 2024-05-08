@@ -99,6 +99,16 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 
 备注: OpenCompass测评过程详见[[Llama3][InternLM2]**OpenCompass 大模型评测Llama3-instruct-8B 中文版_v2** [OpenCompass] - 知乎](https://zhuanlan.zhihu.com/p/694922988)
 
+#### 一个与中文Llama3有关模型的评测结果
+
+![image](https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/8240984/174d3ee9-2ea4-4cde-8d56-7897bd4768f0)
+
+备注: 
+- 评测结果出处[[Llama3]使用弱智吧数据微调Llama3-Instruct-8B模型(**含测评多个中文Llama3模型**) [弱智吧] - 知乎](https://zhuanlan.zhihu.com/p/694818596)
+- [![Open in OpenXLab](https://cdn-static.openxlab.org.cn/app-center/openxlab_app.svg)](https://openxlab.org.cn/apps/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0) EmoLLM 3.0 在线体验链接：  [EmoLLM Llama3心理咨询室V3.0](https://st-app-center-006861-9746-jlroxvg.openxlab.space/) ，或者前往[OpenXLab EmoLLM3.0-Llama3](https://openxlab.org.cn/apps/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0)启动
+- 模型链接：[OpenXLab](https://openxlab.org.cn/models/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0), [ModelScope](https://modelscope.cn/models/chg0901/EmoLLM-Llama3-8B-Instruct3.0/summary) 
+
+
 ### llama3上下文长度简单无损三步扩张法（32K、96K）
 1、直接打开任意下载后llama3微调版本模型文件夹  
 2、把config.json中max_position_embeddings改为32768（32k)   
