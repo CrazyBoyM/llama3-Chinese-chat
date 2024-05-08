@@ -69,6 +69,14 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
   - llava-llama-3-8b：https://huggingface.co/xtuner/llava-llama-3-8b-v1_1
 - agent工具能力增强版：
   - ModelScope Chinese Agent版V1（中文，可根据要求帮你选择工具）：https://modelscope.cn/models/swift/Llama3-Chinese-8B-Instruct-Agent-v1/summary
+- **基于EmoLLM心理数据微调的Llama3-8B-Instruct 模型**
+  - **EmoLLM 3.0 在线体验链接** 
+    - [ **EmoLLM Llama3心理咨询室V3.0**](https://st-app-center-006861-9746-jlroxvg.openxlab.space/) https://st-app-center-006861-9746-jlroxvg.openxlab.space/
+    - 或者前往[OpenXLab EmoLLM3.0-Llama3](https://openxlab.org.cn/apps/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0)启动 https://openxlab.org.cn/apps/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0
+  - **模型链接**
+    - [** OpenXLab **](https://openxlab.org.cn/models/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0) https://openxlab.org.cn/models/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0
+    - [**ModelScope**](https://modelscope.cn/models/chg0901/EmoLLM-Llama3-8B-Instruct3.0/summary) https://modelscope.cn/models/chg0901/EmoLLM-Llama3-8B-Instruct3.0/summary
+
 - 小说、网文、故事撰写任务增强版：计划中
 - 音乐生成任务版：计划中
 - 猫娘扮演版：计划中
@@ -91,13 +99,14 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 | LLaMA3-8B Instruct（shareAI-V2）|   67.2   |
 
 
-| Instruct Model                 |   MMLU   |  C-Eval  |TriviaQA-Wiki| 
-|:-------------------------------|:--------:|:--------:|:--------:|
-|                                |OpenCompass|OpenCompass|OpenCompass|
-| LLaMA3-8B Instruct             |   64.8   |   68.11  |   52.24  | 
-|llama-3-8b-Instruct-chinese_v2  |   64.22  |   67.47  |   51.8   | 
+#### 与中文Llama3有关模型的评测结果集合
 
-备注: OpenCompass测评过程详见[[Llama3][InternLM2]**OpenCompass 大模型评测Llama3-instruct-8B 中文版_v2** [OpenCompass] - 知乎](https://zhuanlan.zhihu.com/p/694922988)
+![7d8221db8d24efd12436fab255ca611](https://github.com/chg0901/llama3-Chinese-chat/assets/8240984/a3b6f468-ab4d-494d-95c3-3e6df7727bba)
+
+**备注**: 
+- **评测结果出处**[[Llama3]使用弱智吧数据微调Llama3-Instruct-8B模型(**含测评多个中文Llama3模型**) [弱智吧] - 知乎](https://zhuanlan.zhihu.com/p/694818596)
+- **OpenCompass测评过程详见**[[Llama3][InternLM2]**OpenCompass 大模型评测Llama3-instruct-8B 中文版_v2** [OpenCompass] - 知乎](https://zhuanlan.zhihu.com/p/694922988)
+
 
 ### llama3上下文长度简单无损三步扩张法（32K、96K）
 1、直接打开任意下载后llama3微调版本模型文件夹  
