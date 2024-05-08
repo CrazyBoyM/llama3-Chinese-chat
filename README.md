@@ -99,20 +99,13 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 | LLaMA3-8B Instruct（shareAI-V2）|   67.2   |
 
 
-| Instruct Model                 |   MMLU   |  C-Eval  |TriviaQA-Wiki| 
-|:-------------------------------|:--------:|:--------:|:--------:|
-|                                |OpenCompass|OpenCompass|OpenCompass|
-| LLaMA3-8B Instruct             |   64.8   |   68.11  |   52.24  | 
-|llama-3-8b-Instruct-chinese_v2  |   64.22  |   67.47  |   51.8   | 
-
-备注: OpenCompass测评过程详见[[Llama3][InternLM2]**OpenCompass 大模型评测Llama3-instruct-8B 中文版_v2** [OpenCompass] - 知乎](https://zhuanlan.zhihu.com/p/694922988)
-
-#### 一个与中文Llama3有关模型的评测结果
+#### 与中文Llama3有关模型的评测结果集合
 
 ![7d8221db8d24efd12436fab255ca611](https://github.com/chg0901/llama3-Chinese-chat/assets/8240984/a3b6f468-ab4d-494d-95c3-3e6df7727bba)
 
-备注: 
-- 评测结果出处[[Llama3]使用弱智吧数据微调Llama3-Instruct-8B模型(**含测评多个中文Llama3模型**) [弱智吧] - 知乎](https://zhuanlan.zhihu.com/p/694818596)
+**备注**: 
+- **评测结果出处**[[Llama3]使用弱智吧数据微调Llama3-Instruct-8B模型(**含测评多个中文Llama3模型**) [弱智吧] - 知乎](https://zhuanlan.zhihu.com/p/694818596)
+- **OpenCompass测评过程详见**[[Llama3][InternLM2]**OpenCompass 大模型评测Llama3-instruct-8B 中文版_v2** [OpenCompass] - 知乎](https://zhuanlan.zhihu.com/p/694922988)
 
 
 ### llama3上下文长度简单无损三步扩张法（32K、96K）
