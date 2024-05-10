@@ -1,4 +1,4 @@
-# 可用于提升模型效果的一种技巧，将最近检查点权重融合
+# 可用于提升模型效果的一种技巧，将最近检查点权重融合, 与RWKV Merge_Lora原理类似，都是对权重的提取合并
 import torch
 
 w_a = torch.load('./checkpoint-700/adapter_model.bin', map_location=torch.device('cpu'))
