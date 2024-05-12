@@ -1,8 +1,7 @@
 # llama3-Chinese-chat
 first version of llama3 in Chinese (首个llama3 中文版)  ，本仓库供交流llama3中文相关学习内容，欢迎任何人加入共建PR  
 新增Phi3模型中文资料仓库（性能超越llama3 8b，以小搏大)，正在适配中，欢迎关注：https://github.com/CrazyBoyM/phi3-Chinese  
-新增网页部署：[点此查看](https://github.com/CrazyBoyM/llama3-Chinese-chat/wiki/%E7%BD%91%E9%A1%B5%E7%89%88%E6%8E%A8%E7%90%86%E6%95%99%E7%A8%8B#%E7%BD%91%E9%A1%B5%E6%8E%A8%E7%90%86)  
-新增趣味版，数据集已开源：https://modelscope.cn/models/baicai003/Llama3-Chinese-instruct-DPO-beta0.5/summary
+新增电脑本地部署推理gguf量化版教程：[文档教程](https://github.com/CrazyBoyM/llama3-Chinese-chat/blob/main/deploy/LMStudio/README.md)
 
 如果你有自己微调的版本或者在网上发现有趣的特化版本，欢迎提issue收录。  
 Base中文SFT版：  
@@ -16,6 +15,7 @@ Instruct偏好强化学习版：
 - 2023-04-20 晚上23点：instruct 中文版训练完成
 - 2024-04-21 晚上2点：增加训练教程、推理教程、网页部署等文档整理
 - 2024-05-04 五一期间，新增偏好对齐版本（直接DPO）。喜欢使用趣味风格、emoji表情回复
+- 2024-05-13 增加gguf量化、LMStudio电脑本地部署教程 
 
 - 近期todo：录制b站视频、封装云端训练镜像、放出量化后gguf、ollama版本及教程  
 近期（预计一个半月后）还会开源一个浏览器插件，AI笔记功能+AI思维导图功能，在跟同学一起用闲时开发（他们俩是主力哈哈），欢迎关注～。  
@@ -182,6 +182,11 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 - unsloth  -  https://github.com/unslothai/unsloth
 - Xtuner  -  https://github.com/SmartFlowAI/Llama3-XTuner-CN  
 - SWIFT  -  https://github.com/modelscope/swift
+
+### 部署推理
+#### 电脑本地部署
+- LMStudio：[文档](https://github.com/CrazyBoyM/llama3-Chinese-chat/blob/main/deploy/LMStudio/README.md)
+- OLLama：待补充
 
 ### Llama3 相关教程推荐
 - Self-LLM
