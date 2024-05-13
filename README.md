@@ -40,10 +40,10 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 
   - Base预训练 + 海量中文优质数据增量预训练：正在进行中 
   - 70b 中文版：计划中
--  下面几个版本因对话模版格式不同暂时不支持网页部署推理，需要用[fastchat](https://github.com/lm-sys/FastChat)体验：
+-  by zhuangxialie，因对话模版设置错误，需要用[fastchat](https://github.com/lm-sys/FastChat)体验：
     - Base + 中文SFT：https://modelscope.cn/models/zhuangxialie/Llama3_Chinese_Sft/files
-    - Base + ORPO：https://modelscope.cn/models/zhuangxialie/Llama3-Chinese-ORPO/summary ```偏爱长对话```
-    - Instruct + DPO：https://www.modelscope.cn/models/zhuangxialie/Llama3-Chinese-DPO/summary ```偏爱长对话```
+    - Base + ORPO：https://modelscope.cn/models/zhuangxialie/Llama3-Chinese-ORPO/summary 
+    - Instruct + DPO：https://www.modelscope.cn/models/zhuangxialie/Llama3-Chinese-DPO/summary 
 - llama3 Pro（加block版，推荐网友积极在该方案上做更多尝试、探索）：
   - linjh1118网友（第一个ORPO偏好对齐 + 扩展2*blocks）：https://github.com/linjh1118/Llama3-Chinese-ORPO
 - llama3 Moe增强版：
@@ -157,6 +157,7 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 | [ruozhiba](https://huggingface.co/datasets/LooksJuicy/ruozhiba)                                               | 弱智吧数据问答，据说比较锻炼模型的心智能力。                                                                                                                                                               |
 | [school-math-0.25M](https://huggingface.co/datasets/YeungNLP/school_math_0.25M)                                               | 由BELLE项目组开源的数学运算指令数据，包含25w条简单数学题目      |
 | [DPO-EN-ZH-20k](https://huggingface.co/datasets/hiyouga/DPO-En-Zh-20k)    | 包含大量偏好对齐的问答对数据<好，差>，有助于进一步提升chat模型的对话质量，使其生成内容更加详细、适合人类偏好。                                                                             |
+| [shareAI/DPO-zh-en-emoji](https://huggingface.co/datasets/shareAI/DPO-zh-en-emoji)    | 包含大量语言偏好对齐的问答对数据<中文，英文>，由同一个问题同时产生中文和英文版本的答案（趣味幽默，含表情emoji），有助于激活多语言chat模型的语种、语言风格偏好。                                                                             |
 | [glaive-function-calling-v2-sharegpt](https://huggingface.co/datasets/hiyouga/glaive-function-calling-v2-sharegpt)   | 包含大量工具函数选择、调用和具体参数数据，有助于提升模型的自主工具选择与使用能力。                                                  |
 | [Agent-FLAN](https://huggingface.co/datasets/internlm/Agent-FLAN)                                         | (纯英文)类型同上， 包含大量工具使用数据，有助于提升模型的工具使用能力。                                            |
 | [Agent-Instruct](https://huggingface.co/datasets/THUDM/AgentInstruct)                                       | (纯英文)类型同上， 包含大量agent演示数据，有助于提升模型的工具使用、模拟能力。                                            |
