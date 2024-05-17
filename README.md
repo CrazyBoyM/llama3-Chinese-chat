@@ -7,13 +7,14 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本仓库供交�
 (注意目前不再接受仅修改单个字、句的typo-PR)
 
 ### 更新记录
-- 2024-04-19 下午1点：世界上首个llama3 中文版训练完成，晚上没睡觉哈哈，使用170k+高质量多轮中文对话数据连夜训练得到。
+- 2024-04-19 下午1点：🍺 世界上首个llama3 中文版训练完成，晚上没睡觉哈哈，使用170k+高质量多轮中文对话数据连夜训练得到。
 - 2024-04-20 早上7点：v2版训练完成 
 - 2023-04-20 晚上23点：instruct 中文版训练完成
 - 2024-04-21 晚上2点：增加训练教程、推理教程、网页部署等文档整理
 - 2024-05-04 五一期间，新增偏好对齐版本（直接DPO）。原汁原味（喜欢使用趣味语言、emoji表情）回复，[下载地址](https://modelscope.cn/models/baicai003/Llama3-Chinese-instruct-DPO-beta0.5/summary)
-- 2024-05-13 增加gguf量化、LMStudio电脑本地部署教程，[文档教程](https://github.com/CrazyBoyM/llama3-Chinese-chat/blob/main/deploy/LMStudio/README.md)
-- 2024-05-17 增加 手写API部署教程，[文档地址](https://github.com/CrazyBoyM/llama3-Chinese-chat/tree/main/deploy/API)
+- 2024-05-13 💪 增加gguf量化、LMStudio电脑本地部署教程，[文档教程](https://github.com/CrazyBoyM/llama3-Chinese-chat/blob/main/deploy/LMStudio/README.md)
+- 2024-05-17 💪 增加 手写API部署教程，[文档地址](https://github.com/CrazyBoyM/llama3-Chinese-chat/tree/main/deploy/API)
+- 2024-05-17 🎉 整理的llama3中文化数据集合在modelscope下载量达2.9k次，连续三周处于modelscope网站首页：[数据下载地址](https://modelscope.cn/datasets/baicai003/Llama3-Chinese-dataset/summary) 
   
 Base中文SFT版：  
 <img width="1000" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/4057d600-11e6-424f-9705-267450b6f635">
