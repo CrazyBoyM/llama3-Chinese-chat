@@ -2,7 +2,7 @@
 first version of llama3 in Chinese (首个llama3 中文版)  ，本仓库供交流llama3中文相关学习内容，欢迎任何人加入共建PR  
 新增Phi3模型中文资料仓库（性能超越llama3 8b，以小搏大)，正在适配中，欢迎关注：https://github.com/CrazyBoyM/phi3-Chinese  
 
-如果你有自己微调的版本或者在网上发现有趣的特化版本，欢迎提issue收录。  
+如果你有自己微调的版本或者在网上发现有趣的特化版本，欢迎提issue、PR收录(注意目前不再接受改单个字、句的typo-PR)。  
 
 ### 更新记录
 - 2024-04-19 下午1点：世界上首个llama3 中文版训练完成，晚上没睡觉哈哈，使用170k+高质量多轮中文对话数据连夜训练得到。
@@ -55,28 +55,27 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
   - 262k上下文（中文）：计划中
   - 无限上下文版本：计划中，参考：https://medium.com/neoxia/llm-infini-attention-with-linear-complexity-3209b87a77c3
 - 其他普通中文微调版本：
-  - 联通微调版（SFT，网友尝试反馈幻觉多）：https://www.modelscope.cn/models/UnicomAI/Unichat-llama3-Chinese/summary
+  - 联通微调版（SFT）：https://www.modelscope.cn/models/UnicomAI/Unichat-llama3-Chinese/summary
   - Openbuddy微调版（SFT，据说不错）：https://www.modelscope.cn/models/OpenBuddy/openbuddy-llama3-8b-v21.1-8k/summary
   - zhichen微调版（ORPO方法，应该是第一个orpo）：https://github.com/seanzhang-zhichen/llama3-chinese
-  - shenzhi-wang微调版（ORPO方法，说是第一个orpo）：https://huggingface.co/shenzhi-wang/Llama3-8B-Chinese-Chat
+  - shenzhi-wang微调版（ORPO方法，也说是第一个orpo）：https://huggingface.co/shenzhi-wang/Llama3-8B-Chinese-Chat
   - Rookie微调版（SFT）：https://github.com/Rookie1019/Llama-3-8B-Instruct-Chinese
-  - hit-sz klc lab 微调版本：[https://github.com/zyg18181818/Llama-3-Chinese](https://github.com/zyg18181818/Llama-3-Chinese)
-- 破解安全限制系列（暂时只支持英文）：
+  - hit-sz klc-lab 微调版：[https://github.com/zyg18181818/Llama-3-Chinese](https://github.com/zyg18181818/Llama-3-Chinese)
+- 破解安全限制系列（nsfw，暂只支持英文）：
   - Unholy：https://huggingface.co/Undi95/Llama-3-Unholy-8B
   - neural-chat：https://hf-mirror.com/Locutusque/llama-3-neural-chat-v1-8b
   - dolphin：https://huggingface.co/cognitivecomputations/dolphin-2.9-llama3-8b
-- v-llama3 多模态图文版：（英文，支持视觉问答）
+- v-llama3 多模态图文版：（支持视觉问答，暂只支持英文）
   - Bunny-Llama-3-8B-V：https://wisemodel.cn/models/BAAI/Bunny-Llama-3-8B-V
   - llava-llama-3-8b：https://huggingface.co/xtuner/llava-llama-3-8b-v1_1
 - agent工具能力增强版：
-  - ModelScope Chinese Agent版V1（中文，可根据要求帮你选择工具）：https://modelscope.cn/models/swift/Llama3-Chinese-8B-Instruct-Agent-v1/summary
-- **基于EmoLLM心理数据微调的Llama3-8B-Instruct 模型**
-  - **EmoLLM 3.0 在线体验链接** 
-    - [ **EmoLLM Llama3心理咨询室V3.0**](https://st-app-center-006861-9746-jlroxvg.openxlab.space/) https://st-app-center-006861-9746-jlroxvg.openxlab.space/
-    - 或者前往[OpenXLab EmoLLM3.0-Llama3](https://openxlab.org.cn/apps/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0)启动 https://openxlab.org.cn/apps/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0
-  - **模型链接**
-    - [** OpenXLab **](https://openxlab.org.cn/models/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0) https://openxlab.org.cn/models/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0
-    - [**ModelScope**](https://modelscope.cn/models/chg0901/EmoLLM-Llama3-8B-Instruct3.0/summary) https://modelscope.cn/models/chg0901/EmoLLM-Llama3-8B-Instruct3.0/summary
+  - ModelScope Chinese Agent版V1（可根据要求帮你选择工具，中文对话）：https://modelscope.cn/models/swift/Llama3-Chinese-8B-Instruct-Agent-v1/summary
+- EmoLLM 心理领域数据微调版：
+  - 在线体验链接：https://st-app-center-006861-9746-jlroxvg.openxlab.space/
+  - 或前往[OpenXLab EmoLLM3.0-Llama3](https://openxlab.org.cn/apps/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0)启动
+  - 模型下载地址
+    - OpenXLab： https://openxlab.org.cn/models/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0
+    - ModelScope： https://modelscope.cn/models/chg0901/EmoLLM-Llama3-8B-Instruct3.0/summary
 
 - 小说、网文、故事撰写任务增强版：计划中
 - 音乐生成任务版：计划中
