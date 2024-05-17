@@ -3,7 +3,7 @@
 ### 代码准备
 首先安装包依赖：
 ```shell
-pip install -U transformers fastapi
+pip install -U transformers fastapi accelerate
 ```
 然后运行easy_server_demo.py，以下为代码示例：
 ```
@@ -58,6 +58,41 @@ if __name__ == '__main__':
     # 如果是base+sft模型需要替换<|eot_id|>为<|end_of_text|>，因为llama3 base模型里没有训练<|eot_id|>这个token
 
     uvicorn.run(app, host='0.0.0.0', port=9009) # 这里的端口替换为你实际想要监听的端口
+```
+
+上面代码中使用了transformers的[pipeline](https://github.com/huggingface/transformers/blob/main/docs/source/en/conversations.md)进行实现，具体来说，它相当于以下操作：
+```python
+from transformers import AutoModelForCausalLM, AutoTokenizer
+import torch
+
+# 输入内容
+chat = [
+    {"role": "system", "content": "You are a sassy, wise-cracking robot as imagined by Hollywood circa 1986."},
+    {"role": "user", "content": "Hey, can you tell me any fun things to do in New York?"}
+]
+
+# 1: 加载模型、分词器
+model = AutoModelForCausalLM.from_pretrained("meta-llama/Meta-Llama-3-8B-Instruct", device_map="auto", torch_dtype=torch.bfloat16)
+tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3-8B-Instruct")
+
+# 2: 使用对话模板
+formatted_chat = tokenizer.apply_chat_template(chat, tokenize=False, add_generation_prompt=True)
+print("Formatted chat:\n", formatted_chat)
+
+# 3: 将对话内容转为token (也可以在上一步直接开启tokenize=True)
+inputs = tokenizer(formatted_chat, return_tensors="pt", add_special_tokens=False)
+
+# 把tokens转移到GPU或者CPU上
+inputs = {key: tensor.to(model.device) for key, tensor in inputs.items()}
+print("Tokenized inputs:\n", inputs)
+
+# 4: 使用模型生成一段文本
+outputs = model.generate(**inputs, max_new_tokens=512, temperature=0.)
+print("Generated tokens:\n", outputs)
+
+# 5: 把生成结果从离散token变为文本
+decoded_output = tokenizer.decode(outputs[0][inputs['input_ids'].size(1):], skip_special_tokens=True)
+print("Decoded output:\n", decoded_output)
 ```
 ### 调用测试
 命令：
