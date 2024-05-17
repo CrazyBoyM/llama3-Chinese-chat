@@ -3,7 +3,7 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本仓库供交�
 新增Phi3模型中文资料仓库（性能超越llama3 8b，以小搏大)，正在适配中，欢迎关注：https://github.com/CrazyBoyM/phi3-Chinese  
 
 如果你有自己微调的版本或者在网上发现有趣的特化版本，欢迎在issue区评论收录。  
-如有你有想要建设的内容版本，欢迎提PR成为核心作者成员。  
+如有你有想要建设的内容版块，欢迎提PR成为核心作者成员。  
 (注意目前不再接受仅修改单个字、句的typo-PR)
 
 ### 更新记录
