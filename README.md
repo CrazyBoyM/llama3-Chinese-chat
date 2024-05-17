@@ -1,21 +1,22 @@
 # llama3-Chinese-chat
 first version of llama3 in Chinese (首个llama3 中文版)  ，本仓库供交流llama3中文相关学习内容，欢迎任何人加入共建PR  
 新增Phi3模型中文资料仓库（性能超越llama3 8b，以小搏大)，正在适配中，欢迎关注：https://github.com/CrazyBoyM/phi3-Chinese  
-新增电脑本地部署推理gguf量化版教程：[文档教程](https://github.com/CrazyBoyM/llama3-Chinese-chat/blob/main/deploy/LMStudio/README.md)
 
 如果你有自己微调的版本或者在网上发现有趣的特化版本，欢迎提issue收录。  
-Base中文SFT版：  
-<img width="1000" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/4057d600-11e6-424f-9705-267450b6f635">
-Instruct偏好强化学习版：  
-<img width="1000" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/0330a118-7a38-44a7-8a48-a94bfb9eead2">
 
 ### 更新记录
 - 2024-04-19 下午1点：世界上首个llama3 中文版训练完成，晚上没睡觉哈哈，使用170k+高质量多轮中文对话数据连夜训练得到。
 - 2024-04-20 早上7点：v2版训练完成 
 - 2023-04-20 晚上23点：instruct 中文版训练完成
 - 2024-04-21 晚上2点：增加训练教程、推理教程、网页部署等文档整理
-- 2024-05-04 五一期间，新增偏好对齐版本（直接DPO）。喜欢使用趣味风格、emoji表情回复
-- 2024-05-13 增加gguf量化、LMStudio电脑本地部署教程 
+- 2024-05-04 五一期间，新增偏好对齐版本（直接DPO）。原汁原味（喜欢使用趣味语言、emoji表情）回复，[下载地址](https://modelscope.cn/models/baicai003/Llama3-Chinese-instruct-DPO-beta0.5/summary)
+- 2024-05-13 增加gguf量化、LMStudio电脑本地部署教程，[文档教程](https://github.com/CrazyBoyM/llama3-Chinese-chat/blob/main/deploy/LMStudio/README.md)
+- 2024-05-17 增加 手写API部署教程，[文档地址](https://github.com/CrazyBoyM/llama3-Chinese-chat/tree/main/deploy/API)
+  
+Base中文SFT版：  
+<img width="1000" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/4057d600-11e6-424f-9705-267450b6f635">
+Instruct偏好强化学习版：  
+<img width="1000" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/0330a118-7a38-44a7-8a48-a94bfb9eead2">
 
 - 近期todo：录制b站视频、封装云端训练镜像、放出量化后gguf、ollama版本及教程  
 近期（预计一个半月后）还会开源一个浏览器插件，AI笔记功能+AI思维导图功能，在跟同学一起用闲时开发（他们俩是主力哈哈），欢迎关注～。  
@@ -34,7 +35,7 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
     - modelscope模型下载：https://modelscope.cn/models/baicai003/llama-3-8b-Instruct-chinese_v2/summary
     - 云服务器镜像在线体验（点击即用，免费 4 小时）：https://www.suanyun.cn/console/share?uuid=b1ba51908f8a4bd1af37148765c293ee
   - Instruct + 强化学习中文版：
-    - DPO 表情趣味版 （10分钟左右可训练好，对原多语言instruct版最小化性能损伤，实测超过大多中文大量训练版）
+    - llama3 instruct DPO版 （10分钟左右可训练好，对原多语言instruct版最小化性能损伤，实测超过大多中文大量训练版）
       - modelscope下载：https://modelscope.cn/models/baicai003/Llama3-Chinese-instruct-DPO-beta0.5/summary
       - 偏好学习数据集：[DPO-zh-en-emoji](https://huggingface.co/datasets/shareAI/DPO-zh-en-emoji)
 
