@@ -193,6 +193,7 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 - OLLama：待补充
 
 ### Llama3 相关教程推荐
+- 从零手写llama3：https://github.com/naklecha/llama3-from-scratch
 - Self-LLM
   - [后端API部署](https://github.com/datawhalechina/self-llm/blob/master/LLaMA3/01-LLaMA3-8B-Instruct%20FastApi%20%E9%83%A8%E7%BD%B2%E8%B0%83%E7%94%A8.md)
   - [langchain教程文档](https://github.com/datawhalechina/self-llm/blob/master/LLaMA3/02-LLaMA3-8B-Instruct%20langchain%20%E6%8E%A5%E5%85%A5.md)
@@ -208,8 +209,8 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 - [x] base + sft llama3 中文版模型 v2
 - [x] instruct + sft llama3 中文版模型
 - [x] 训练与推理教程 
-- [ ] 模型量化部署支持、推理教程
-- [ ] 模型ollama支持、推理教程
+- [x] 模型量化部署支持、推理教程
+- [x] 模型ollama支持、推理教程
 - [ ] 模型vllm支持、推理教程
 - [ ] 电脑本地cpu跑模型
 - [ ] 手机端推理模型
@@ -217,10 +218,7 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 - [x] 扩充上下文长度
 - [ ] 角色扮演增强模型
 - [x] agent工具调用能力增强模型
-- [ ] ...
-
-### 模型量化加速、部署
-待补充，欢迎PR  
+- [ ] ... 
 
 ## 模型使用
 
