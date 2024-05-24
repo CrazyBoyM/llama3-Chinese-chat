@@ -58,6 +58,7 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
   - 262k上下文（中文）：计划中
   - 无限上下文版本：计划中，参考：https://medium.com/neoxia/llm-infini-attention-with-linear-complexity-3209b87a77c3
 - 其他普通中文微调版本：
+  - 中兴微调版（DPO）：https://www.modelscope.cn/models/ZTEAIM2024/Llama3_70B_instruct_chinese/summary
   - 联通微调版（SFT）：https://www.modelscope.cn/models/UnicomAI/Unichat-llama3-Chinese/summary
   - Openbuddy微调版（SFT，据说不错）：https://www.modelscope.cn/models/OpenBuddy/openbuddy-llama3-8b-v21.1-8k/summary
   - zhichen微调版（ORPO方法，应该是第一个orpo）：https://github.com/seanzhang-zhichen/llama3-chinese
