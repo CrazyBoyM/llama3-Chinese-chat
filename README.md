@@ -51,7 +51,7 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 -  by zhuangxialie，因对话模版设置错误，需要用[fastchat](https://github.com/lm-sys/FastChat)体验：
     - Base + 中文SFT：https://modelscope.cn/models/zhuangxialie/Llama3_Chinese_Sft/files
     - Base + ORPO：https://modelscope.cn/models/zhuangxialie/Llama3-Chinese-ORPO/summary 
-    - Instruct + DPO：https://www.modelscope.cn/models/zhuangxialie/Llama3-Chinese-DPO/summary 
+    - Instruct + DPO：https://www.modelscope.cn/models/zhuangxialie/Llama3-Chinese-DPO/summary
 - llama3 Pro（加block版，推荐网友积极在该方案上做更多尝试、探索）：
   - linjh1118网友（第一个ORPO偏好对齐 + 扩展2*blocks）：https://github.com/linjh1118/Llama3-Chinese-ORPO
 - llama3 Moe增强版：
@@ -69,10 +69,11 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
   - shenzhi-wang微调版（ORPO方法，也说是第一个orpo）：https://huggingface.co/shenzhi-wang/Llama3-8B-Chinese-Chat
   - Rookie微调版（SFT）：https://github.com/Rookie1019/Llama-3-8B-Instruct-Chinese
   - hit-sz klc-lab 微调版：[https://github.com/zyg18181818/Llama-3-Chinese](https://github.com/zyg18181818/Llama-3-Chinese)
-- 破解安全限制系列（nsfw，暂只支持英文）：
+- 破解安全限制系列（nsfw）：
   - Unholy：https://huggingface.co/Undi95/Llama-3-Unholy-8B
   - neural-chat：https://hf-mirror.com/Locutusque/llama-3-neural-chat-v1-8b
   - dolphin：https://huggingface.co/cognitivecomputations/dolphin-2.9-llama3-8b
+  - Orion: https://huggingface.co/Orion-zhen/Llama3-70B-Orion-Chinese 破限+中文, 并保留了原版llama3喜欢emoji的习惯
 - v-llama3 多模态图文版：（支持视觉问答，暂只支持英文）
   - Bunny-Llama-3-8B-V：https://wisemodel.cn/models/BAAI/Bunny-Llama-3-8B-V
   - llava-llama-3-8b：https://huggingface.co/xtuner/llava-llama-3-8b-v1_1
