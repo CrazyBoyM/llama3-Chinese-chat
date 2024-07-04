@@ -26,7 +26,7 @@ Instruct偏好强化学习版：
 <img width="1000" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/0330a118-7a38-44a7-8a48-a94bfb9eead2">
 
 - 近期todo：录制b站视频、封装云端训练镜像、放出量化后gguf、ollama版本及教程  
-近期（预计一个半月后）还会开源一个浏览器插件，AI笔记功能+AI思维导图功能，在跟同学一起用闲时开发（他们俩是主力哈哈），欢迎关注～。  
+近期（预计一个半月后）还会开源一个浏览器插件，AI笔记功能+AI思维导图功能，在跟同学一起用闲时开发（他们俩是主力哈哈），欢迎关注～。07-03更新：已经做了一个浏览器AI插件Demo：https://github.com/CrazyBoyM/doc2mindmap    
 
 ### 可用Chat版模型整理
 llama3相关对话版本优质权重整理：（欢迎issue补充）
@@ -37,7 +37,8 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
         - OpenCSG满速下载：https://opencsg.com/models/shareAI/llama3-Chinese-chat-8b
         - WiseModel满速下载：https://wisemodel.cn/models/shareAI/llama3-Chinese-chat-8b
      - V2版
-        - modelscope：https://modelscope.cn/models/baicai003/Llama3-Chinese_v2/summary 
+        - modelscope：https://modelscope.cn/models/baicai003/Llama3-Chinese_v2/summary
+        - 思维导图生成能力强化LoRA：https://modelscope.cn/models/shareAI/llama3-instruct-8b-cn-doc2markmap-lora
   - Instruct + 继续中文SFT版：
     - modelscope模型下载：https://modelscope.cn/models/baicai003/llama-3-8b-Instruct-chinese_v2/summary
     - 云服务器镜像在线体验（点击即用，免费 4 小时）：https://www.suanyun.cn/console/share?uuid=b1ba51908f8a4bd1af37148765c293ee
@@ -175,6 +176,7 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 | [web-QA](https://huggingface.co/datasets/THUDM/webglm-qa)                                    | (纯英文) 包含大量（网页文章 -> 问题 -> 答案)数据，可以提升模型在RAG、文档问答、网页问答等垂直场景表现能力。欢迎翻译成中文进行开源                   |
 | [Humaneval-x](https://huggingface.co/datasets/THUDM/humaneval-x)                                      | (纯英文) 包含cpp、java、go、js等代码的测试数据，可以评测模型生成代码能力。                                            |
 | [longBench](https://huggingface.co/datasets/THUDM/LongBench)                                     | (中、英文) 包含长样本问答数据，可以评测模型在输入内容比较长时候的任务能力。（长上下文）                                            |
+| [doc2markmap](https://huggingface.co/datasets/shareAI/doc2markmap)                                     | (中文) 包含一千多篇CSDN、微信公众号文章及对应文章的思维导图形式，可锻炼大模型生成思维导图的能力                                            |
 欢迎提issue补充建议，尽量中文且一问一答形式，适合用于提升llama3任务能力的数据集
 
 
