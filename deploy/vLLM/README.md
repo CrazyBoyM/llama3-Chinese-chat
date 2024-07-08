@@ -54,7 +54,6 @@ for output in outputs:
 ## OpenAI格式后端部署
 ```
 python -m vllm.entrypoints.openai.api_server \
-    --chat-template /path/to/your-chat-template.jinja \
     --model /path/to/your_model \
     --served-model-name llama3-cn \
     --max-model-len=1024
