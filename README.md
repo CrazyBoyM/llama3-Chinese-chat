@@ -75,9 +75,11 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
   - neural-chat：https://hf-mirror.com/Locutusque/llama-3-neural-chat-v1-8b
   - dolphin：https://huggingface.co/cognitivecomputations/dolphin-2.9-llama3-8b
   - Orion: https://huggingface.co/Orion-zhen/Llama3-70B-Orion-Chinese 破限+中文, 并保留了原版llama3喜欢emoji的习惯
-- v-llama3 多模态图文版：（支持视觉问答，暂只支持英文）
-  - Bunny-Llama-3-8B-V：https://wisemodel.cn/models/BAAI/Bunny-Llama-3-8B-V
-  - llava-llama-3-8b：https://huggingface.co/xtuner/llava-llama-3-8b-v1_1
+- v-llama3 多模态版：（支持文字以外的输入、输出）
+  - 图像问答：
+    - Bunny-Llama-3-8B-V：https://wisemodel.cn/models/BAAI/Bunny-Llama-3-8B-V
+    - llava-llama-3-8b：https://huggingface.co/xtuner/llava-llama-3-8b-v1_1
+  - 视频理解（可支持 1 分钟内视频问答）：https://github.com/THUDM/CogVLM2  
 - agent工具能力增强版：
   - ModelScope Chinese Agent版V1（可根据要求帮你选择工具，中文对话）：https://modelscope.cn/models/swift/Llama3-Chinese-8B-Instruct-Agent-v1/summary
 - EmoLLM 心理领域数据微调版：
