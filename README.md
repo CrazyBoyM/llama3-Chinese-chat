@@ -19,7 +19,7 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本仓库供交�
 - 2024-05-13 💪 增加LMStudio电脑本地部署教程，[文档教程](https://github.com/CrazyBoyM/llama3-Chinese-chat/blob/main/deploy/LMStudio/README.md)，[手把手视频教程](https://www.bilibili.com/video/BV1nt421g79T)
 - 2024-05-17 💪 增加 手写API部署教程、命令调用，[文档地址](https://github.com/CrazyBoyM/llama3-Chinese-chat/tree/main/deploy/API)
 - 2024-05-17 🎉 整理的llama3中文化数据集合在modelscope下载量达2.9k次，连续三周处于modelscope网站首页：[数据下载地址](https://modelscope.cn/datasets/baicai003/Llama3-Chinese-dataset/summary) 
-  
+- 2024-07-24 llama3.1 中文版训练计划启动。
 Base中文SFT版：  
 <img width="1000" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/4057d600-11e6-424f-9705-267450b6f635">
 Instruct偏好强化学习版：  
