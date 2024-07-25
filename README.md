@@ -36,7 +36,9 @@ llama3.1
   - 算力：8 * A100，5分钟，感谢opencsg社区的友情赞助支持 
   - 模型下载 - OpenCSG： https://opencsg.com/models/shareAI/llama3.1-8b-instruct-dpo-zh  
   - 模型下载 - modelscope： https://modelscope.cn/models/shareAI/llama3.1-8b-instruct-dpo-zh  
-  - 模型下载 - Huggingface： https://huggingface.co/shareAI/llama3.1-8b-instruct-dpo-zh  
+  - 模型下载 - Huggingface： https://huggingface.co/shareAI/llama3.1-8b-instruct-dpo-zh
+- openbuddy
+  - openbuddy-llama3.1-8b（SFT中文）：https://modelscope.cn/models/OpenBuddy/openbuddy-llama3.1-8b-v22.1-131k
 
 llama3相关对话版本优质权重整理：（欢迎issue补充）
 - shareAI系列：
