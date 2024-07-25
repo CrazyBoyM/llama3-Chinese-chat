@@ -10,25 +10,34 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本仓库供交�
 如有你有想要建设的内容版块，欢迎fork提交PR成为核心作者成员。  
 (注意：目前不再接受仅修改单个字、句的typo-PR，请避免频繁提交该类PR)
 
-### 更新记录
-- 2024-04-19 下午1点：🍺 世界上首个llama3 中文版训练完成，晚上没睡觉哈哈，使用170k+高质量多轮中文对话数据连夜训练得到。
-- 2024-04-20 早上7点：v2版训练完成 
-- 2023-04-20 晚上23点：instruct 中文版训练完成
-- 2024-04-21 晚上2点：增加训练教程、推理教程、网页部署等文档整理
-- 2024-05-04 五一假期间：🚀 新增语言偏好强化对齐版本（直接对英文instruct版做DPO）。保持原汁原味的口吻回复(喜欢趣味语言、emoji表情)，[模型下载](https://modelscope.cn/models/baicai003/Llama3-Chinese-instruct-DPO-beta0.5/summary)，[gguf量化版下载](https://modelscope.cn/models/shareAI/llama-3-8b-Instruct-dpo-chinese-loftq-gguf/summary)，[语言偏好强化数据集工作已开源](https://huggingface.co/datasets/shareAI/DPO-zh-en-emoji)
-- 2024-05-13 💪 增加LMStudio电脑本地部署教程，[文档教程](https://github.com/CrazyBoyM/llama3-Chinese-chat/blob/main/deploy/LMStudio/README.md)，[手把手视频教程](https://www.bilibili.com/video/BV1nt421g79T)
-- 2024-05-17 💪 增加 手写API部署教程、命令调用，[文档地址](https://github.com/CrazyBoyM/llama3-Chinese-chat/tree/main/deploy/API)
-- 2024-05-17 🎉 整理的llama3中文化数据集合在modelscope下载量达2.9k次，连续三周处于modelscope网站首页：[数据下载地址](https://modelscope.cn/datasets/baicai003/Llama3-Chinese-dataset/summary) 
+### News 更新记录
+- 2024-07-25 llama3.1 中文DPO版训练权重放出。
 - 2024-07-24 llama3.1 中文版训练计划启动。
+- 2024-05-17 🎉 整理的llama3中文化数据集合在modelscope下载量达2.9k次，连续三周处于modelscope网站首页：[数据下载地址](https://modelscope.cn/datasets/baicai003/Llama3-Chinese-dataset/summary) 
+- 2024-05-17 💪 增加 手写API部署教程、命令调用，[文档地址](https://github.com/CrazyBoyM/llama3-Chinese-chat/tree/main/deploy/API)
+- 2024-05-13 💪 增加LMStudio电脑本地部署教程，[文档教程](https://github.com/CrazyBoyM/llama3-Chinese-chat/blob/main/deploy/LMStudio/README.md)，[手把手视频教程](https://www.bilibili.com/video/BV1nt421g79T)
+- 2024-05-04 五一假期间：🚀 新增语言偏好强化对齐版本（直接对英文instruct版做DPO）。保持原汁原味的口吻回复(喜欢趣味语言、emoji表情)，[模型下载](https://modelscope.cn/models/baicai003/Llama3-Chinese-instruct-DPO-beta0.5/summary)，[gguf量化版下载](https://modelscope.cn/models/shareAI/llama-3-8b-Instruct-dpo-chinese-loftq-gguf/summary)，[语言偏好强化数据集工作已开源](https://huggingface.co/datasets/shareAI/DPO-zh-en-emoji)
+- 2024-04-21 晚上2点：增加训练教程、推理教程、网页部署等文档整理
+- 2023-04-20 晚上23点：instruct 中文版训练完成
+- 2024-04-20 早上7点：v2版训练完成 
+- 2024-04-19 下午1点：🍺 世界上首个llama3 中文版训练完成，晚上没睡觉哈哈，使用170k+高质量多轮中文对话数据连夜训练得到。
+
+### Demo 演示示例
 Base中文SFT版：  
 <img width="1000" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/4057d600-11e6-424f-9705-267450b6f635">
 Instruct偏好强化学习版：  
 <img width="1000" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/0330a118-7a38-44a7-8a48-a94bfb9eead2">
 
-- 近期todo：录制b站视频、封装云端训练镜像、放出量化后gguf、ollama版本及教程  
-近期（预计一个半月后）还会开源一个浏览器插件，AI笔记功能+AI思维导图功能，在跟同学一起用闲时开发（他们俩是主力哈哈），欢迎关注～。07-03更新：已经做了一个浏览器AI插件Demo：https://github.com/CrazyBoyM/doc2mindmap    
+### llama3 可用Chat版模型整理
+llama3.1
+- shareAI-DPO中文版本
+  - 训练数据： https://huggingface.co/datasets/shareAI/DPO-zh-en-emoji
+  - 训练细节：DPO(beta 0.5) + lora rank128, alpha256 + 打开"lm_head", "input_layernorm", "post_attention_layernorm", "norm"层训练.
+  - 算力：8 * A100，5分钟，感谢opencsg社区的友情赞助支持 
+  - 模型下载 - OpenCSG： https://opencsg.com/models/shareAI/llama3.1-8b-instruct-dpo-zh  
+  - 模型下载 - modelscope： https://modelscope.cn/models/shareAI/llama3.1-8b-instruct-dpo-zh  
+  - 模型下载 - Huggingface： https://huggingface.co/shareAI/llama3.1-8b-instruct-dpo-zh  
 
-### 可用Chat版模型整理
 llama3相关对话版本优质权重整理：（欢迎issue补充）
 - shareAI系列：
   - base预训练 + 直接中文SFT版:
