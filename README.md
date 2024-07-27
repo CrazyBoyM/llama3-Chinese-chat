@@ -32,7 +32,7 @@ Instruct偏好强化学习版：
 llama3.1
 - shareAI-DPO中文版本
   - 训练数据开源： https://huggingface.co/datasets/shareAI/DPO-zh-en-emoji
-  - 训练细节：DPO(beta 0.5) + lora rank128, alpha256 + 打开"lm_head", "input_layernorm", "post_attention_layernorm", "norm"层训练.
+  - 训练细节分享：DPO(beta 0.5) + lora rank128, alpha256 + 打开"lm_head", "input_layernorm", "post_attention_layernorm", "norm"层训练.
   - 算力：8 * A100，5分钟，感谢opencsg社区的友情赞助支持 
   - 模型下载 - OpenCSG： https://opencsg.com/models/shareAI/llama3.1-8b-instruct-dpo-zh  
   - 模型下载 - modelscope： https://modelscope.cn/models/shareAI/llama3.1-8b-instruct-dpo-zh  
