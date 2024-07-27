@@ -37,6 +37,7 @@ llama3.1
   - 模型下载 - OpenCSG： https://opencsg.com/models/shareAI/llama3.1-8b-instruct-dpo-zh  
   - 模型下载 - modelscope： https://modelscope.cn/models/shareAI/llama3.1-8b-instruct-dpo-zh  
   - 模型下载 - Huggingface： https://huggingface.co/shareAI/llama3.1-8b-instruct-dpo-zh
+  - GGUF版本下载 （ollama、lmstudio可用）：https://huggingface.co/shareAI/llama3.1-8b-instruct-dpo-zh/blob/main/llama3.1_8b_chinese_chat_q4_k_m-shareAI.gguf  
 - openbuddy
   - openbuddy-llama3.1-8b（SFT中文）：https://modelscope.cn/models/OpenBuddy/openbuddy-llama3.1-8b-v22.1-131k
 
