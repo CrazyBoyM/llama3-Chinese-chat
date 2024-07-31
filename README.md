@@ -39,7 +39,8 @@ llama3.1
   - 模型下载 - modelscope： https://modelscope.cn/models/shareAI/llama3.1-8b-instruct-dpo-zh  
   - 模型下载 - Huggingface： https://huggingface.co/shareAI/llama3.1-8b-instruct-dpo-zh
   - GGUF版本下载 （ollama、lmstudio可用）：https://huggingface.co/shareAI/llama3.1-8b-instruct-dpo-zh/blob/main/llama3.1_8b_chinese_chat_q4_k_m-shareAI.gguf
-  - GGUF版本国内下载 （hf-mirror 国内加速站点）：https://hf-mirror.com/shareAI/llama3.1-8b-instruct-dpo-zh  
+  - GGUF版本国内下载 （hf-mirror 国内加速站点）：https://hf-mirror.com/shareAI/llama3.1-8b-instruct-dpo-zh
+  - ollama命令直接运行：`ollama run shareai/llama3.1-dpo-zh `
 - openCSG wukong中文 405B版本 (SFT中文）
   - shareAI & openCSG联合发布
   - 介绍文章：https://mp.weixin.qq.com/s/7_lDZ6Zslq_WUckfuTToyQ
@@ -239,8 +240,8 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 - [x] 训练与推理教程 
 - [x] 模型量化部署支持、推理教程
 - [x] 模型ollama支持、推理教程
-- [ ] 模型vllm支持、推理教程
-- [ ] 电脑本地cpu跑模型
+- [x] 模型vllm支持、推理教程
+- [x] 电脑本地cpu跑模型
 - [ ] 手机端推理模型
 - [x] 扩充优质训练数据集
 - [x] 扩充上下文长度
@@ -249,6 +250,12 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 - [ ] ... 
 
 ## 模型使用
+### ollama 命令行工具
+首先，去官网下载安装ollama：https://ollama.com/  
+然后，打开终端命令行，执行以下命令即可开始与AI对话：
+```
+ollama run shareai/llama3.1-dpo-zh
+```
 
 ### 网页推理
 <img width="1000" alt="image" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/b1176d48-1141-4c8f-a345-e1eb005306da">
