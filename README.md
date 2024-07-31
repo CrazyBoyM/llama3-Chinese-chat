@@ -116,84 +116,6 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 
 注意由于只训练了常见对话，Base + SFT版有可能会出现不符合预期的回复 （尤其是对于一些非常见回答），本教程更多用于优质资源整理（包含如何对llama3进行中文微调，怎样制作中文对话数据集，角色扮演、agent能力增强，扩充上下文长度，如何进行网页部署和量化，手机、电脑cpu推理部署等），将会逐渐整理补充进来。  
 
-### 模型及训练推理成本
-- 推理
-  - fp16 模式
-    大概占用16G显存，推荐24G显卡使用
-  - int4模式
-    大概占用8G显存，推荐至少10G显存使用，**需要自行搜索修改代码中load_in_4bit=True**
-
-- 训练
-
-| Method            | Bits | 7B    | 13B   | 30B   | 70B    | 8x7B  |
-| ----------------- | ---- | ----- | ----- | ----- | ------ | ----- |
-| Full              | AMP  | 120GB | 240GB | 600GB | 1200GB | 900GB |
-| Full              | 16   | 60GB  | 120GB | 300GB | 600GB  | 400GB |
-| LoRA/GaLore/BAdam | 16   | 16GB  | 32GB  | 64GB  | 160GB  | 120GB |
-| QLoRA             | 8    | 10GB  | 20GB  | 40GB  | 80GB   | 60GB  |
-| QLoRA             | 4    | 6GB   | 12GB  | 24GB  | 48GB   | 30GB  |
-
-
-### 可用训练数据整理
-
-| 数据集                                                                                                          | 介绍                                                                                                                                                                                                      |
-|----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [firefly-train-1.1M](https://huggingface.co/datasets/YeungNLP/firefly-train-1.1M)                            | 包含了23种常见的中文NLP任务的数据，并且构造了许多与中华文化相关的数据，如对联、作诗、文言文翻译、散文、金庸小说等。对于每个任务，由人工书写若干种指令模板，保证数据的高质量与丰富度，数据量为115万。                                                        |
-| [shareAI/CodeChat](https://huggingface.co/datasets/shareAI/CodeChat)                                         | 主要包含逻辑推理、代码问答、代码生成相关语料样本。                                                                                                                                                        |
-| [shareAI/ShareGPT-Chinese-English-90k](https://huggingface.co/datasets/shareAI/ShareGPT-Chinese-English-90k) | 优质中英文双语人机问答数据集，覆盖真实复杂场景下的用户提问。（包含大量多轮人机对话）               |
-| [moss-003-sft-data](https://huggingface.co/datasets/YeungNLP/moss-003-sft-data) | 由复旦大学MOSS团队开源的中英文多轮对话数据，包含100w中英文多轮人机对话数据               |
-| [WizardLM_evol_instruct_V2_143k](https://huggingface.co/datasets/YeungNLP/moss-003-sft-data) | (纯英文）由WizardLM项目开源的英文指令微调数据集，包含143k条数据，可提升模型对复杂指令要求的遵循能力。             |
-| [ruozhiba](https://huggingface.co/datasets/LooksJuicy/ruozhiba)                                               | 弱智吧数据问答，据说比较锻炼模型的心智能力。                                                                                                                                                               |
-| [school-math-0.25M](https://huggingface.co/datasets/YeungNLP/school_math_0.25M)                                               | 由BELLE项目组开源的数学运算指令数据，包含25w条简单数学题目      |
-| [DPO-EN-ZH-20k](https://huggingface.co/datasets/hiyouga/DPO-En-Zh-20k)    | 包含大量偏好对齐的问答对数据<好，差>，有助于进一步提升chat模型的对话质量，使其生成内容更加详细、适合人类偏好。                                                                             |
-| [shareAI/DPO-zh-en-emoji](https://huggingface.co/datasets/shareAI/DPO-zh-en-emoji)    | 包含大量语言偏好对齐的问答对数据<中文，英文>，由同一个问题同时产生中文和英文版本的答案（趣味幽默，含表情emoji），有助于激活多语言chat模型的语种、语言风格偏好。                                                                             |
-| [Orion-zhen/dpo-toxic-zh-v1.0](https://huggingface.co/datasets/Orion-zhen/dpo-toxic-zh-v1.0) | 包含大量拒绝答复和进行答案的样本，可用于对大模型进行安全对齐，或者破解开源模型的安全对齐。 |
-| [glaive-function-calling-v2-sharegpt](https://huggingface.co/datasets/hiyouga/glaive-function-calling-v2-sharegpt)   | 包含大量工具函数选择、调用和具体参数数据，有助于提升模型的自主工具选择与使用能力。                                                  |
-| [Agent-FLAN](https://huggingface.co/datasets/internlm/Agent-FLAN)                                         | (纯英文)类型同上， 包含大量工具使用数据，有助于提升模型的工具使用能力。                                            |
-| [Agent-Instruct](https://huggingface.co/datasets/THUDM/AgentInstruct)                                       | (纯英文)类型同上， 包含大量agent演示数据，有助于提升模型的工具使用、模拟能力。                                            |
-| [CogVLM-sft-311K](https://huggingface.co/datasets/THUDM/CogVLM-SFT-311K)                                    | (中文) 包含带图片问答数据，可以训练模型看图问答、看图生成代码能力。                                            |
-| [ShareGPT4-V ](https://huggingface.co/datasets/Lin-Chen/ShareGPT4V)                                         | (英文) 类型同上，包含带图片问答数据，可以训练模型看图问答、看图生成代码能力。                                            |
-| [web-QA](https://huggingface.co/datasets/THUDM/webglm-qa)                                    | (纯英文) 包含大量（网页文章 -> 问题 -> 答案)数据，可以提升模型在RAG、文档问答、网页问答等垂直场景表现能力。欢迎翻译成中文进行开源                   |
-| [Humaneval-x](https://huggingface.co/datasets/THUDM/humaneval-x)                                      | (纯英文) 包含cpp、java、go、js等代码的测试数据，可以评测模型生成代码能力。                                            |
-| [longBench](https://huggingface.co/datasets/THUDM/LongBench)                                     | (中、英文) 包含长样本问答数据，可以评测模型在输入内容比较长时候的任务能力。（长上下文）                                            |
-| [doc2markmap](https://huggingface.co/datasets/shareAI/doc2markmap)                                     | (中文) 包含一千多篇CSDN、微信公众号文章及对应文章的思维导图形式，可锻炼大模型生成思维导图的能力                                            |
-欢迎提issue补充建议，尽量中文且一问一答形式，适合用于提升llama3任务能力的数据集
-
-### 中文对话微调数据集打包  
-已经转换好，开箱即用：  
-1、[firefly可用格式](https://modelscope.cn/datasets/baicai003/Llama3-Chinese-dataset/summary)  
-2、[llama-factory可用格式（sharegpt格式）](https://modelscope.cn/datasets/zhuangxialie/Llama3-Chinese-Dataset/dataPeview)  
-
-<img src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/608e6953-5b1d-45ba-a0cd-4f1c80256538" width="520">
-
-### llama3 训练框架工具推理
-下面的库都是相当好用的，代码封装简洁又清晰，如果你也想微调个自己的llama3 中文定制版，不要错过～
-- Firefly  -  https://github.com/yangjianxin1/Firefly
-- LLaMA-Factory - https://github.com/hiyouga/LLaMA-Factory
-- unsloth  -  https://github.com/unslothai/unsloth
-- Xtuner  -  https://github.com/SmartFlowAI/Llama3-XTuner-CN  
-- SWIFT  -  https://github.com/modelscope/swift
-
-### llama3 学习教程推荐
-- 从零手写llama3：https://github.com/naklecha/llama3-from-scratch
-- Self-LLM
-  - [后端API部署](https://github.com/datawhalechina/self-llm/blob/master/LLaMA3/01-LLaMA3-8B-Instruct%20FastApi%20%E9%83%A8%E7%BD%B2%E8%B0%83%E7%94%A8.md)
-  - [langchain教程文档](https://github.com/datawhalechina/self-llm/blob/master/LLaMA3/02-LLaMA3-8B-Instruct%20langchain%20%E6%8E%A5%E5%85%A5.md)
-  - [streamlit部署](https://github.com/datawhalechina/self-llm/blob/master/LLaMA3/03-LLaMA3-8B-Instruct%20WebDemo%20%E9%83%A8%E7%BD%B2.md)
-  - [极简LoRA训练](https://github.com/datawhalechina/self-llm/blob/master/LLaMA3/04-LLaMA3-8B-Instruct%20Lora%20%E5%BE%AE%E8%B0%83.md)
-
-### llama3上下文长度简单扩张法（32K、96K）
-1、直接打开任意下载后llama3微调版本模型文件夹  
-2、把config.json中max_position_embeddings改为32768（32k)   
-3、rope_theta改为1000000或者4000000  
-即可在几乎无性能损失情况下将llama3的上下文从8k拉长到32k，从而适配大部分长上下文任务。  
-（该方法由群友“@岁月”分享,适用于Instruct版本，猜测可能是官方已经训练过超长上下文数据了）
-
-<img src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/27b4796d-ea42-4cd4-86ed-076f35df56cb" width=520>  
-
-可以看到，当llama3长度扩展到96K时，几乎仍没什么性能上损失。(备注：当前llama3.1已原生支持128k上下文长度）    
-链接源：https://github.com/OpenAccess-AI-Collective/axolotl/pull/1567
-
 ## 模型使用方法
 ### 云端服务
 #### 简单API方式
@@ -574,6 +496,83 @@ Llama3-Chinese：虽然我是一款先进的人工智能，但由于我只是基
 备注: 
 - 评测结果出处[Llama3]使用弱智吧数据微调Llama3-Instruct-8B模型(含测评多个中文Llama3模型) [弱智吧] - 知乎](https://zhuanlan.zhihu.com/p/694818596)
 - OpenCompass测评过程详见[[Llama3][InternLM2]OpenCompass 大模型评测Llama3-instruct-8B 中文版_v2 [OpenCompass] - 知乎](https://zhuanlan.zhihu.com/p/694922988)
+
+### 模型及训练推理成本
+- 推理
+  - fp16 模式
+    大概占用16G显存，推荐24G显卡使用
+  - int4模式
+    大概占用8G显存，推荐至少10G显存使用，**需要自行搜索修改代码中load_in_4bit=True**
+
+- 训练
+
+| Method            | Bits | 7B    | 13B   | 30B   | 70B    | 8x7B  |
+| ----------------- | ---- | ----- | ----- | ----- | ------ | ----- |
+| Full              | AMP  | 120GB | 240GB | 600GB | 1200GB | 900GB |
+| Full              | 16   | 60GB  | 120GB | 300GB | 600GB  | 400GB |
+| LoRA/GaLore/BAdam | 16   | 16GB  | 32GB  | 64GB  | 160GB  | 120GB |
+| QLoRA             | 8    | 10GB  | 20GB  | 40GB  | 80GB   | 60GB  |
+| QLoRA             | 4    | 6GB   | 12GB  | 24GB  | 48GB   | 30GB  |
+
+## 训练数据 & 工具 & 教程
+### 可用训练数据整理
+
+| 数据集                                                                                                          | 介绍                                                                                                                                                                                                      |
+|----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [firefly-train-1.1M](https://huggingface.co/datasets/YeungNLP/firefly-train-1.1M)                            | 包含了23种常见的中文NLP任务的数据，并且构造了许多与中华文化相关的数据，如对联、作诗、文言文翻译、散文、金庸小说等。对于每个任务，由人工书写若干种指令模板，保证数据的高质量与丰富度，数据量为115万。                                                        |
+| [shareAI/CodeChat](https://huggingface.co/datasets/shareAI/CodeChat)                                         | 主要包含逻辑推理、代码问答、代码生成相关语料样本。                                                                                                                                                        |
+| [shareAI/ShareGPT-Chinese-English-90k](https://huggingface.co/datasets/shareAI/ShareGPT-Chinese-English-90k) | 优质中英文双语人机问答数据集，覆盖真实复杂场景下的用户提问。（包含大量多轮人机对话）               |
+| [moss-003-sft-data](https://huggingface.co/datasets/YeungNLP/moss-003-sft-data) | 由复旦大学MOSS团队开源的中英文多轮对话数据，包含100w中英文多轮人机对话数据               |
+| [WizardLM_evol_instruct_V2_143k](https://huggingface.co/datasets/YeungNLP/moss-003-sft-data) | (纯英文）由WizardLM项目开源的英文指令微调数据集，包含143k条数据，可提升模型对复杂指令要求的遵循能力。             |
+| [ruozhiba](https://huggingface.co/datasets/LooksJuicy/ruozhiba)                                               | 弱智吧数据问答，据说比较锻炼模型的心智能力。                                                                                                                                                               |
+| [school-math-0.25M](https://huggingface.co/datasets/YeungNLP/school_math_0.25M)                                               | 由BELLE项目组开源的数学运算指令数据，包含25w条简单数学题目      |
+| [DPO-EN-ZH-20k](https://huggingface.co/datasets/hiyouga/DPO-En-Zh-20k)    | 包含大量偏好对齐的问答对数据<好，差>，有助于进一步提升chat模型的对话质量，使其生成内容更加详细、适合人类偏好。                                                                             |
+| [shareAI/DPO-zh-en-emoji](https://huggingface.co/datasets/shareAI/DPO-zh-en-emoji)    | 包含大量语言偏好对齐的问答对数据<中文，英文>，由同一个问题同时产生中文和英文版本的答案（趣味幽默，含表情emoji），有助于激活多语言chat模型的语种、语言风格偏好。                                                                             |
+| [Orion-zhen/dpo-toxic-zh-v1.0](https://huggingface.co/datasets/Orion-zhen/dpo-toxic-zh-v1.0) | 包含大量拒绝答复和进行答案的样本，可用于对大模型进行安全对齐，或者破解开源模型的安全对齐。 |
+| [glaive-function-calling-v2-sharegpt](https://huggingface.co/datasets/hiyouga/glaive-function-calling-v2-sharegpt)   | 包含大量工具函数选择、调用和具体参数数据，有助于提升模型的自主工具选择与使用能力。                                                  |
+| [Agent-FLAN](https://huggingface.co/datasets/internlm/Agent-FLAN)                                         | (纯英文)类型同上， 包含大量工具使用数据，有助于提升模型的工具使用能力。                                            |
+| [Agent-Instruct](https://huggingface.co/datasets/THUDM/AgentInstruct)                                       | (纯英文)类型同上， 包含大量agent演示数据，有助于提升模型的工具使用、模拟能力。                                            |
+| [CogVLM-sft-311K](https://huggingface.co/datasets/THUDM/CogVLM-SFT-311K)                                    | (中文) 包含带图片问答数据，可以训练模型看图问答、看图生成代码能力。                                            |
+| [ShareGPT4-V ](https://huggingface.co/datasets/Lin-Chen/ShareGPT4V)                                         | (英文) 类型同上，包含带图片问答数据，可以训练模型看图问答、看图生成代码能力。                                            |
+| [web-QA](https://huggingface.co/datasets/THUDM/webglm-qa)                                    | (纯英文) 包含大量（网页文章 -> 问题 -> 答案)数据，可以提升模型在RAG、文档问答、网页问答等垂直场景表现能力。欢迎翻译成中文进行开源                   |
+| [Humaneval-x](https://huggingface.co/datasets/THUDM/humaneval-x)                                      | (纯英文) 包含cpp、java、go、js等代码的测试数据，可以评测模型生成代码能力。                                            |
+| [longBench](https://huggingface.co/datasets/THUDM/LongBench)                                     | (中、英文) 包含长样本问答数据，可以评测模型在输入内容比较长时候的任务能力。（长上下文）                                            |
+| [doc2markmap](https://huggingface.co/datasets/shareAI/doc2markmap)                                     | (中文) 包含一千多篇CSDN、微信公众号文章及对应文章的思维导图形式，可锻炼大模型生成思维导图的能力                                            |
+欢迎提issue补充建议，尽量中文且一问一答形式，适合用于提升llama3任务能力的数据集
+
+### 中文对话微调数据集打包  
+已经转换好，开箱即用：  
+1、[firefly可用格式](https://modelscope.cn/datasets/baicai003/Llama3-Chinese-dataset/summary)  
+2、[llama-factory可用格式（sharegpt格式）](https://modelscope.cn/datasets/zhuangxialie/Llama3-Chinese-Dataset/dataPeview)  
+
+<img src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/608e6953-5b1d-45ba-a0cd-4f1c80256538" width="520">
+
+### llama3 训练框架工具
+- Firefly  -  https://github.com/yangjianxin1/Firefly
+- LLaMA-Factory - https://github.com/hiyouga/LLaMA-Factory
+- unsloth  -  https://github.com/unslothai/unsloth
+- Xtuner  -  https://github.com/SmartFlowAI/Llama3-XTuner-CN  
+- SWIFT  -  https://github.com/modelscope/swift
+
+### llama3 学习教程
+- 从零手写llama3：https://github.com/naklecha/llama3-from-scratch
+- Self-LLM
+  - [后端API部署](https://github.com/datawhalechina/self-llm/blob/master/LLaMA3/01-LLaMA3-8B-Instruct%20FastApi%20%E9%83%A8%E7%BD%B2%E8%B0%83%E7%94%A8.md)
+  - [langchain教程文档](https://github.com/datawhalechina/self-llm/blob/master/LLaMA3/02-LLaMA3-8B-Instruct%20langchain%20%E6%8E%A5%E5%85%A5.md)
+  - [streamlit部署](https://github.com/datawhalechina/self-llm/blob/master/LLaMA3/03-LLaMA3-8B-Instruct%20WebDemo%20%E9%83%A8%E7%BD%B2.md)
+  - [极简LoRA训练](https://github.com/datawhalechina/self-llm/blob/master/LLaMA3/04-LLaMA3-8B-Instruct%20Lora%20%E5%BE%AE%E8%B0%83.md)
+
+### llama3上下文长度简单扩张法（32K、96K）
+1、直接打开任意下载后llama3微调版本模型文件夹  
+2、把config.json中max_position_embeddings改为32768（32k)   
+3、rope_theta改为1000000或者4000000  
+即可在几乎无性能损失情况下将llama3的上下文从8k拉长到32k，从而适配大部分长上下文任务。  
+（该方法由群友“@岁月”分享,适用于Instruct版本，猜测可能是官方已经训练过超长上下文数据了）
+
+<img src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/27b4796d-ea42-4cd4-86ed-076f35df56cb" width=520>  
+
+可以看到，当llama3长度扩展到96K时，几乎仍没什么性能上损失。(备注：当前llama3.1已原生支持128k上下文长度）    
+链接源：https://github.com/OpenAccess-AI-Collective/axolotl/pull/1567
 
 ## 交流 & 讨论技术
 
