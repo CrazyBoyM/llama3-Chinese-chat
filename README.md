@@ -115,40 +115,6 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 
 
 注意由于只训练了常见对话，Base + SFT版有可能会出现不符合预期的回复 （尤其是对于一些非常见回答），本教程更多用于优质资源整理（包含如何对llama3进行中文微调，怎样制作中文对话数据集，角色扮演、agent能力增强，扩充上下文长度，如何进行网页部署和量化，手机、电脑cpu推理部署等），将会逐渐整理补充进来。  
-### 模型评测
-| Model                 |   MMLU   |  C-Eval  |  TriviaQA-Wiki   | 
-|:----------------------|:--------:|:--------:|:--------:|
-|                       |  5-shot  |  5-shot  |  8-shot  |
-| LLaMA3-8B             |   66.6   |   49.8   |   81.4   |
-| LLaMA3-8B（shareAI-V2）|   66.2   |   50.9   |   81.8   |
-
-
-| Instruct Model                 |   MMLU   |
-|:-------------------------------|:--------:|
-|                                |  5-shot  |
-| LLaMA3-8B Instruct             |   67.1   |
-| LLaMA3-8B Instruct（shareAI-V2）|   67.2   |
-
-
-#### 与中文Llama3有关模型的评测结果集合
-
-![7d8221db8d24efd12436fab255ca611](https://github.com/chg0901/llama3-Chinese-chat/assets/8240984/a3b6f468-ab4d-494d-95c3-3e6df7727bba)
-
-备注: 
-- 评测结果出处[Llama3]使用弱智吧数据微调Llama3-Instruct-8B模型(含测评多个中文Llama3模型) [弱智吧] - 知乎](https://zhuanlan.zhihu.com/p/694818596)
-- OpenCompass测评过程详见[[Llama3][InternLM2]OpenCompass 大模型评测Llama3-instruct-8B 中文版_v2 [OpenCompass] - 知乎](https://zhuanlan.zhihu.com/p/694922988)
-
-
-### llama3上下文长度简单无损三步扩张法（32K、96K）
-1、直接打开任意下载后llama3微调版本模型文件夹  
-2、把config.json中max_position_embeddings改为32768（32k)   
-3、rope_theta改为1000000或者4000000  
-即可在几乎无性能损失情况下将llama3的上下文从8k拉长到32k，从而适配大部分长上下文任务。  
-（该方法由群友“@岁月”分享,适用于Instruct版本，猜测可能是官方已经训练过超长上下文数据了）
-评测实验：  
-<img src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/27b4796d-ea42-4cd4-86ed-076f35df56cb" width=520>  
-可以看到，当长度扩展到96K时，依然没什么性能上损失。  
-链接源：https://github.com/OpenAccess-AI-Collective/axolotl/pull/1567
 
 ### 模型及训练推理成本
 - 推理
@@ -167,16 +133,8 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 | QLoRA             | 8    | 10GB  | 20GB  | 40GB  | 80GB   | 60GB  |
 | QLoRA             | 4    | 6GB   | 12GB  | 24GB  | 48GB   | 30GB  |
 
-### 
-
-| 名称 | 群聊二维码 | 名称 | 群聊二维码 | 
-|---------|---------|---------|---------|
-| llama3 中文交流QQ群 | <img width="260" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/83a3d1e9-d1ae-4eed-91b5-20589407581e"> | 优质中文数据整理建设群 | <img width="260" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/77110656-0a87-419c-a21f-29bf1c2ca22b"> | 
-
-后面我也会在b站录制相关模型部署推理、训练的演示教程视频，我的个人b站：https://space.bilibili.com/291593914  
 
 ### 可用训练数据整理
-
 
 | 数据集                                                                                                          | 介绍                                                                                                                                                                                                      |
 |----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -189,6 +147,7 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 | [school-math-0.25M](https://huggingface.co/datasets/YeungNLP/school_math_0.25M)                                               | 由BELLE项目组开源的数学运算指令数据，包含25w条简单数学题目      |
 | [DPO-EN-ZH-20k](https://huggingface.co/datasets/hiyouga/DPO-En-Zh-20k)    | 包含大量偏好对齐的问答对数据<好，差>，有助于进一步提升chat模型的对话质量，使其生成内容更加详细、适合人类偏好。                                                                             |
 | [shareAI/DPO-zh-en-emoji](https://huggingface.co/datasets/shareAI/DPO-zh-en-emoji)    | 包含大量语言偏好对齐的问答对数据<中文，英文>，由同一个问题同时产生中文和英文版本的答案（趣味幽默，含表情emoji），有助于激活多语言chat模型的语种、语言风格偏好。                                                                             |
+| [Orion-zhen/dpo-toxic-zh-v1.0](https://huggingface.co/datasets/Orion-zhen/dpo-toxic-zh-v1.0) | 包含大量拒绝答复和进行答案的样本，可用于对大模型进行安全对齐，或者破解开源模型的安全对齐。 |
 | [glaive-function-calling-v2-sharegpt](https://huggingface.co/datasets/hiyouga/glaive-function-calling-v2-sharegpt)   | 包含大量工具函数选择、调用和具体参数数据，有助于提升模型的自主工具选择与使用能力。                                                  |
 | [Agent-FLAN](https://huggingface.co/datasets/internlm/Agent-FLAN)                                         | (纯英文)类型同上， 包含大量工具使用数据，有助于提升模型的工具使用能力。                                            |
 | [Agent-Instruct](https://huggingface.co/datasets/THUDM/AgentInstruct)                                       | (纯英文)类型同上， 包含大量agent演示数据，有助于提升模型的工具使用、模拟能力。                                            |
@@ -200,7 +159,6 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 | [doc2markmap](https://huggingface.co/datasets/shareAI/doc2markmap)                                     | (中文) 包含一千多篇CSDN、微信公众号文章及对应文章的思维导图形式，可锻炼大模型生成思维导图的能力                                            |
 欢迎提issue补充建议，尽量中文且一问一答形式，适合用于提升llama3任务能力的数据集
 
-
 ### 中文对话微调数据集打包  
 已经转换好，开箱即用：  
 1、[firefly可用格式](https://modelscope.cn/datasets/baicai003/Llama3-Chinese-dataset/summary)  
@@ -208,7 +166,7 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 
 <img src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/608e6953-5b1d-45ba-a0cd-4f1c80256538" width="520">
 
-### 可用训练工具整理
+### llama3 训练框架工具推理
 下面的库都是相当好用的，代码封装简洁又清晰，如果你也想微调个自己的llama3 中文定制版，不要错过～
 - Firefly  -  https://github.com/yangjianxin1/Firefly
 - LLaMA-Factory - https://github.com/hiyouga/LLaMA-Factory
@@ -216,12 +174,7 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 - Xtuner  -  https://github.com/SmartFlowAI/Llama3-XTuner-CN  
 - SWIFT  -  https://github.com/modelscope/swift
 
-### 部署推理
-#### 电脑本地部署
-- LMStudio：[文档](https://github.com/CrazyBoyM/llama3-Chinese-chat/blob/main/deploy/LMStudio/README.md)
-- OLLama：待补充
-
-### Llama3 相关教程推荐
+### llama3 学习教程推荐
 - 从零手写llama3：https://github.com/naklecha/llama3-from-scratch
 - Self-LLM
   - [后端API部署](https://github.com/datawhalechina/self-llm/blob/master/LLaMA3/01-LLaMA3-8B-Instruct%20FastApi%20%E9%83%A8%E7%BD%B2%E8%B0%83%E7%94%A8.md)
@@ -229,21 +182,17 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
   - [streamlit部署](https://github.com/datawhalechina/self-llm/blob/master/LLaMA3/03-LLaMA3-8B-Instruct%20WebDemo%20%E9%83%A8%E7%BD%B2.md)
   - [极简LoRA训练](https://github.com/datawhalechina/self-llm/blob/master/LLaMA3/04-LLaMA3-8B-Instruct%20Lora%20%E5%BE%AE%E8%B0%83.md)
 
-### 事项清单
-- [x] base + sft llama3 中文版模型 v1
-- [x] base + sft llama3 中文版模型 v2
-- [x] instruct + sft llama3 中文版模型
-- [x] 训练与推理教程 
-- [x] 模型量化部署支持、推理教程
-- [x] 模型ollama支持、推理教程
-- [x] 模型vllm支持、推理教程
-- [x] 电脑本地cpu跑模型
-- [ ] 手机端推理模型
-- [x] 扩充优质训练数据集
-- [x] 扩充上下文长度
-- [ ] 角色扮演增强模型
-- [x] agent工具调用能力增强模型
-- [ ] ... 
+### llama3上下文长度简单扩张法（32K、96K）
+1、直接打开任意下载后llama3微调版本模型文件夹  
+2、把config.json中max_position_embeddings改为32768（32k)   
+3、rope_theta改为1000000或者4000000  
+即可在几乎无性能损失情况下将llama3的上下文从8k拉长到32k，从而适配大部分长上下文任务。  
+（该方法由群友“@岁月”分享,适用于Instruct版本，猜测可能是官方已经训练过超长上下文数据了）
+
+<img src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/27b4796d-ea42-4cd4-86ed-076f35df56cb" width=520>  
+
+可以看到，当llama3长度扩展到96K时，几乎仍没什么性能上损失。(备注：当前llama3.1已原生支持128k上下文长度）    
+链接源：https://github.com/OpenAccess-AI-Collective/axolotl/pull/1567
 
 ## 模型使用方法
 ### 云端服务
@@ -254,22 +203,22 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 文档教程：https://github.com/CrazyBoyM/llama3-Chinese-chat/tree/main/deploy/vLLM
 
 ### 本地部署
-#### LMStudio电脑本地部署方式
-文档教程：https://github.com/CrazyBoyM/llama3-Chinese-chat/blob/main/deploy/LMStudio/README.md
+#### LMStudio电脑本地部署方式 （有UI界面）
+文档教程：https://github.com/CrazyBoyM/llama3-Chinese-chat/blob/main/deploy/LMStudio/README.md  
 视频教程：https://www.bilibili.com/video/BV1nt421g79T
 
-#### ollama 命令行工具方式
+#### ollama 命令行工具方式 (推荐, 简单易用)
 首先，去官网下载安装ollama：https://ollama.com/  
 然后，打开终端命令行，执行以下命令即可开始与AI对话：
 ```
 ollama run shareai/llama3.1-dpo-zh
 ```
 
-#### Streamlit 网页推理方式
+#### Streamlit 网页推理方式 （适合训练后，调试、测试模型）
 <img width="1000" alt="image" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/b1176d48-1141-4c8f-a345-e1eb005306da">
 
 ```
-pip install -U streamlit
+pip install -U streamlit transformers==4.40.1
 ```
 首先通过以上命令安装streamlit，然后通过下面命令启动网页以便访问，'/path/to/model'需要改成你的权重下载路径。  
 V1版本：
@@ -605,6 +554,50 @@ Llama3-Chinese：虽然我是一款先进的人工智能，但由于我只是基
 4.潜在风险：因为我是一个自动化工具，人们可能会误解我的输出，或利用它造成伤害。因此，对于敏感或危险的主题（例如医疗诊断或金融交易）来说，谨慎行事尤其必要。
 总之，我旨在尽最大努力提供准确和相关的信息，为客户提供最佳支持。但是，由于我仅代表人类智慧的一个小部分，我并不完美。
 ```
+
+## 一些模型评测
+![7d8221db8d24efd12436fab255ca611](https://github.com/chg0901/llama3-Chinese-chat/assets/8240984/a3b6f468-ab4d-494d-95c3-3e6df7727bba)
+
+| Model                 |   MMLU   |  C-Eval  |  TriviaQA-Wiki   | 
+|:----------------------|:--------:|:--------:|:--------:|
+|                       |  5-shot  |  5-shot  |  8-shot  |
+| LLaMA3-8B             |   66.6   |   49.8   |   81.4   |
+| LLaMA3-8B（shareAI-V2）|   66.2   |   50.9   |   81.8   |
+
+
+| Instruct Model                 |   MMLU   |
+|:-------------------------------|:--------:|
+|                                |  5-shot  |
+| LLaMA3-8B Instruct             |   67.1   |
+| LLaMA3-8B Instruct（shareAI-V2）|   67.2   |
+
+备注: 
+- 评测结果出处[Llama3]使用弱智吧数据微调Llama3-Instruct-8B模型(含测评多个中文Llama3模型) [弱智吧] - 知乎](https://zhuanlan.zhihu.com/p/694818596)
+- OpenCompass测评过程详见[[Llama3][InternLM2]OpenCompass 大模型评测Llama3-instruct-8B 中文版_v2 [OpenCompass] - 知乎](https://zhuanlan.zhihu.com/p/694922988)
+
+## 交流 & 讨论技术
+
+| 名称 | 群聊二维码 | 名称 | 群聊二维码 | 
+|---------|---------|---------|---------|
+| llama3 中文交流QQ群 | <img width="260" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/83a3d1e9-d1ae-4eed-91b5-20589407581e"> | 优质中文数据整理建设群 | <img width="260" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/77110656-0a87-419c-a21f-29bf1c2ca22b"> | 
+
+后面我也会在b站录制相关模型部署推理、训练的演示教程视频，我的个人b站：https://space.bilibili.com/291593914  
+
+## 事项清单
+- [x] base + sft llama3 中文版模型 v1
+- [x] base + sft llama3 中文版模型 v2
+- [x] instruct + sft llama3 中文版模型
+- [x] 训练与推理教程 
+- [x] 模型量化部署支持、推理教程
+- [x] 模型ollama支持、推理教程
+- [x] 模型vllm支持、推理教程
+- [x] 电脑本地cpu跑模型
+- [ ] 手机端推理模型
+- [x] 扩充优质训练数据集
+- [x] 扩充上下文长度
+- [ ] 角色扮演增强模型
+- [x] agent工具调用能力增强模型
+- [ ] ... 
 
 ## QA
 问：词表扩充了吗？  
