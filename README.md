@@ -229,10 +229,6 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
   - [streamlit部署](https://github.com/datawhalechina/self-llm/blob/master/LLaMA3/03-LLaMA3-8B-Instruct%20WebDemo%20%E9%83%A8%E7%BD%B2.md)
   - [极简LoRA训练](https://github.com/datawhalechina/self-llm/blob/master/LLaMA3/04-LLaMA3-8B-Instruct%20Lora%20%E5%BE%AE%E8%B0%83.md)
 
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=CrazyBoyM/llama3-Chinese-chat&type=Date)](https://star-history.com/#CrazyBoyM/llama3-Chinese-chat&Date)
-
 ### 事项清单
 - [x] base + sft llama3 中文版模型 v1
 - [x] base + sft llama3 中文版模型 v2
@@ -249,15 +245,27 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 - [x] agent工具调用能力增强模型
 - [ ] ... 
 
-## 模型使用
-### ollama 命令行工具
+## 模型使用方法
+### 云端服务
+#### 简单API方式
+文档教程：https://github.com/CrazyBoyM/llama3-Chinese-chat/tree/main/deploy/API
+
+#### vLLM方式 （推荐，兼容OpenAI格式）
+文档教程：https://github.com/CrazyBoyM/llama3-Chinese-chat/tree/main/deploy/vLLM
+
+### 本地部署
+#### LMStudio电脑本地部署方式
+文档教程：https://github.com/CrazyBoyM/llama3-Chinese-chat/blob/main/deploy/LMStudio/README.md
+视频教程：https://www.bilibili.com/video/BV1nt421g79T
+
+#### ollama 命令行工具方式
 首先，去官网下载安装ollama：https://ollama.com/  
 然后，打开终端命令行，执行以下命令即可开始与AI对话：
 ```
 ollama run shareai/llama3.1-dpo-zh
 ```
 
-### 网页推理
+#### Streamlit 网页推理方式
 <img width="1000" alt="image" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/b1176d48-1141-4c8f-a345-e1eb005306da">
 
 ```
@@ -277,7 +285,7 @@ Instruct DPO版  （支持自定义system prompt，喜欢使用有趣语言风�
 ```
 streamlit run deploy/web_streamlit_for_instruct_v2.py /path/to/model --theme.base="dark"
 ```
-### 终端推理
+#### Python 代码推理方式
 默认情况下直接运行以下代码即可体验llama3中文对话，请自行修改`model_name_or_path`为你下载的模型路径
 
 ```
@@ -458,7 +466,7 @@ if __name__ == '__main__':
     main()
 ```
 
-### 多轮问答示例
+## 多轮问答示例
 ```
 User：你是谁
 Llama3-Chinese：我是由ShareAI训练的大型语言模型。我的目的是协助回答问题并提供信息。
@@ -598,7 +606,7 @@ Llama3-Chinese：虽然我是一款先进的人工智能，但由于我只是基
 总之，我旨在尽最大努力提供准确和相关的信息，为客户提供最佳支持。但是，由于我仅代表人类智慧的一个小部分，我并不完美。
 ```
 
-# QA
+## QA
 问：词表扩充了吗？  
 答：没，llama3自身的词表已经有128k了（llama2只有32k)，扩充再增量预训练词表会损坏官方的15T充分预训练时学到的通用能力。  
 另外在llama2上一系列扩充了词表的模型表现也并不优秀。作者这里希望大家更多关注在优质数据集任务上，模型可以频繁发版、换代，数据才是核心。  
@@ -610,3 +618,7 @@ llama3其实本身中文能力就很强，人们说不强的知识因为在线�
 问：为什么这么快训练llama3中文版？  
 答：晚上睡得晚，刚好看到llama3权重刚刚开源几十分钟，就比较兴奋地拉取了权重文件，看了下网络结构没变，  
 去年又有首发llama2中文版的经验，就轻车熟路用去年的东西和环境配置直接快速开练了。
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=CrazyBoyM/llama3-Chinese-chat&type=Date)](https://star-history.com/#CrazyBoyM/llama3-Chinese-chat&Date)
