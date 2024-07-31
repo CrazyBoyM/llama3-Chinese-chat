@@ -116,15 +116,15 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 
 注意由于只训练了常见对话，Base + SFT版有可能会出现不符合预期的回复 （尤其是对于一些非常见回答），本教程更多用于优质资源整理（包含如何对llama3进行中文微调，怎样制作中文对话数据集，角色扮演、agent能力增强，扩充上下文长度，如何进行网页部署和量化，手机、电脑cpu推理部署等），将会逐渐整理补充进来。  
 
-## 模型使用方法
-### 云端服务
+## 模型使用方式
+### 云端服务部署
 #### 简单API方式
 文档教程：https://github.com/CrazyBoyM/llama3-Chinese-chat/tree/main/deploy/API
 
 #### vLLM方式 （推荐，兼容OpenAI格式）
 文档教程：https://github.com/CrazyBoyM/llama3-Chinese-chat/tree/main/deploy/vLLM
 
-### 本地部署
+### 本地电脑部署
 #### LMStudio电脑本地部署方式 （有UI界面）
 文档教程：https://github.com/CrazyBoyM/llama3-Chinese-chat/blob/main/deploy/LMStudio/README.md  
 视频教程：https://www.bilibili.com/video/BV1nt421g79T
@@ -157,6 +157,8 @@ Instruct DPO版  （支持自定义system prompt，喜欢使用有趣语言风�
 streamlit run deploy/web_streamlit_for_instruct_v2.py /path/to/model --theme.base="dark"
 ```
 #### Python 代码推理方式
+<details>
+<summary> 点击展开 </summary>
 默认情况下直接运行以下代码即可体验llama3中文对话，请自行修改`model_name_or_path`为你下载的模型路径
 
 ```
@@ -337,7 +339,13 @@ if __name__ == '__main__':
     main()
 ```
 
+</details>
+
 ## 多轮问答示例
+
+<details>
+<summary> 点击展开 </summary>
+  
 ```
 User：你是谁
 Llama3-Chinese：我是由ShareAI训练的大型语言模型。我的目的是协助回答问题并提供信息。
@@ -476,6 +484,7 @@ Llama3-Chinese：虽然我是一款先进的人工智能，但由于我只是基
 4.潜在风险：因为我是一个自动化工具，人们可能会误解我的输出，或利用它造成伤害。因此，对于敏感或危险的主题（例如医疗诊断或金融交易）来说，谨慎行事尤其必要。
 总之，我旨在尽最大努力提供准确和相关的信息，为客户提供最佳支持。但是，由于我仅代表人类智慧的一个小部分，我并不完美。
 ```
+</details>
 
 ## 一些模型评测
 ![7d8221db8d24efd12436fab255ca611](https://github.com/chg0901/llama3-Chinese-chat/assets/8240984/a3b6f468-ab4d-494d-95c3-3e6df7727bba)
