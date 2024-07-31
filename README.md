@@ -30,7 +30,7 @@ Instruct偏好强化学习版：
 
 ### llama3 可用Chat版模型整理
 llama3.1
-- shareAI-DPO中文 8B版本
+- shareAI-DPO中文 8B版本 （RLHF中文）
   - 训练数据开源： https://huggingface.co/datasets/shareAI/DPO-zh-en-emoji
   - 训练细节分享：DPO(beta 0.5) + lora rank128, alpha256 + 打开"lm_head", "input_layernorm", "post_attention_layernorm", "norm"层训练.
   - 算力：8 * A100，5分钟，感谢opencsg社区的友情赞助支持
@@ -40,7 +40,7 @@ llama3.1
   - 模型下载 - Huggingface： https://huggingface.co/shareAI/llama3.1-8b-instruct-dpo-zh
   - GGUF版本下载 （ollama、lmstudio可用）：https://huggingface.co/shareAI/llama3.1-8b-instruct-dpo-zh/blob/main/llama3.1_8b_chinese_chat_q4_k_m-shareAI.gguf
   - GGUF版本国内下载 （hf-mirror 国内加速站点）：https://hf-mirror.com/shareAI/llama3.1-8b-instruct-dpo-zh  
-- openCSG wukong中文 405B版本
+- openCSG wukong中文 405B版本 (SFT中文）
   - shareAI & openCSG联合发布
   - 介绍文章：https://mp.weixin.qq.com/s/7_lDZ6Zslq_WUckfuTToyQ
   - 模型开源：https://opencsg.com/models/OpenCSG/CSG-Wukong-Chinese-Llama3.1-405B
