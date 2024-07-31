@@ -23,10 +23,14 @@ first version of llama3 in Chinese (首个llama3 中文版)  ，本仓库供交�
 - 2024-04-19 下午1点：🍺 世界上首个llama3 中文版训练完成，晚上没睡觉哈哈，使用170k+高质量多轮中文对话数据连夜训练得到。
 
 ### Demo 演示示例
-Base中文SFT版：  
+#### llama3-base-8b 中文SFT版
 <img width="1000" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/4057d600-11e6-424f-9705-267450b6f635">
-Instruct偏好强化学习版：  
+
+#### llama3-instruct-8b 中文DPO版
 <img width="1000" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/0330a118-7a38-44a7-8a48-a94bfb9eead2">
+
+#### llama3.1-instruct-8b 中文DPO版
+<img width="1000" alt="image" src="https://github.com/user-attachments/assets/7140ee4b-d2d5-42f6-976b-9379ec6a9811">
 
 ### llama3 可用Chat版模型整理
 llama3.1
@@ -135,6 +139,9 @@ llama3相关对话版本优质权重整理：（欢迎issue补充）
 ```
 ollama run shareai/llama3.1-dpo-zh
 ```
+
+<img width="1000" alt="image" src="https://github.com/user-attachments/assets/7140ee4b-d2d5-42f6-976b-9379ec6a9811">
+
 
 #### Streamlit 网页推理方式 （适合训练后，调试、测试模型）
 <img width="1000" alt="image" src="https://github.com/CrazyBoyM/llama3-Chinese-chat/assets/35400185/b1176d48-1141-4c8f-a345-e1eb005306da">
