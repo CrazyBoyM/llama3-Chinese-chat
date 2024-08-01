@@ -1,9 +1,8 @@
 # vLLM部署
-## 简单介绍
-vLLM 是一个快速且易于使用的库，用于大型语言模型（LLM）的推理和服务。
+## 简单介绍 vllm
+vLLM 是一个快速且易于使用的库，用于大型语言模型（LLM）的推理和服务，拥有接近榨干GPU的极速性能。
 
-vLLM 的速度优势包括：
-
+### 速度优势
 - 最先进的服务吞吐量
 - 使用 PagedAttention 高效管理注意力键和值的内存
 - 连续批处理传入请求
@@ -11,8 +10,7 @@ vLLM 的速度优势包括：
 - 量化支持：GPTQ、AWQ、SqueezeLLM、FP8 KV 缓存
 - 优化的 CUDA 内核
 
-vLLM 的灵活性和易用性包括：
-
+### 灵活性和易用性
 - 与流行的 Hugging Face 模型无缝集成
 - 通过各种解码算法（包括并行采样、束搜索等）实现高吞吐量服务
 - 支持张量并行以进行分布式推理
@@ -23,7 +21,6 @@ vLLM 的灵活性和易用性包括：
 - （实验性）多 lora 支持
 
 vLLM 无缝支持 HuggingFace 上大多数流行的开源模型，包括：
-
 - 类 Transformer 的大型语言模型（例如 Llama）
 - 专家混合大型语言模型（例如 Mixtral）
 - 多模态大型语言模型（例如 LLaVA）
@@ -33,6 +30,7 @@ vLLM 无缝支持 HuggingFace 上大多数流行的开源模型，包括：
 pip install vllm
 ```
 ## 代码推理
+该方法适合运行一些需要加速模型推理运行，但整个模型不方便通过API单独部署的场景。
 ```python
 from vllm import LLM, SamplingParams
 
@@ -52,7 +50,7 @@ for output in outputs:
     generated_text = output.outputs[0].text
     print(f"Prompt: {prompt!r}, Generated text: {generated_text!r}")
 ```
-## OpenAI格式后端部署 （推荐）
+## 后端部署 （推荐，兼容OpenAI格式）
 ### 服务端部署API
 在服务器上执行以下命令，启动模型服务：
 ```shell
