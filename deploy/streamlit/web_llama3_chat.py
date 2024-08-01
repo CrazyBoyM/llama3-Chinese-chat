@@ -6,7 +6,6 @@ from typing import Callable, List, Optional
 
 import streamlit as st
 import torch
-
 from transformers.utils import logging
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig  # isort: skip
 from peft import PeftModel
@@ -84,30 +83,6 @@ def prepare_generation_config():
 
     return generation_config
 
-system_prompt = '<|begin_of_text|><<SYS>>\n{content}\n<</SYS>>\n\n'
-user_prompt = '<|start_header_id|>user<|end_header_id|>\n\n{user}<|eot_id|>'
-robot_prompt = '<|start_header_id|>assistant<|end_header_id|>\n\n{robot}<|eot_id|>'
-cur_query_prompt = '<|start_header_id|>user<|end_header_id|>\n\n{user}<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n'
-
-def combine_history(prompt):
-    messages = st.session_state.messages
-    total_prompt = ''
-    for message in messages:
-        cur_content = message['content']
-        if message['role'] == 'user':
-            cur_prompt = user_prompt.format(user=cur_content)
-        elif message['role'] == 'robot':
-            cur_prompt = robot_prompt.format(robot=cur_content)
-        else:
-            raise RuntimeError
-        total_prompt += cur_prompt
-
-    system_prompt_content = st.session_state.system_prompt_content
-    system = system_prompt.format(content=system_prompt_content)
-    total_prompt = system + total_prompt + cur_query_prompt.format(user=prompt)
-    
-    return total_prompt
-
 def main(model_name_or_path, adapter_name_or_path):
     # torch.cuda.empty_cache()
     print('load model...')
@@ -132,33 +107,39 @@ def main(model_name_or_path, adapter_name_or_path):
         # Display user message in chat message container
         with st.chat_message('user'):
             st.markdown(prompt)
-        real_prompt = combine_history(prompt)
         # Add user message to chat history
         st.session_state.messages.append({
             'role': 'user',
             'content': prompt,
         })
 
+        # Prepare chat history
+        chat = [
+            {"role": "system", "content": st.session_state.system_prompt_content},
+            *st.session_state.messages
+        ]
+
+        # Use chat template
+        formatted_chat = tokenizer.apply_chat_template(chat, tokenize=False, add_generation_prompt=True)
+        inputs = tokenizer(formatted_chat, return_tensors='pt').to(model.device)
+        streamer = TextIteratorStreamer(tokenizer, skip_special_tokens=True)
+
+        generation_kwargs = dict(
+            **inputs,
+            streamer=streamer,
+            max_new_tokens=generation_config.max_new_tokens,
+            do_sample=generation_config.do_sample,
+            top_p=generation_config.top_p,
+            temperature=generation_config.temperature,
+            repetition_penalty=generation_config.repetition_penalty,
+        )
+
+        thread = Thread(target=model.generate, kwargs=generation_kwargs)
+        thread.start()
+
+        response = ''
         with st.chat_message('robot'):
             message_placeholder = st.empty()
-            
-            inputs = tokenizer([real_prompt], return_tensors='pt').to(model.device)
-            streamer = TextIteratorStreamer(tokenizer, skip_special_tokens=True)
-            
-            generation_kwargs = dict(
-                **inputs,
-                streamer=streamer,
-                max_new_tokens=generation_config.max_new_tokens,
-                do_sample=generation_config.do_sample,
-                top_p=generation_config.top_p,
-                temperature=generation_config.temperature,
-                repetition_penalty=generation_config.repetition_penalty,
-            )
-
-            thread = Thread(target=model.generate, kwargs=generation_kwargs)
-            thread.start()
-
-            response = ''
             for token in streamer:
                 response += token
                 message_placeholder.markdown(response + '▌')
@@ -166,7 +147,7 @@ def main(model_name_or_path, adapter_name_or_path):
 
         # Add robot response to chat history
         st.session_state.messages.append({
-            'role': 'robot',
+            'role': 'assistant',
             'content': response,
         })
         torch.cuda.empty_cache()
