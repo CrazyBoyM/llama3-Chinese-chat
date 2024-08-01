@@ -4,7 +4,7 @@
 
 first version of llama3 in Chinese (首个llama3 中文版)  ，本仓库供交流llama3中文相关学习内容，欢迎任何人加入共建PR  
 
-新增Phi3模型中文资料仓库（性能超越llama3 8b，以小搏大)，正在适配中，欢迎关注：https://github.com/CrazyBoyM/phi3-Chinese  
+🔥新增LLM-Chinese仓库，欢迎关注，偏教程性质，以「模型中文化」为一个典型的模型训练问题切入场景，指导读者上手学习LLM二次微调训练（当前已对齐gemma2模型，待整理资料输出）：https://github.com/CrazyBoyM/LLM-Chinese 
 
 如果你有自己微调的版本或者在网上发现有趣的特化版本，欢迎在issue区评论收录。  
 如有你有想要建设的内容版块，欢迎fork提交PR成为核心作者成员。  
