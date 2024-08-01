@@ -10,3 +10,21 @@ ollama run shareai/llama3.1-dpo-zh
 ```
 
 <img width="1000" alt="image" src="https://github.com/user-attachments/assets/7140ee4b-d2d5-42f6-976b-9379ec6a9811">
+
+## 通过API连接ollama (兼容openai格式)
+运行上面命令后，ollama会默认启动一个api服务，可以通过以下命令进行调用测试：  
+```shell
+curl http://localhost:11434/v1/chat/completions -d '{
+  "model": "shareai/llama3.1-dpo-zh",
+  "messages": [
+    {
+      "role": "user",
+      "content": "讲个笑话?"
+    }
+  ],
+  "stream": false
+}'
+```
+
+## 更多
+可以参考ollama中文文档：https://ollama.fan/reference/api/
