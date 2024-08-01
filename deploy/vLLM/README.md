@@ -52,13 +52,53 @@ for output in outputs:
     print(f"Prompt: {prompt!r}, Generated text: {generated_text!r}")
 ```
 ## OpenAI格式后端部署
-```
+### 服务端部署API
+在服务器上执行以下命令，启动模型服务：
+```shell
 python -m vllm.entrypoints.openai.api_server \
     --model /path/to/your_model \
-    --served-model-name llama3-cn \
-    --max-model-len=1024
+    --served-model-name "llama3-cn" \
+    --max-model-len=1024 \
+    --api-key="xxx-abc-123"
 ```
-支持的全部参数列表如下，可按需自行调整：
+
+说明：其中--api-key是指定一个给连接用的token密钥，--max-model-len是最大模型单次生成长度，默认会读取模型tokenizer_config.json中自带的对话模板，你也可以通过--chat-template自行指定一个模板。（需要写为.jinja文件）
+### 客户端测试API
+终端shell：
+```shell
+curl http://服务器ip:端口/v1/chat/completions \
+    -H 'Content-Type: application/json' \
+    -H 'Accept: application/json' \
+    -H 'Authorization: Bearer xxx-abc-123' \
+    -d '{
+        "model": "llama3-cn",
+        "messages": [
+            {"role": "system", "content": "You are a helpful assistant."},
+            {"role": "user", "content": "讲个笑话"}
+        ]
+    }'
+```
+python代码：
+```python
+from openai import OpenAI
+
+client = OpenAI(base_url="http://服务器ip:端口/v1", api_key="xxx-abc-123")
+
+completion = client.chat.completions.create(
+  model="llama3-cn",
+  messages=[
+    {"role": "system", "content": "You are a helpful assistant."},
+    {"role": "user", "content": "讲个笑话"}
+  ],
+  temperature=0.7,
+  stop=["<|eot_id|>"],
+)
+
+print(completion.choices[0].message)
+```
+
+附：
+vllm部署支持的全部命令参数列表如下，可按需自行调整：
 
 | 参数                     | 说明                                                                                                  | 默认值          |
 |-----------------------|-----------------------------------------------------------------------------------------------------|---------------|
