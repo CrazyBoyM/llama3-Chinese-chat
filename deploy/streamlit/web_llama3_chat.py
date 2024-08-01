@@ -118,6 +118,7 @@ def main(model_name_or_path, adapter_name_or_path):
             {"role": "system", "content": st.session_state.system_prompt_content},
             *st.session_state.messages
         ]
+        #breakpoint()
 
         # Use chat template
         formatted_chat = tokenizer.apply_chat_template(chat, tokenize=False, add_generation_prompt=True)
@@ -140,8 +141,12 @@ def main(model_name_or_path, adapter_name_or_path):
         response = ''
         with st.chat_message('robot'):
             message_placeholder = st.empty()
+            
+            count = 0
             for token in streamer:
-                response += token
+                count += 1
+                if count > len(inputs['input_ids']):
+                    response += token
                 message_placeholder.markdown(response + '▌')
             message_placeholder.markdown(response)
 
@@ -150,6 +155,7 @@ def main(model_name_or_path, adapter_name_or_path):
             'role': 'assistant',
             'content': response,
         })
+        # breakpoint()
         torch.cuda.empty_cache()
 
 if __name__ == '__main__':
