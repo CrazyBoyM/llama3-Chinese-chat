@@ -109,3 +109,4 @@ curl -X POST "http://127.0.0.1:9009"  -H 'Content-Type: application/json'  -d '{
 如果你需要在其他开发语言中使用，可以用gpt将调用命令转换为其他语言版本(如python、java、php）
 
 ## 二、 OpenAI格式版本
+请参考vLLM部署教程：https://github.com/CrazyBoyM/llama3-Chinese-chat/tree/main/deploy/vLLM
