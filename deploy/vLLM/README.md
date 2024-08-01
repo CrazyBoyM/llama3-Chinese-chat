@@ -32,7 +32,7 @@ vLLM 无缝支持 HuggingFace 上大多数流行的开源模型，包括：
 ```
 pip install vllm
 ```
-## 简单推理
+## 代码推理
 ```python
 from vllm import LLM, SamplingParams
 
@@ -52,7 +52,7 @@ for output in outputs:
     generated_text = output.outputs[0].text
     print(f"Prompt: {prompt!r}, Generated text: {generated_text!r}")
 ```
-## OpenAI格式后端部署
+## OpenAI格式后端部署 （推荐）
 ### 服务端部署API
 在服务器上执行以下命令，启动模型服务：
 ```shell
@@ -64,7 +64,7 @@ python -m vllm.entrypoints.openai.api_server \
 ```
 
 说明：
-- --api-key是指定一个给连接用的token密钥，你可以通过环境变量设置`VLLM_API_KEY`传入。  
+- --api-key是指定一个给连接用的token密钥，你也可以不直接设置，而是通过环境变量设置`VLLM_API_KEY`传入。  
 - --max-model-len是模型上下文长度，一般很多模型都是默认 8192，可以自行按需设置一个合适的大小，否则可能会超出你的GPU显存容量导致模型无法启动推理服务。    
 - 默认会读取模型tokenizer_config.json中自带的对话模板，你也可以通过--chat-template自行指定一个模板。（需要写为.jinja文件）
 ### 客户端测试API
