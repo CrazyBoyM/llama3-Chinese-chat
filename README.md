@@ -544,6 +544,7 @@ Llama3-Chinese：虽然我是一款先进的人工智能，但由于我只是基
 | [DPO-EN-ZH-20k](https://huggingface.co/datasets/hiyouga/DPO-En-Zh-20k)    | 包含大量偏好对齐的问答对数据<好，差>，有助于进一步提升chat模型的对话质量，使其生成内容更加详细、适合人类偏好。                                                                             |
 | [shareAI/DPO-zh-en-emoji](https://huggingface.co/datasets/shareAI/DPO-zh-en-emoji)    | 包含大量语言偏好对齐的问答对数据<中文，英文>，由同一个问题同时产生中文和英文版本的答案（趣味幽默，含表情emoji），有助于激活多语言chat模型的语种、语言风格偏好。                                                                             |
 | [Orion-zhen/dpo-toxic-zh-v1.0](https://huggingface.co/datasets/Orion-zhen/dpo-toxic-zh-v1.0) | 包含大量拒绝答复和进行答案的样本，可用于对大模型进行安全对齐，或者破解开源模型的安全对齐。 |
+| [Zhihu-KOL](https://huggingface.co/datasets/wangrui6/Zhihu-KOL)              | 包含大量知乎问题以及回答（每条样本都带有赞同数等详细数据），可以用于训练让LLM的回复更像人（一般人无法区分是人类回答，还是人工智能的生成）|
 | [glaive-function-calling-v2-sharegpt](https://huggingface.co/datasets/hiyouga/glaive-function-calling-v2-sharegpt)   | 包含大量工具函数选择、调用和具体参数数据，有助于提升模型的自主工具选择与使用能力。                                                  |
 | [Agent-FLAN](https://huggingface.co/datasets/internlm/Agent-FLAN)                                         | (纯英文)类型同上， 包含大量工具使用数据，有助于提升模型的工具使用能力。                                            |
 | [Agent-Instruct](https://huggingface.co/datasets/THUDM/AgentInstruct)                                       | (纯英文)类型同上， 包含大量agent演示数据，有助于提升模型的工具使用、模拟能力。                                            |
