@@ -8,13 +8,14 @@ def convert_jsonl(input_file, output_file):
                 conversations = data['conversation']
                 new_conversations = []
                 for conv in conversations:
-                    new_conversation = []
                     for key, value in conv.items():
-                        # 将 assistant 替换为 gpt
                         if key == 'assistant':
                             key = 'gpt'
-                        new_conversation.append({'from': key, 'value': value})
-                    new_conversations.append(new_conversation)
+                        else:
+                            key = 'human'
+                            
+                        new_conversations.append({'from': key, 'value': value})
+                        
                 new_data = {'conversations': new_conversations}
                 fout.write(json.dumps(new_data, ensure_ascii=False) + '\n')
 
