@@ -1,14 +1,21 @@
 # llama3-Chinese-chat
+[![HF Demo](https://img.shields.io/static/v1?label=Demo&message=OpenBayes%E8%B4%9D%E5%BC%8F%E8%AE%A1%E7%AE%97&color=green)](https://openbayes.com/console/hyperai-tutorials/containers/EzsoQaZB8LA)  &ensp;  
+### 1st version of Chinese-llama3 
+首个llama3 中文版  
+本仓库供交流llama3中文相关学习内容，欢迎任何热心朋友加入共建  
 
-[![HF Demo](https://img.shields.io/static/v1?label=Demo&message=OpenBayes%E8%B4%9D%E5%BC%8F%E8%AE%A1%E7%AE%97&color=green)](https://openbayes.com/console/hyperai-tutorials/containers/EzsoQaZB8LA)  &ensp;
+### 训练 & 推理流程
+<img width="67%" alt="训练流程图" src="https://github.com/user-attachments/assets/28fe6edc-9a54-44a7-8dba-f9a9173901ff" />
+<img width="30%" alt="训练与推理" src="https://github.com/user-attachments/assets/22f9ea26-49ca-4d7a-adad-c338f2309b50" /> <br>
+<center>看图快速学习: https://deepwiki.com/CrazyBoyM/llama3-Chinese-chat</center>
 
-first version of llama3 in Chinese (首个llama3 中文版)  ，本仓库供交流llama3中文相关学习内容，欢迎任何人加入共建PR  
-
+### 通知 
 🔥新增LLM-Chinese仓库，欢迎关注，偏教程性质，以「模型中文化」为一个典型的模型训练问题切入场景，指导读者上手学习LLM二次微调训练：https://github.com/CrazyBoyM/LLM-Chinese （含gemma2 中文版模型，2b、 9b尺寸）
 
 如果你有自己微调的版本或者在网上发现有趣的特化版本，欢迎在issue区评论收录。  
 如有你有想要建设的内容版块，欢迎fork提交PR成为核心作者成员。  
 (注意：目前不再接受仅修改单个字、句的typo-PR，请避免频繁提交该类PR)
+
 
 ### News 更新记录
 - 2024-07-25 llama3.1 中文DPO版训练权重放出。
