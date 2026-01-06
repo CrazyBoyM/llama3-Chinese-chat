@@ -580,10 +580,10 @@ Llama3-Chinese：虽然我是一款先进的人工智能，但由于我只是基
 ### llama3 学习教程
 - 从零手写llama3：https://github.com/naklecha/llama3-from-scratch
 - Self-LLM
-  - [后端API部署](https://github.com/datawhalechina/self-llm/blob/master/LLaMA3/01-LLaMA3-8B-Instruct%20FastApi%20%E9%83%A8%E7%BD%B2%E8%B0%83%E7%94%A8.md)
-  - [langchain教程文档](https://github.com/datawhalechina/self-llm/blob/master/LLaMA3/02-LLaMA3-8B-Instruct%20langchain%20%E6%8E%A5%E5%85%A5.md)
-  - [streamlit部署](https://github.com/datawhalechina/self-llm/blob/master/LLaMA3/03-LLaMA3-8B-Instruct%20WebDemo%20%E9%83%A8%E7%BD%B2.md)
-  - [极简LoRA训练](https://github.com/datawhalechina/self-llm/blob/master/LLaMA3/04-LLaMA3-8B-Instruct%20Lora%20%E5%BE%AE%E8%B0%83.md)
+  - [后端API部署](https://github.com/datawhalechina/self-llm/blob/master/models/LLaMA3/01-LLaMA3-8B-Instruct%20FastApi%20%E9%83%A8%E7%BD%B2%E8%B0%83%E7%94%A8.md)
+  - [langchain教程文档](https://github.com/datawhalechina/self-llm/blob/master/models/LLaMA3/02-LLaMA3-8B-Instruct%20langchain%20%E6%8E%A5%E5%85%A5.md)
+  - [streamlit部署](https://github.com/datawhalechina/self-llm/blob/master/models/LLaMA3/03-LLaMA3-8B-Instruct%20WebDemo%20%E9%83%A8%E7%BD%B2.md)
+  - [极简LoRA训练](https://github.com/datawhalechina/self-llm/blob/master/models/LLaMA3/04-LLaMA3-8B-Instruct%20Lora%20%E5%BE%AE%E8%B0%83.md)
 
 ### llama3上下文长度简单扩张法（32K、96K）
 1、直接打开任意下载后llama3微调版本模型文件夹  
